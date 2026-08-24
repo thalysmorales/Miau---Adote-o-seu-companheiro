@@ -1,0 +1,100 @@
+*{
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.nav{
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    padding: 1rem;
+    background-color: #F9F7F7 !important;
+}
+
+.inicio a{
+    display: flex;
+    font: bolder;
+     text-align: center;
+    color: #FFDAB9 !important;
+    font-weight: bold;
+    font-size: 20px;
+    padding-left: 1.5rem;
+}
+
+.fim{
+    display: flex;
+    gap: 0.4rem;
+}
+
+.nav-link{
+    color: black !important;
+}
+
+.nav-link:hover{
+ color: #FF6F61 !important;
+}
+
+.nav-link.active{
+    color: #FF6F61 !important;
+}
+
+/*Encontrar pet*/
+.main-encontrar{
+    margin: 1.5rem;
+}
+.texto h3{
+    font-size: 18px;
+    font-weight: bolder;
+    color: #008080;
+}
+
+.texto p{
+    text-align: justify;
+}
+
+.botoes{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 12px;
+}
+.botoes button{
+    border: none;
+    border-radius: 1rem;
+    color: #000;
+    background-color: #FFDAB9;
+    width: 76px;
+    height: 25px;
+}
+
+.botaoFiltro{
+    background-color: transparent !important;
+    color: rgb(0,0,0,0.7) !important;
+}
+
+.botaoFiltro i{
+    padding: 0.2rem;
+    color: rgb(0,0,0,0.7) !important;
+}
+.botoes :focus{
+    background-color: #008080 !important;
+}
+
+.botoes p{
+    padding-top: 0.8rem;
+    padding-left: 0.4rem;
+    font-size: 25px;
+    color: #FFDAB9;
+}
+
+.rodape{
+    background-color: #000;
+    border-radius: 2rem;
+}
+
+.item-rodape{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
