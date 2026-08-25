@@ -1,9 +1,9 @@
-*{
-    font-size: 14px;
+* {
+    font-size: 16px;
     font-family: Arial, Helvetica, sans-serif;
 }
 
-.nav{
+.nav {
     display: flex;
     justify-content: space-between;
     text-align: center;
@@ -11,54 +11,83 @@
     background-color: #F9F7F7 !important;
 }
 
-.inicio a{
+.inicio a {
     display: flex;
     font: bolder;
-     text-align: center;
+    justify-content: center;
+    text-align: center;
     color: #FFDAB9 !important;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 18px;
     padding-left: 1.5rem;
 }
 
-.fim{
-    display: flex;
-    gap: 0.4rem;
+.disabled {
+    font-size: 36px !important;
 }
 
-.nav-link{
+.fim {
+    display: flex;
+    gap: 0.4rem;
+    padding-top: 1rem;
+}
+
+.nav-link {
     color: black !important;
 }
 
-.nav-link:hover{
- color: #FF6F61 !important;
-}
-
-.nav-link.active{
+.nav-link:hover {
     color: #FF6F61 !important;
 }
 
+.nav-link.active {
+    color: #FF6F61 !important;
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
+}
+
 /*Encontrar pet*/
-.main-encontrar{
+
+
+.main-encontrar {
     margin: 1.5rem;
 }
-.texto h3{
-    font-size: 18px;
+
+.texto h3 {
+    font-size: 36px;
     font-weight: bolder;
     color: #008080;
 }
 
-.texto p{
+.texto p {
     text-align: justify;
+
 }
 
-.botoes{
+.botoes {
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    font-size: 12px;
+    font-size: 13px;
+    margin: 0;
 }
-.botoes button{
+
+.botoes button {
     border: none;
     border-radius: 1rem;
     color: #000;
@@ -67,34 +96,139 @@
     height: 25px;
 }
 
-.botaoFiltro{
+.botaoFiltro {
     background-color: transparent !important;
-    color: rgb(0,0,0,0.7) !important;
+    color: rgb(0, 0, 0, 0.7);
 }
 
-.botaoFiltro i{
+.botaoFiltro i {
     padding: 0.2rem;
-    color: rgb(0,0,0,0.7) !important;
-}
-.botoes :focus{
-    background-color: #008080 !important;
+    color: rgb(0, 0, 0, 0.7) !important;
 }
 
-.botoes p{
+.botoes :focus {
+    background-color: #008080 !important;
+    color: #fff;
+}
+
+.botoes :focus i {
+    color: #fff !important;
+}
+
+.botoes p {
     padding-top: 0.8rem;
     padding-left: 0.4rem;
-    font-size: 25px;
+    font-size: 26px;
     color: #FFDAB9;
 }
 
-.rodape{
-    background-color: #000;
-    border-radius: 2rem;
+.divCards{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2.5rem;
+    margin-left: 2.5rem;
+    margin-right: 2.5rem;
+    padding-bottom: 8rem;
 }
 
-.item-rodape{
+.card{
+    border: none;
+}
+
+.card img{
+    border-top-left-radius: 1.5rem;
+    border-top-right-radius: 1.5rem;
+    width: 16rem;
+    height: 16rem;
+}
+
+.card-body{
+    border: 1px solid #FFDAB9;
+    border-bottom-left-radius: 1.5rem !important;
+    border-bottom-right-radius: 1.5rem !important;
+    padding-bottom: 1.5rem;
+    width: 16rem;
+    height: auto;
+}
+
+.card-body h5{
+    font-size: 20px;
+    font-weight: bold;
+    color: #000;
+    margin: 0;
+}
+
+.card-body p{
+    font-size: 14px;
+    font-weight: 500;
+    color: #000;
+    margin: 0;
+    padding-bottom: 1rem;
+}
+
+.card-body a{
+    border-radius: 0.5rem;
+    color: #fff;
+    background-color: #FF6F61;
+    text-align: center;
+    border: none;
+    font-size: 16px;
+    font-weight: bold;
+    width: 14rem;
+}
+
+.btn-primary:hover{
+    background-color: #008080 !important;
+    color: #fff !important;
+}
+
+.botao{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+
+
+.rodape {
+    background-color: #1C1C1C;
+    border-top-left-radius: 2rem;
+    border-top-left-radius: 2rem;
+    padding-top: 3.5rem;
+}
+
+.item-rodape {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.item-rodape h3 {
+    color: #FFDAB9;
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.item-rodape p {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.p-rodape,
+.p-rodape i {
+    color: #99A1AF !important;
+    font-size: 14px !important;
+}
+
+.pRo {
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+}
+
+.i-rodape {
+    color: #F9F7F7 !important;
+    font-size: 30px;
+    padding: 0.5rem;
 }
