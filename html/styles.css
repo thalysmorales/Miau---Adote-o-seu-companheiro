@@ -1,8 +1,7 @@
 * {
     font-size: 16px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Quicksand', Arial, Helvetica, sans-serif;
 }
-
 .nav {
     display: flex;
     justify-content: space-between;
@@ -125,7 +124,7 @@ main {
 .divCards{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 2.5rem;
+    gap: 2rem;
     margin-left: 2.5rem;
     margin-right: 2.5rem;
     padding-bottom: 8rem;
@@ -232,3 +231,324 @@ main {
     font-size: 30px;
     padding: 0.5rem;
 }
+
+@media (max-width:768px){
+
+  .main-encontrar {
+    margin: 1rem;
+}
+
+.texto h3 {
+    font-size: 36px;
+}
+
+.texto p {
+    text-align: justify;
+}
+
+.botoes {
+    gap: 0.5rem;
+    font-size: 13px;
+}
+
+.botoes button {
+    border-radius: 1rem;
+    width: 76px;
+    height: 25px;
+}
+
+.botoes p {
+    padding-top: 0.8rem;
+    padding-left: 0.4rem;
+    font-size: 26px;
+}
+
+.divCards{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-left: 2.5rem;
+    margin-right: 2.5rem;
+    padding-bottom: 8rem;
+}
+
+.card img{
+    border-top-left-radius: 1.5rem;
+    border-top-right-radius: 1.5rem;
+    width: 16rem;
+    height: 16rem;
+}
+
+.card-body{
+    border-bottom-left-radius: 1.5rem !important;
+    border-bottom-right-radius: 1.5rem !important;
+    padding-bottom: 1.5rem;
+    width: 16rem;
+    height: auto;
+}
+
+.card-body h5{
+    font-size: 20px;
+}
+
+.card-body p{
+    font-size: 14px;
+    font-weight: 500;
+    padding-bottom: 1rem;
+}
+
+.card-body a{
+    border-radius: 0.5rem;
+    font-size: 16px;
+    width: 14rem;
+}
+.rodape {
+    border-top-left-radius: 2rem;
+    border-top-left-radius: 2rem;
+    padding-top: 3.5rem;
+}
+
+.item-rodape {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.item-rodape h3 {
+    font-size: 36px;
+}
+
+.item-rodape p {
+    font-size: 20px;
+}
+
+.p-rodape,
+.p-rodape i {
+    font-size: 14px !important;
+}
+
+.pRo {
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+}
+
+.i-rodape {
+    font-size: 30px;
+    padding: 0.5rem;
+}
+    
+}
+
+/*
+TENHO INTERESSE
+*/
+
+.box-informacao{
+    margin:0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 3rem;
+    padding-bottom: 5.5rem;
+}
+
+.galeria{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.carrossel-principal{
+    position: relative;
+    width: 27.6rem; 
+}
+
+.foto-principal{
+    width: 27.6rem;
+    height: 27.6rem;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 1rem;
+}
+
+.div-seta{
+     position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 8px;
+    pointer-events: none;
+
+}
+
+.seta{
+   background-color: rgba(255, 255, 255, 0.2);
+    border: none;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: auto;
+}
+
+.seta:hover{
+    background-color: rgb(255, 255, 255,0.5);
+}
+
+.seta-esquerda{
+    left: 8px;
+}
+
+.seta-direita{
+    right: 8px;
+}
+
+.miniaturas{
+    display: flex;
+    gap: 2.5rem;
+    margin: 0;
+    padding-top: 0;
+}
+
+.thumb{
+    width: 5rem;
+    height: 5rem;
+    object-fit: cover;
+    border-radius: 1rem;
+    cursor: pointer;
+    opacity: 0.6;
+    transition: opacity 0.2s ease, border 0.2s ease;
+    border: 2px solid transparent;
+}
+
+.thumb:hover{
+    opacity: 1;
+}
+
+.thumb.active{
+    opacity: 1;
+    border: 2px solid #FF6F61;
+}
+
+.descricao{
+    padding-left: 2.5rem;
+    
+}
+
+.descricao h4{
+    font-size: 3.12rem;
+    font-weight: bold;
+    margin: 0;
+    padding-bottom: 0;
+    
+}
+
+.descricao h3{
+    font-size: 3.12rem;
+    color: rgba(0, 128, 128, 1);
+}
+
+.descricao p{
+    font-size: 1.56rem;
+    color:rgba(0, 0, 0, 0.7);
+    padding-bottom: 1.5rem;
+    padding-top: 0;
+    margin: 0;
+}
+
+.especifacoesPersona{
+    display: flex !important;
+    justify-content: flex-start !important;
+    gap: 1rem !important;
+    padding-top: 0.5rem;
+    padding-bottom: 2.5rem;
+}
+
+.especifacoesPersona div{
+    border: 2px solid rgba(255, 218, 185, 1);
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 1.5rem;
+    width: 9.45rem;
+    height: 4.4rem;
+}
+
+.especifacoesPersona div p{
+    font-size: 1.5rem;
+    font-weight: 550;
+    color:#000;
+}
+.especifacoesPersona div h6{
+    font-size: 0.8125rem;
+    color: rgba(0, 0, 0, 0.7);
+}
+.textoPersona{
+    font-size: 1rem !important;
+    width: 43rem;
+    height: 8rem;
+}
+
+.botoesPersona{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    gap: 3rem;
+    padding-top: 1rem;
+}
+
+.botoesPersona a,
+.botoesPersona i{
+    text-decoration: none;
+    font-size: 1.5rem;
+}
+
+.botoesPersona button{
+    border: none;
+    border-radius: 1rem;
+    width: 18rem;
+    height: 4rem;
+}
+
+.corBum{
+    background-color: #FF6F61;
+}
+
+.corBum a,
+.corBum i{
+    color: #F9F7F7;
+}
+
+.corBois{
+    border: 1px solid #008080 !important;
+    background-color: transparent;
+}
+
+.corBois:hover{
+    background-color: #008080;
+}
+
+.corBois a,
+.corBois i{ 
+    color:#008080;
+}
+
+.corBois:hover a{ 
+    color:#fff;
+}
+
+.corBois:hover i{
+    color:#FFF;
+}
+

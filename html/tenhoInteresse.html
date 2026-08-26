@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <title>Encontrar Pet</title>
+</head>
+
+<body>
+    <nav>
+
+        <ul class="nav">
+            <div class="inicio">
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="#">MiAu</a>
+                </li>
+            </div>
+            <div class="fim">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Encontrar Pet</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="sejaVoluntario.html">Seja Voluntário</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="muralNoticia.html">Mural de Notícias</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="sobreONG.html">Sobre a ONG</a>
+                </li>
+
+            </div>
+        </ul>
+
+    </nav>
+    <main>
+
+        <div class="box-informacao">
+
+            <div>
+                <div class="galeria">
+                    <div class="carrossel-principal">
+
+                        <img id="imagemPrincipal" src="img/imagemPET.png" alt="Foto do pet" class="foto-principal">
+                        <div class="div-seta">
+                            <button class="seta seta-esquerda" id="btnAnterior"
+                                aria-label="Foto anterior">&#10094;</button>
+                            <button class="seta seta-direita" id="btnProximo"
+                                aria-label="Próxima foto">&#10095;</button>
+                        </div>
+                    </div>
+                    <div class="miniaturas">
+                        <img src="img/imagemPET.png" class="thumb active" data-full="img/imagemPET.png">
+                        <img src="img/imagemPET.png" class="thumb" data-full="img/imagemPET.png">
+                        <img src="img/imagemPET.png" class="thumb" data-full="img/imagemPET.png">
+                        <img src="img/imagemPET.png" class="thumb" data-full="img/imagemPET.png">
+                    </div>
+                </div>
+            </div>
+            <div class="descricao">
+
+                <h4>Mike</h4>
+                <p>Vira-lata(SRD)</p>
+
+                <div class="especifacoesPersona">
+                    <div>
+                        <h6>ESPÉCIE:</h6>
+                        <p>Cachorro</p>
+                    </div>
+
+                    <div>
+                        <h6>IDADE:</h6>
+                        <p>9 anos</p>
+                    </div>
+
+                    <div>
+                        <h6>PORTE:</h6>
+                        <p>Pequeno</p>
+                    </div>
+
+                    <div>
+                        <h6>PESO:</h6>
+                        <p>99Kg</p>
+                    </div>
+                </div>
+                <h3>Personalidade</h3>
+                <p class="textoPersona">Cachorro calvo Cachorro calvoCachorro calvoCachorro calvoCachorro calvoCachorro
+                    calvo
+                    Cachorro calvoCachorro calvoCachorro calvoCachorro calvoCachorro calvoCachorro calvo
+                    Cachorro calvoCachorro calvoCachorro calvoCachorro calvoCachorro calvoCachorro calvo
+                    Cachorro calvoCachorro calvoCachorro calvoCachorro calvoCachorro calvoCachorro calvo
+                    Cachorro calvoCachorro calvoCachorro calvoCachorro calvoCachorro calvoCachorro calvo</p>
+
+                <div class="botoesPersona">
+                    <button class="corBum"><a href=""><i class="fa-solid fa-paw"></i> Adotar Mike</a></button>
+                    <button class="corBois"><a href=""><i class="bi bi-chat-right"></i> Tirar Dúvidas</a></button>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="rodape">
+
+        <div class="item-rodape">
+            <h3>MiAu</h3>
+            <p>Frase de efeito da MiAu a criar</p>
+            <div>
+                <i class="bi bi-camera i-rodape"></i>
+                <i class="bi bi-envelope i-rodape"></i>
+            </div>
+            <div class="pRo">
+                <p class="p-rodape"><i class="bi bi-c-circle"></i> 2026 MiAu - Centro Universitário UNIPAM</p>
+            </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+    <script src="tenhoInteresse.js"></script>
+</body>
+
+</html>
