@@ -11,7 +11,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    <title>Encontrar Pet</title>
+    <title>Início MiAu - Adote Seu Companheiro</title>
 </head>
 
 <body>
@@ -20,18 +20,18 @@
         <ul class="nav">
             <div class="inicio">
                 <li class="nav-item">
-                    <a class="nav-link disabled" href="#">MiAu</a>
+                    <a class="nav-link disabled">MiAu</a>
                 </li>
             </div>
             <div class="fim">
                 <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="home.html">Início</a>
+                    <a class="nav-link active" aria-current="page" href="#">Início</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" aria-current="page" href="encontrarPET.html">Encontrar Pet</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" href="sejaVoluntario.html">Seja Voluntário</a>
+                    <a class="nav-link" href="sejaVoluntario.html">Seja Voluntário</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="muralNoticia.html">Mural de Notícias</a>
@@ -39,12 +39,38 @@
                 <li class="nav-item">
                     <a class="nav-link" href="sobreONG.html">Sobre a ONG</a>
                 </li>
-
             </div>
         </ul>
 
     </nav>
-    <main>
+
+
+    <main class="mainHome">
+
+        <div class="boxHome">
+            <div class="texto">
+                <h1>Seu novo <h1 class="textoHome"> melhor amigo</h1>
+                    <h1>está a um </h1><h1>clique!</h1>
+                    <p>Conectamos você a ONG para encontrar o companheiro ideal e ficar por dentro de todas as notícias
+                        da Só Patas. Ajude esse projeto e dê um lar cheio de amor para quem mais precisa</p>
+
+                    <div class="botoesHome">
+                        <button type="button" class="corBum">
+                            <a href="encontrarPET.html"> <i class="bi bi-search"></i>  Encontrar Meu Pet</a>
+                        </button>
+
+                        <button type="button" class="corBois">
+                            <a href="sobreONG.html"><i class="bi bi-chat-right-text"></i>  Conhecer a ONG</a>
+                        </button>
+                    </div>
+            </div>
+
+        
+                <div>
+                    <img id="imagemPrincipalHome" src="img/imagemPET.png" alt="Foto do pet" class="foto-principalHome">
+                </div>
+           
+        </div>
 
     </main>
 
@@ -64,7 +90,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
-    <script src="sejaVoluntario.js"></script>
+    <script src="home.js"></script>
 </body>
 
 </html>
