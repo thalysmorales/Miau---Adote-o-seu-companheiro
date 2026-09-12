@@ -2,6 +2,7 @@
     font-size: 16px;
     font-family: 'Quicksand', Arial, Helvetica, sans-serif;
 }
+
 .nav {
     display: flex;
     justify-content: space-between;
@@ -16,7 +17,7 @@
     justify-content: center;
     text-align: center;
     color: #FFDAB9 !important;
-    font-weight: bold;
+    font-weight: 600;
     font-size: 18px;
     padding-left: 1.5rem;
 }
@@ -121,7 +122,7 @@ main {
     color: #FFDAB9;
 }
 
-.divCards{
+.divCards {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 2rem;
@@ -130,18 +131,18 @@ main {
     padding-bottom: 8rem;
 }
 
-.card{
+.card {
     border: none;
 }
 
-.card img{
+.card img {
     border-top-left-radius: 1.5rem;
     border-top-right-radius: 1.5rem;
     width: 16rem;
     height: 16rem;
 }
 
-.card-body{
+.card-body {
     border: 1px solid #FFDAB9;
     border-bottom-left-radius: 1.5rem !important;
     border-bottom-right-radius: 1.5rem !important;
@@ -150,14 +151,14 @@ main {
     height: auto;
 }
 
-.card-body h5{
+.card-body h5 {
     font-size: 20px;
     font-weight: bold;
     color: #000;
     margin: 0;
 }
 
-.card-body p{
+.card-body p {
     font-size: 14px;
     font-weight: 500;
     color: #000;
@@ -165,7 +166,7 @@ main {
     padding-bottom: 1rem;
 }
 
-.card-body a{
+.card-body a {
     border-radius: 0.5rem;
     color: #fff;
     background-color: #FF6F61;
@@ -176,12 +177,12 @@ main {
     width: 14rem;
 }
 
-.btn-primary:hover{
+.btn-primary:hover {
     background-color: #008080 !important;
     color: #fff !important;
 }
 
-.botao{
+.botao {
     display: flex;
     justify-content: center;
     text-align: center;
@@ -232,139 +233,140 @@ main {
     padding: 0.5rem;
 }
 
-@media (max-width:768px){
+@media (max-width:768px) {
 
-  .main-encontrar {
-    margin: 1rem;
-}
+    .main-encontrar {
+        margin: 1rem;
+    }
 
-.texto h3 {
-    font-size: 36px;
-}
+    .texto h3 {
+        font-size: 36px;
+    }
 
-.texto p {
-    text-align: justify;
-}
+    .texto p {
+        text-align: justify;
+    }
 
-.botoes {
-    gap: 0.5rem;
-    font-size: 13px;
-}
+    .botoes {
+        gap: 0.5rem;
+        font-size: 13px;
+    }
 
-.botoes button {
-    border-radius: 1rem;
-    width: 76px;
-    height: 25px;
-}
+    .botoes button {
+        border-radius: 1rem;
+        width: 76px;
+        height: 25px;
+    }
 
-.botoes p {
-    padding-top: 0.8rem;
-    padding-left: 0.4rem;
-    font-size: 26px;
-}
+    .botoes p {
+        padding-top: 0.8rem;
+        padding-left: 0.4rem;
+        font-size: 26px;
+    }
 
-.divCards{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
-    margin-left: 2.5rem;
-    margin-right: 2.5rem;
-    padding-bottom: 8rem;
-}
+    .divCards {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+        margin-left: 2.5rem;
+        margin-right: 2.5rem;
+        padding-bottom: 8rem;
+    }
 
-.card img{
-    border-top-left-radius: 1.5rem;
-    border-top-right-radius: 1.5rem;
-    width: 16rem;
-    height: 16rem;
-}
+    .card img {
+        border-top-left-radius: 1.5rem;
+        border-top-right-radius: 1.5rem;
+        width: 16rem;
+        height: 16rem;
+    }
 
-.card-body{
-    border-bottom-left-radius: 1.5rem !important;
-    border-bottom-right-radius: 1.5rem !important;
-    padding-bottom: 1.5rem;
-    width: 16rem;
-    height: auto;
-}
+    .card-body {
+        border-bottom-left-radius: 1.5rem !important;
+        border-bottom-right-radius: 1.5rem !important;
+        padding-bottom: 1.5rem;
+        width: 16rem;
+        height: auto;
+    }
 
-.card-body h5{
-    font-size: 20px;
-}
+    .card-body h5 {
+        font-size: 20px;
+    }
 
-.card-body p{
-    font-size: 14px;
-    font-weight: 500;
-    padding-bottom: 1rem;
-}
+    .card-body p {
+        font-size: 14px;
+        font-weight: 500;
+        padding-bottom: 1rem;
+    }
 
-.card-body a{
-    border-radius: 0.5rem;
-    font-size: 16px;
-    width: 14rem;
-}
-.rodape {
-    border-top-left-radius: 2rem;
-    border-top-left-radius: 2rem;
-    padding-top: 3.5rem;
-}
+    .card-body a {
+        border-radius: 0.5rem;
+        font-size: 16px;
+        width: 14rem;
+    }
 
-.item-rodape {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
+    .rodape {
+        border-top-left-radius: 2rem;
+        border-top-left-radius: 2rem;
+        padding-top: 3.5rem;
+    }
 
-.item-rodape h3 {
-    font-size: 36px;
-}
+    .item-rodape {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
 
-.item-rodape p {
-    font-size: 20px;
-}
+    .item-rodape h3 {
+        font-size: 36px;
+    }
 
-.p-rodape,
-.p-rodape i {
-    font-size: 14px !important;
-}
+    .item-rodape p {
+        font-size: 20px;
+    }
 
-.pRo {
-    padding-bottom: 1rem;
-    padding-top: 1rem;
-}
+    .p-rodape,
+    .p-rodape i {
+        font-size: 14px !important;
+    }
 
-.i-rodape {
-    font-size: 30px;
-    padding: 0.5rem;
-}
-    
+    .pRo {
+        padding-bottom: 1rem;
+        padding-top: 1rem;
+    }
+
+    .i-rodape {
+        font-size: 30px;
+        padding: 0.5rem;
+    }
+
 }
 
 /*
 TENHO INTERESSE
 */
 
-.box-informacao{
-    margin:0;
+.box-informacao {
+    margin: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     padding-top: 3rem;
-    padding-bottom: 5.5rem;
+    padding-bottom: 4rem;
 }
 
-.galeria{
+.galeria {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
 }
 
-.carrossel-principal{
+.carrossel-principal {
     position: relative;
-    width: 27.6rem; 
+    width: 27.6rem;
 }
 
-.foto-principal{
+.foto-principal {
     width: 27.6rem;
     height: 27.6rem;
     aspect-ratio: 1 / 1;
@@ -372,8 +374,8 @@ TENHO INTERESSE
     border-radius: 1rem;
 }
 
-.div-seta{
-     position: absolute;
+.div-seta {
+    position: absolute;
     top: 0;
     left: 0;
     right: 0;
@@ -386,8 +388,8 @@ TENHO INTERESSE
 
 }
 
-.seta{
-   background-color: rgba(255, 255, 255, 0.2);
+.seta {
+    background-color: rgba(255, 255, 255, 0.2);
     border: none;
     width: 2rem;
     height: 2rem;
@@ -400,26 +402,26 @@ TENHO INTERESSE
     pointer-events: auto;
 }
 
-.seta:hover{
-    background-color: rgb(255, 255, 255,0.5);
+.seta:hover {
+    background-color: rgb(255, 255, 255, 0.5);
 }
 
-.seta-esquerda{
+.seta-esquerda {
     left: 8px;
 }
 
-.seta-direita{
+.seta-direita {
     right: 8px;
 }
 
-.miniaturas{
+.miniaturas {
     display: flex;
     gap: 2.5rem;
     margin: 0;
     padding-top: 0;
 }
 
-.thumb{
+.thumb {
     width: 5rem;
     height: 5rem;
     object-fit: cover;
@@ -430,42 +432,42 @@ TENHO INTERESSE
     border: 2px solid transparent;
 }
 
-.thumb:hover{
+.thumb:hover {
     opacity: 1;
 }
 
-.thumb.active{
+.thumb.active {
     opacity: 1;
     border: 2px solid #FF6F61;
 }
 
-.descricao{
+.descricao {
     padding-left: 2.5rem;
-    
+
 }
 
-.descricao h4{
+.descricao h4 {
     font-size: 3.12rem;
     font-weight: bold;
     margin: 0;
     padding-bottom: 0;
-    
+
 }
 
-.descricao h3{
+.descricao h3 {
     font-size: 3.12rem;
     color: rgba(0, 128, 128, 1);
 }
 
-.descricao p{
+.descricao p {
     font-size: 1.56rem;
-    color:rgba(0, 0, 0, 0.7);
+    color: rgba(0, 0, 0, 0.7);
     padding-bottom: 1.5rem;
     padding-top: 0;
     margin: 0;
 }
 
-.especifacoesPersona{
+.especifacoesPersona {
     display: flex !important;
     justify-content: flex-start !important;
     gap: 1rem !important;
@@ -473,7 +475,7 @@ TENHO INTERESSE
     padding-bottom: 2.5rem;
 }
 
-.especifacoesPersona div{
+.especifacoesPersona div {
     border: 2px solid rgba(255, 218, 185, 1);
     border-radius: 0.5rem;
     display: flex;
@@ -485,22 +487,24 @@ TENHO INTERESSE
     height: 4.4rem;
 }
 
-.especifacoesPersona div p{
+.especifacoesPersona div p {
     font-size: 1.5rem;
     font-weight: 550;
-    color:#000;
+    color: #000;
 }
-.especifacoesPersona div h6{
+
+.especifacoesPersona div h6 {
     font-size: 0.8125rem;
     color: rgba(0, 0, 0, 0.7);
 }
-.textoPersona{
+
+.textoPersona {
     font-size: 1rem !important;
     width: 43rem;
     height: 8rem;
 }
 
-.botoesPersona{
+.botoesPersona {
     display: flex;
     justify-content: center;
     text-align: center;
@@ -509,46 +513,255 @@ TENHO INTERESSE
 }
 
 .botoesPersona a,
-.botoesPersona i{
+.botoesPersona i {
     text-decoration: none;
     font-size: 1.5rem;
 }
 
-.botoesPersona button{
+.botoesPersona button {
     border: none;
     border-radius: 1rem;
     width: 18rem;
     height: 4rem;
 }
 
-.corBum{
+.corBum {
     background-color: #FF6F61;
 }
 
 .corBum a,
-.corBum i{
+.corBum i {
     color: #F9F7F7;
 }
 
-.corBois{
+.corBois {
     border: 1px solid #008080 !important;
     background-color: transparent;
 }
 
-.corBois:hover{
+.corBois:hover {
     background-color: #008080;
 }
 
 .corBois a,
-.corBois i{ 
-    color:#008080;
+.corBois i {
+    color: #008080;
 }
 
-.corBois:hover a{ 
-    color:#fff;
+.corBois:hover a {
+    color: #fff;
 }
 
-.corBois:hover i{
-    color:#FFF;
+.corBois:hover i {
+    color: #FFF;
 }
 
+.box-informacao-ptd {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 7rem;
+    padding-bottom: 5.5rem;
+}
+
+.box-informacao-ptd h4 {
+    font-size: 1.9rem;
+    font-weight: bold;
+    padding-left: 0.8rem;
+    padding-top: 1rem;
+}
+
+.icon-letra {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.75rem;
+    height: 2.75rem;
+    font-size: 1rem;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.3);
+    color: rgba(255, 219, 88, 1);
+    font-weight: bold;
+    margin-right: 8px;
+}
+
+.vacinas {
+    background-color: rgba(0, 128, 128, 1);
+    color: #fff;
+    border-radius: 1rem;
+    display: flex !important;
+    flex-direction: column !important;
+    padding: 1.5rem;
+    padding-right: 6rem;
+    padding-left: 2rem;
+
+}
+
+.fa-solid.fa-syringe.um {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgba(255, 219, 88, 1) !important;
+    font-size: 1.9rem !important;
+    padding-top: 1.5rem;
+}
+
+.iconeAjuste {
+    display: flex;
+    gap: 4rem;
+}
+
+.iconeAjustei {
+    font-size: 7rem !important;
+    color: rgba(255, 255, 255, 0.1);
+    padding-left: 10rem;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    padding-top: 1rem;
+}
+
+.informacoes-saude h6 {
+    font-size: 1.25rem;
+    font-weight: 500;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+.informacoes-saude p {
+    font-size: 1rem;
+    padding-top: 0;
+    margin-top: 0;
+    padding-left: 3.5rem;
+}
+
+.contato {
+    background-color: rgba(255, 218, 185, 0.3);
+    border: 0.1rem solid rgba(255, 218, 185, 0.3);
+    border-radius: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 2.2rem;
+    padding-left: 2rem;
+    padding-right: 6rem;
+}
+
+.contato a {
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.9);
+}
+
+.iconeContato {
+    background-color: rgba(255, 255, 255, 1);
+    color: rgba(255, 111, 97, 1);
+    font-weight: bold;
+    margin-right: 8px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.75rem;
+    height: 2.75rem;
+    font-size: 1rem;
+    border-radius: 50%;
+}
+
+.organizaicone {
+    display: flex;
+    margin: 0;
+    padding-top: 1.5rem;
+}
+
+.organizaicone h6 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+.organizaicone p {
+    font-weight: 500;
+    font-size: 1rem;
+    padding-top: 0;
+    margin-top: 0;
+}
+
+/*Home*/
+
+.mainHome {
+    padding-top: 1rem;
+    margin-left: 7rem;
+    margin-right: 4rem;
+
+}
+
+.boxHome {
+    display: flex;
+    gap: 5rem;
+    padding-bottom: 10rem;
+}
+
+.texto h1 {
+    font-size: 4.5rem;
+    font-weight: bold;
+    color: rgba(0, 0, 0, 1);
+    text-align: left;
+    margin-left: 1.5rem;
+}
+
+.texto p {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.7);
+    text-align: left;
+    margin-right: 10rem;
+    padding-top: 1rem;
+    margin-left: 1.5rem;
+}
+
+.textoHome {
+    color: rgba(255, 111, 97, 1) !important;
+    position: relative;
+    display: inline-block;
+}
+
+.textoHome::after {
+    content: '';
+    position: absolute;
+    left: -2%;
+    right: -2%;
+    bottom: -0.8rem;
+    height: 1rem;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 20' preserveAspectRatio='none'%3E%3Cpath d='M5,8 Q150,25 295,8' stroke='%23FFDB58' stroke-width='15' stroke-linecap='round' fill='none'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.botoesHome {
+    display: flex;
+    justify-content: flex-start;
+    text-align: center;
+    gap: 1.5rem;
+    padding-top: 0.5rem;
+}
+
+.botoesHome a,
+.botoesHome i {
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.botoesHome button {
+    border: none;
+    border-radius: 1.5rem;
+    width: 19.37rem;
+    height: 4.43rem;
+}
+
+.foto-principalHome {
+    width: 37rem;
+    height: 38rem;
+    border-radius: 1.5rem;
+}
