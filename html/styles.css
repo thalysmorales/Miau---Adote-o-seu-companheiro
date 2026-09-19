@@ -691,15 +691,15 @@ TENHO INTERESSE
 
 .mainHome {
     padding-top: 1rem;
-    margin-left: 7rem;
-    margin-right: 4rem;
-
 }
 
 .boxHome {
     display: flex;
-    gap: 5rem;
+    justify-content: center;
+    align-items: center;
     padding-bottom: 10rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
 }
 
 .texto h1 {
@@ -761,7 +761,7 @@ TENHO INTERESSE
 }
 
 .foto-principalHome {
-    width: 37rem;
+    width: 38rem;
     height: 38rem;
     border-radius: 1.5rem;
 }
