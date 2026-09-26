@@ -3,12 +3,18 @@
     font-family: 'Quicksand', Arial, Helvetica, sans-serif;
 }
 
+
 .nav {
     display: flex;
     justify-content: space-between;
     text-align: center;
     padding: 1rem;
-    background-color: #F9F7F7 !important;
+    background-color: #094B4B!important;
+}
+.logoOfc{
+    width: 7.6875rem;
+    height: 3.3125rem;
+    object-fit: cover;
 }
 
 .inicio a {
@@ -33,15 +39,15 @@
 }
 
 .nav-link {
-    color: black !important;
+    color: #fff !important;
 }
 
 .nav-link:hover {
-    color: #FF6F61 !important;
+    color: #FFDB58 !important;
 }
 
 .nav-link.active {
-    color: #FF6F61 !important;
+    color: #FFDB58 !important;
 }
 
 html,
@@ -59,6 +65,12 @@ body {
 
 main {
     flex: 1;
+     background-image: 
+        linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.8)),
+        url("img/padrao-fundo.svg");
+   background-position: center 100px center;
+    background-size: cover; 
+    
 }
 
 /*Encontrar pet*/
@@ -88,17 +100,18 @@ main {
 }
 
 .botoes button {
-    border: none;
+    border: 1px solid #FFDAB9;
     border-radius: 1rem;
     color: #000;
-    background-color: #FFDAB9;
-    width: 76px;
-    height: 25px;
+    background-color: transparent;
+    width: 5.9375rem;
+    height: 1.9375rem;
 }
 
 .botaoFiltro {
     background-color: transparent !important;
     color: rgb(0, 0, 0, 0.7);
+    border: none !important;
 }
 
 .botaoFiltro i {
@@ -140,6 +153,7 @@ main {
     border-top-right-radius: 1.5rem;
     width: 16rem;
     height: 16rem;
+    object-fit: cover;
 }
 
 .card-body {
@@ -191,9 +205,7 @@ main {
 
 
 .rodape {
-    background-color: #1C1C1C;
-    border-top-left-radius: 2rem;
-    border-top-left-radius: 2rem;
+    background-color: #094B4B;
     padding-top: 3.5rem;
 }
 
@@ -212,6 +224,7 @@ main {
 
 .item-rodape p {
     color: #fff;
+    padding-top: 0.8rem ;
     font-size: 20px;
     font-weight: 500;
 }
@@ -367,8 +380,8 @@ TENHO INTERESSE
 }
 
 .foto-principal {
-    width: 27.6rem;
-    height: 27.6rem;
+    width: 30.3125rem;
+    height: 30.3125rem;
     aspect-ratio: 1 / 1;
     object-fit: cover;
     border-radius: 1rem;
@@ -764,4 +777,5 @@ TENHO INTERESSE
     width: 38rem;
     height: 38rem;
     border-radius: 1.5rem;
+    object-fit: cover;
 }
