@@ -49,17 +49,29 @@
         </div>
 
         <div class="botoes">
-            <button>Todos</button>
-            <button>Cachorro</button>
-            <button>Gato</button>
-            <button>Filhote</button>
-            <button>Adulto</button>
+            <button data-tipo="todos">Todos</button>
+            <button data-tipo="especie" data-valor="cachorro">Cachorro</button>
+            <button data-tipo="especie" data-valor="gato">Gato</button>
+            <button data-tipo="idade" data-valor="filhote">Filhote</button>
+            <button data-tipo="idade" data-valor="adulto">Adulto</button>
             <p>|</p>
             <button class="botaoFiltro"><i class="bi bi-funnel"></i>Filtros</button>
         </div>
 
+        <div id="painelFiltros" class="painel-filtros" hidden>
+            <fieldset>
+                <legend>Porte</legend>
+                <label><input type="radio" name="porte" value="pequeno"> Pequeno</label>
+                <label><input type="radio" name="porte" value="medio"> Médio</label>
+                <label><input type="radio" name="porte" value="grande"> Grande</label>
+            </fieldset>
+            <button type="button" id="limparFiltros">Limpar filtros</button>
+        </div>
+
+        <div id="filtrosAtivos" class="filtros-ativos"></div>
+
         <div class="divCards">
-            <div class="card" style="width: 18rem;">
+            <div class="card" style="width: 18rem;" data-especie="cachorro" data-idade="adulto" data-porte="medio">
                 <img src="img/C6/img1.jpg" class="card-img-top" alt="Fotografia do animal que está para adoção">
                 <div class="card-body">
                     <h5 class="card-title">Mike</h5>
@@ -70,7 +82,7 @@
                 </div>
             </div>
 
-            <div class="card" style="width: 18rem;">
+            <div class="card" style="width: 18rem;" data-especie="cachorro" data-idade="adulto" data-porte="pequeno">
                 <img src="img/C4/img1.jpg" class="card-img-top" alt="Fotografia do animal que está para adoção">
                 <div class="card-body">
                     <h5 class="card-title">Mike</h5>
@@ -82,7 +94,7 @@
             </div>
 
 
-            <div class="card" style="width: 18rem;">
+            <div class="card" style="width: 18rem;" data-especie="cachorro" data-idade="adulto" data-porte="pequeno">
                 <img src="img/c5/img4.jpg" class="card-img-top" alt="Fotografia do animal que está para adoção">
                 <div class="card-body">
                     <h5 class="card-title">Mike</h5>
@@ -94,7 +106,7 @@
             </div>
 
 
-            <div class="card" style="width: 18rem;">
+            <div class="card" style="width: 18rem;" data-especie="cachorro" data-idade="adulto" data-porte="pequeno">
                 <img src="img/C3/img2.jpg" class="card-img-top" alt="Fotografia do animal que está para adoção">
                 <div class="card-body">
                     <h5 class="card-title">Mike</h5>
@@ -106,7 +118,7 @@
             </div>
 
 
-            <div class="card" style="width: 18rem;">
+            <div class="card" style="width: 18rem;" data-especie="gato" data-idade="adulto" data-porte="pequeno">
                 <img src="img/G2/img1.jpg" class="card-img-top" alt="Fotografia do animal que está para adoção">
                 <div class="card-body">
                     <h5 class="card-title">Mike</h5>
@@ -117,7 +129,7 @@
                 </div>
             </div>
 
-            <div class="card" style="width: 18rem;">
+            <div class="card" style="width: 18rem;" data-especie="gato" data-idade="adulto" data-porte="pequeno">
                 <img src="img/G1/img3.jpg" class="card-img-top" alt="Fotografia do animal que está para adoção">
                 <div class="card-body">
                     <h5 class="card-title">Mike</h5>
@@ -128,7 +140,7 @@
                 </div>
             </div>
 
-            <div class="card" style="width: 18rem;">
+            <div class="card" style="width: 18rem;" data-especie="gato" data-idade="adulto" data-porte="pequeno">
                 <img src="img/G3/img3.jpg" class="card-img-top" alt="Fotografia do animal que está para adoção">
                 <div class="card-body">
                     <h5 class="card-title">Mike</h5>
@@ -139,7 +151,7 @@
                 </div>
             </div>
 
-            <div class="card" style="width: 18rem;">
+            <div class="card" style="width: 18rem;" data-especie="gato" data-idade="adulto" data-porte="pequeno">
                 <img src="img/G4/img4.jpg" class="card-img-top" alt="Fotografia do animal que está para adoção">
                 <div class="card-body">
                     <h5 class="card-title">Mike</h5>
@@ -151,6 +163,7 @@
             </div>
 
         </div>
+        <p id="semResultado" class="text-center" hidden>Nenhum pet encontrado com esses filtros.</p>
 
     </main>
     <footer class="rodape">
