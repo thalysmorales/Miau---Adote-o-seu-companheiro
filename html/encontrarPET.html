@@ -43,113 +43,125 @@
     </nav>
 
     <main class="main-encontrar">
-        <div class="texto">
+        <div class="textoEncontrar">
             <h3>Encontrar Pet</h3>
             <p>Use os filtros para encontrar seu companheiro ideal.</p>
         </div>
 
         <div class="botoes">
-            <button>Todos</button>
-            <button>Cachorro</button>
-            <button>Gato</button>
-            <button>Filhote</button>
-            <button>Adulto</button>
+            <button data-tipo="todos">Todos</button>
+            <button data-tipo="especie" data-valor="cachorro">Cachorro</button>
+            <button data-tipo="especie" data-valor="gato">Gato</button>
+            <button data-tipo="idade" data-valor="filhote">Filhote</button>
+            <button data-tipo="idade" data-valor="adulto">Adulto</button>
             <p>|</p>
             <button class="botaoFiltro"><i class="bi bi-funnel"></i>Filtros</button>
         </div>
 
-        <div class="divCards">
-            <div class="card" style="width: 18rem;">
-                <img src="img/C6/img1.jpg" class="card-img-top" alt="Fotografia do animal que está para adoção">
-                <div class="card-body">
-                    <h5 class="card-title">Mike</h5>
-                    <p class="card-text">2 anos - Pequeno </p>
-                    <div class="botao">
-                        <a href="tenhoInteresse.html" class="btn btn-primary">Tenho Interesse</a>
+        <div id="painelFiltros" class="painel-filtros" hidden>
+            <fieldset>
+                <legend>Porte</legend>
+                <label><input type="radio" name="porte" value="pequeno"> Pequeno</label>
+                <label><input type="radio" name="porte" value="medio"> Médio</label>
+                <label><input type="radio" name="porte" value="grande"> Grande</label>
+            </fieldset>
+            <button type="button" id="limparFiltros">Limpar filtros</button>
+        </div>
+        <div id="filtrosAtivos" class="filtros-ativos"></div>
+
+        <div class="alinhamentoEP">
+            <div class="divCards">
+                <div class="card" style="width: 16rem;">
+                    <img src="img/C6/img1.jpg" class="card-img-top" alt="Fotografia do animal que está para adoção">
+                    <div class="card-body">
+                        <h5 class="card-title">Mike</h5>
+                        <p class="card-text">2 anos - Pequeno </p>
+                        <div class="botao">
+                            <a href="tenhoInteresse.html" class="btn btn-primary">Tenho Interesse</a>
+                        </div>
                     </div>
                 </div>
-            </div>
-
-            <div class="card" style="width: 18rem;">
-                <img src="img/C4/img1.jpg" class="card-img-top" alt="Fotografia do animal que está para adoção">
-                <div class="card-body">
-                    <h5 class="card-title">Mike</h5>
-                    <p class="card-text">2 anos - Pequeno </p>
-                    <div class="botao">
-                        <a href="tenhoInteresse.html" class="btn btn-primary">Tenho Interesse</a>
+                <div class="card" style="width: 16rem;">
+                    <img src="img/C4/img1.jpg" class="card-img-top" alt="Fotografia do animal que está para adoção">
+                    <div class="card-body">
+                        <h5 class="card-title">Mike</h5>
+                        <p class="card-text">2 anos - Pequeno </p>
+                        <div class="botao">
+                            <a href="tenhoInteresse.html" class="btn btn-primary">Tenho Interesse</a>
+                        </div>
                     </div>
                 </div>
-            </div>
 
 
-            <div class="card" style="width: 18rem;">
-                <img src="img/c5/img4.jpg" class="card-img-top" alt="Fotografia do animal que está para adoção">
-                <div class="card-body">
-                    <h5 class="card-title">Mike</h5>
-                    <p class="card-text">2 anos - Pequeno </p>
-                    <div class="botao">
-                        <a href="tenhoInteresse.html" class="btn btn-primary">Tenho Interesse</a>
+                <div class="card" style="width: 16rem">
+                    <img src="img/c5/img4.jpg" class="card-img-top" alt="Fotografia do animal que está para adoção">
+                    <div class="card-body">
+                        <h5 class="card-title">Mike</h5>
+                        <p class="card-text">2 anos - Pequeno </p>
+                        <div class="botao">
+                            <a href="tenhoInteresse.html" class="btn btn-primary">Tenho Interesse</a>
+                        </div>
                     </div>
                 </div>
-            </div>
 
 
-            <div class="card" style="width: 18rem;">
-                <img src="img/C3/img2.jpg" class="card-img-top" alt="Fotografia do animal que está para adoção">
-                <div class="card-body">
-                    <h5 class="card-title">Mike</h5>
-                    <p class="card-text">2 anos - Pequeno </p>
-                    <div class="botao">
-                        <a href="tenhoInteresse.html" class="btn btn-primary">Tenho Interesse</a>
+                <div class="card" style="width: 16rem;">
+                    <img src="img/C3/img2.jpg" class="card-img-top" alt="Fotografia do animal que está para adoção">
+                    <div class="card-body">
+                        <h5 class="card-title">Mike</h5>
+                        <p class="card-text">2 anos - Pequeno </p>
+                        <div class="botao">
+                            <a href="tenhoInteresse.html" class="btn btn-primary">Tenho Interesse</a>
+                        </div>
                     </div>
                 </div>
-            </div>
 
 
-            <div class="card" style="width: 18rem;">
-                <img src="img/G2/img1.jpg" class="card-img-top" alt="Fotografia do animal que está para adoção">
-                <div class="card-body">
-                    <h5 class="card-title">Mike</h5>
-                    <p class="card-text">2 anos - Pequeno </p>
-                    <div class="botao">
-                        <a href="tenhoInteresse.html" class="btn btn-primary">Tenho Interesse</a>
+                <div class="card" style="width: 16rem;">
+                    <img src="img/G2/img1.jpg" class="card-img-top" alt="Fotografia do animal que está para adoção">
+                    <div class="card-body">
+                        <h5 class="card-title">Mike</h5>
+                        <p class="card-text">2 anos - Pequeno </p>
+                        <div class="botao">
+                            <a href="tenhoInteresse.html" class="btn btn-primary">Tenho Interesse</a>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="card" style="width: 18rem;">
-                <img src="img/G1/img3.jpg" class="card-img-top" alt="Fotografia do animal que está para adoção">
-                <div class="card-body">
-                    <h5 class="card-title">Mike</h5>
-                    <p class="card-text">2 anos - Pequeno </p>
-                    <div class="botao">
-                        <a href="tenhoInteresse.html" class="btn btn-primary">Tenho Interesse</a>
+                <div class="card" style="width: 16rem;">
+                    <img src="img/G1/img3.jpg" class="card-img-top" alt="Fotografia do animal que está para adoção">
+                    <div class="card-body">
+                        <h5 class="card-title">Mike</h5>
+                        <p class="card-text">2 anos - Pequeno </p>
+                        <div class="botao">
+                            <a href="tenhoInteresse.html" class="btn btn-primary">Tenho Interesse</a>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="card" style="width: 18rem;">
-                <img src="img/G3/img3.jpg" class="card-img-top" alt="Fotografia do animal que está para adoção">
-                <div class="card-body">
-                    <h5 class="card-title">Mike</h5>
-                    <p class="card-text">2 anos - Pequeno </p>
-                    <div class="botao">
-                        <a href="tenhoInteresse.html" class="btn btn-primary">Tenho Interesse</a>
+                <div class="card" style="width: 16rem;">
+                    <img src="img/G3/img3.jpg" class="card-img-top" alt="Fotografia do animal que está para adoção">
+                    <div class="card-body">
+                        <h5 class="card-title">Mike</h5>
+                        <p class="card-text">2 anos - Pequeno </p>
+                        <div class="botao">
+                            <a href="tenhoInteresse.html" class="btn btn-primary">Tenho Interesse</a>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="card" style="width: 18rem;">
-                <img src="img/G4/img4.jpg" class="card-img-top" alt="Fotografia do animal que está para adoção">
-                <div class="card-body">
-                    <h5 class="card-title">Mike</h5>
-                    <p class="card-text">2 anos - Pequeno </p>
-                    <div class="botao">
-                        <a href="tenhoInteresse.html" class="btn btn-primary">Tenho Interesse</a>
+                <div class="card" style="width: 16rem;">
+                    <img src="img/G4/img4.jpg" class="card-img-top" alt="Fotografia do animal que está para adoção">
+                    <div class="card-body">
+                        <h5 class="card-title">Mike</h5>
+                        <p class="card-text">2 anos - Pequeno </p>
+                        <div class="botao">
+                            <a href="tenhoInteresse.html" class="btn btn-primary">Tenho Interesse</a>
+                        </div>
                     </div>
                 </div>
-            </div>
 
+            </div>
         </div>
 
     </main>
