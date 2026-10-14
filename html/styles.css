@@ -562,6 +562,79 @@ main {
 
 }
 
+/* ===== Filtros ===== */
+.botoes button.ativo {
+    background-color: #008080;
+    color: #fff;
+}
+
+.painel-filtros {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin: 1rem 0;
+    padding: 1rem 1.5rem;
+    border: 1px solid #FFDAB9;
+    border-radius: 1rem;
+    font-size: 14px;
+}
+
+.painel-filtros fieldset {
+    border: none;
+    padding: 0;
+    margin: 0;
+    width: auto;
+}
+
+.painel-filtros legend {
+    font-size: 16px;
+    font-weight: bold;
+    color: #008080;
+}
+
+.painel-filtros label {
+    display: block;
+}
+
+.painel-filtros input {
+    accent-color: #008080;
+    margin-right: 0.4rem;
+}
+
+#limparFiltros {
+    align-self: flex-end;
+    border: none;
+    background: none;
+    color: #FF6F61;
+    font-weight: bold;
+}
+
+.filtros-ativos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin: 1rem 0;
+}
+
+.chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.2rem 0.8rem;
+    border: 1px solid #FFDAB9;
+    border-radius: 1rem;
+    font-size: 13px;
+    color: #008080;
+}
+
+.chip button {
+    border: none;
+    background: none;
+    padding: 0;
+    color: #FF6F61;
+    font-weight: bold;
+}
+
 /*
 TENHO INTERESSE
 */
