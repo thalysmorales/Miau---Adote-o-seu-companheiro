@@ -778,4 +778,388 @@ TENHO INTERESSE
     height: 38rem;
     border-radius: 1.5rem;
     object-fit: cover;
+} 
+* RUAN 
+:root {
+  --botao: #ff6b60;
+  --texto: #222222;
+  --borda: #555555;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+  font-family: "Quicksand", system-ui, sans-serif;
+  color: var(--texto);
+}
+
+.login {
+  width: 100%;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 52px;
+}
+
+/* Logo */
+.logo {
+  width: 160px;
+  max-width: 60%;
+  height: auto;
+  display: block;
+}
+
+/* Formulário */
+.login-form {
+  width: 100%;
+  max-width: 212px;
+  display: flex;
+  flex-direction: column;
+}
+
+.login-form label {
+  margin: 0 0 4px 5px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.login-form input {
+  width: 100%;
+  height: 36px;
+  margin-bottom: 12px;
+  padding: 0 10px;
+  border: 1px solid var(--borda);
+  border-radius: 8px;
+  background: #fff;
+  font: inherit;
+  font-size: 0.9rem;
+}
+
+.login-form input:focus {
+  outline: 2px solid var(--botao);
+  outline-offset: 1px;
+}
+
+.login-form button {
+  align-self: center;
+  margin-top: 14px;
+  padding: 6px 18px;
+  border: none;
+  border-radius: 6px;
+  background: var(--botao);
+  color: #fff;
+  font: inherit;
+  font-size: 0.65rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.25);
+  transition: filter 0.15s;
+}
+
+.login-form button:hover {
+  filter: brightness(0.95);
+}
+
+.login-form button:focus-visible {
+  outline: 2px solid var(--texto);
+  outline-offset: 2px;
+}  
+
+/* ==========================================================
+   MiAu - styles.css (tela cheia, escala com o tamanho da tela)
+   Para trocar as cores, altere só as variáveis abaixo.
+   ========================================================== */
+
+:root {
+    --verde-escuro: #0b4c49;
+    --fundo: #f3f3f3;
+    --pata: #e4e4e4;
+    --texto: #333333;
+    --coral: #ff6b5f;
+    --coral-escuro: #ee564a;
+    --amarelo: #ffd43b;
+    --branco: #ffffff;
+    --texto-rodape: #9fbdba;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Tudo usa rem, então a página inteira cresce junto com a tela.
+   Se achar pequeno, aumente o 1.15vw (ex.: 1.4vw). Se achar grande, diminua (ex.: 1vw). */
+html {
+    font-size: clamp(15px, 1.15vw, 26px);
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    max-width: none;
+    min-height: 100vh;
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;      /* faz menu, conteúdo e rodapé ocuparem a largura toda */
+    justify-content: flex-start;
+    font-family: "Quicksand", Arial, sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--texto);
+    background: var(--fundo);
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+:focus-visible {
+    outline: 3px solid var(--amarelo);
+    outline-offset: 3px;
+}
+
+/* Garante largura total nas 3 partes da página */
+.menu,
+.voluntario,
+.rodape {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    align-self: stretch;
+}
+
+/* ---------- Menu ---------- */
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem 2rem;
+    padding: 0.9rem 3rem;
+    background: var(--verde-escuro);
+}
+
+.menu .inicio {
+    display: inline-flex;
+}
+
+.menu .logoOfc {
+    display: block;
+    height: 2.6rem;
+    width: auto;
+}
+
+.menu .nav.fim {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 0.5rem 2.25rem;
+}
+
+.menu .nav-link {
+    padding: 0.25rem 0;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--branco);
+    transition: color 0.15s;
+}
+
+.menu .nav-link:hover,
+.menu .nav-link.active {
+    color: var(--amarelo);
+}
+
+/* ---------- Conteúdo (ocupa toda a tela) ---------- */
+.voluntario {
+    position: relative;
+    flex: 1 0 auto;
+    display: flex;
+    align-items: stretch;
+    padding: 2rem 3rem;
+    overflow: hidden;
+    background: var(--fundo);
+}
+
+.voluntario-conteudo {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.voluntario-conteudo h1 {
+    margin: 0 0 0.5rem;
+    font-size: 2.3rem;
+    font-weight: 700;
+    line-height: 1.2;
+    color: var(--texto);
+}
+
+.voluntario-conteudo p {
+    margin: 0 0 1.25rem;
+    font-size: 1.1rem;
+    color: var(--texto);
+}
+
+/* Imagem com tamanho fixo de 1165 x 287 px.
+   Em telas menores ela diminui, mantendo a proporção. */
+.foto-voluntarios {
+    display: block;
+    flex: 0 0 auto;
+    width: 1165px;
+    max-width: 100%;
+    height: auto;
+    aspect-ratio: 1165 / 287;
+    object-fit: cover;
+    margin: 0 auto 1.5rem;
+    border-radius: 0.7rem;
+}
+
+.btn-ajude {
+    padding: 0.9rem 2.5rem;
+    font-family: inherit;
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--branco);
+    background: var(--coral);
+    border: 0;
+    border-radius: 0.6rem;
+    cursor: pointer;
+    transition: background-color 0.15s, transform 0.15s;
+}
+
+.btn-ajude:hover {
+    background: var(--coral-escuro);
+    transform: translateY(-1px);
+}
+
+/* ---------- Patinhas do fundo ---------- */
+.pata {
+    position: absolute;
+    z-index: 0;
+    width: 10rem;
+    height: 10rem;
+    background: var(--pata);
+    pointer-events: none;
+    -webkit-mask: var(--icone-pata) center / contain no-repeat;
+    mask: var(--icone-pata) center / contain no-repeat;
+
+    --icone-pata: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cellipse cx='12' cy='28' rx='7' ry='10'/%3E%3Cellipse cx='25' cy='15' rx='7' ry='11'/%3E%3Cellipse cx='39' cy='15' rx='7' ry='11'/%3E%3Cellipse cx='52' cy='28' rx='7' ry='10'/%3E%3Cpath d='M32 30c-9 0-18 10-18 19 0 7 6 10 11 9 3-1 5-2 7-2s4 1 7 2c5 1 11-2 11-9 0-9-9-19-18-19z'/%3E%3C/svg%3E");
+}
+
+.p1 { top: 3%;     left: 14%;  transform: rotate(-20deg); }
+.p2 { top: 8%;     right: 8%;  transform: rotate(20deg);  width: 12rem; height: 12rem; }
+.p3 { top: 40%;    left: -2%;  transform: rotate(10deg); }
+.p4 { bottom: 3%;  left: 6%;   transform: rotate(15deg);  width: 13rem; height: 13rem; }
+.p5 { bottom: 4%;  right: 12%; transform: rotate(-10deg); width: 13rem; height: 13rem; }
+.p6 { top: 42%;    right: -3%; transform: rotate(-25deg); width: 9rem;  height: 9rem; }
+.p7 { top: 2%;     left: 52%;  transform: rotate(30deg);  width: 6rem;  height: 6rem; }
+
+/* ---------- Rodapé ---------- */
+.rodape {
+    padding: 1.25rem 1rem 0.9rem;
+    background: var(--verde-escuro);
+    color: var(--branco);
+}
+
+.item-rodape {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.35rem;
+    text-align: center;
+}
+
+.item-rodape .logoOfc {
+    height: 2.2rem;
+    width: auto;
+}
+
+.item-rodape p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+.i-rodape {
+    margin: 0 0.4rem;
+    font-size: 1.3rem;
+    color: var(--branco);
+    transition: color 0.15s;
+}
+
+.item-rodape a:hover .i-rodape {
+    color: var(--amarelo);
+}
+
+.pRo {
+    margin-top: 0.15rem;
+}
+
+.item-rodape .p-rodape {
+    font-size: 0.75rem;
+    color: var(--texto-rodape);
+}
+
+/* ---------- Celular ---------- */
+@media (max-width: 767.98px) {
+    html {
+        font-size: 16px;
+    }
+
+    .menu {
+        justify-content: center;
+        padding: 1rem;
+    }
+
+    .menu .nav.fim {
+        justify-content: center;
+        gap: 0.25rem 1.25rem;
+    }
+
+    .voluntario {
+        padding: 2rem 1rem;
+    }
+
+    .voluntario-conteudo h1 {
+        font-size: 1.7rem;
+    }
+
+    .foto-voluntarios {
+        aspect-ratio: 16 / 9;
+    }
+
+    .btn-ajude {
+        width: 100%;
+    }
+
+    .pata {
+        opacity: 0.6;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+        transition: none !important;
+    }
 }
