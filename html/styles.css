@@ -35,8 +35,9 @@
 
 .fim {
     display: flex;
-    gap: 0.4rem;
+    gap: 3.4rem;
     padding-top: 1rem;
+    padding-right: 3rem;
 }
 
 .nav-link {
@@ -199,8 +200,51 @@ main {
     font-weight: bold;
 }
 
-/*Encontrar pet*/
 
+.rodape {
+    background-color: #094B4B;
+    padding-top: 3.5rem;
+}
+
+.item-rodape {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.item-rodape h3 {
+    color: #FFDAB9;
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.item-rodape p {
+    color: #fff;
+    padding-top: 0.8rem;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.p-rodape,
+.p-rodape i {
+    color: #99A1AF !important;
+    font-size: 14px !important;
+}
+
+.pRo {
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+}
+
+.i-rodape {
+    color: #F9F7F7 !important;
+    font-size: 30px;
+    padding: 0.5rem;
+}
+
+
+/*Encontrar pet*/
 
 .main-encontrar {
     padding: 1rem;
@@ -409,50 +453,6 @@ main {
     text-align: center;
 }
 
-
-
-.rodape {
-    background-color: #094B4B;
-    padding-top: 3.5rem;
-}
-
-.item-rodape {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.item-rodape h3 {
-    color: #FFDAB9;
-    font-size: 36px;
-    font-weight: bold;
-}
-
-.item-rodape p {
-    color: #fff;
-    padding-top: 0.8rem;
-    font-size: 20px;
-    font-weight: 500;
-}
-
-.p-rodape,
-.p-rodape i {
-    color: #99A1AF !important;
-    font-size: 14px !important;
-}
-
-.pRo {
-    padding-bottom: 1rem;
-    padding-top: 1rem;
-}
-
-.i-rodape {
-    color: #F9F7F7 !important;
-    font-size: 30px;
-    padding: 0.5rem;
-}
-
 @media (max-width:768px) {
 
     .main-encontrar {
@@ -562,82 +562,8 @@ main {
 
 }
 
-/* ===== Filtros ===== */
-.botoes button.ativo {
-    background-color: #008080;
-    color: #fff;
-}
 
-.painel-filtros {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2rem;
-    margin: 1rem 0;
-    padding: 1rem 1.5rem;
-    border: 1px solid #FFDAB9;
-    border-radius: 1rem;
-    font-size: 14px;
-}
-
-.painel-filtros fieldset {
-    border: none;
-    padding: 0;
-    margin: 0;
-    width: auto;
-}
-
-.painel-filtros legend {
-    font-size: 16px;
-    font-weight: bold;
-    color: #008080;
-}
-
-.painel-filtros label {
-    display: block;
-}
-
-.painel-filtros input {
-    accent-color: #008080;
-    margin-right: 0.4rem;
-}
-
-#limparFiltros {
-    align-self: flex-end;
-    border: none;
-    background: none;
-    color: #FF6F61;
-    font-weight: bold;
-}
-
-.filtros-ativos {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-    margin: 1rem 0;
-}
-
-.chip {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.4rem;
-    padding: 0.2rem 0.8rem;
-    border: 1px solid #FFDAB9;
-    border-radius: 1rem;
-    font-size: 13px;
-    color: #008080;
-}
-
-.chip button {
-    border: none;
-    background: none;
-    padding: 0;
-    color: #FF6F61;
-    font-weight: bold;
-}
-
-/*
-TENHO INTERESSE
-*/
+/*TENHO INTERESSE*/
 
 .box-informacao {
     margin: 0;
@@ -645,93 +571,14 @@ TENHO INTERESSE
     justify-content: center;
     align-items: center;
     padding-top: 3rem;
-    padding-bottom: 4rem;
-}
-
-.galeria {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-}
-
-.carrossel-principal {
-    position: relative;
-    width: 27.6rem;
+    padding-bottom: 4.5rem;
 }
 
 .foto-principal {
     width: 30.3125rem;
-    height: 30.3125rem;
-    aspect-ratio: 1 / 1;
+    height: 32.4rem;
     object-fit: cover;
     border-radius: 1rem;
-}
-
-.div-seta {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 8px;
-    pointer-events: none;
-
-}
-
-.seta {
-    background-color: rgba(255, 255, 255, 0.2);
-    border: none;
-    width: 2rem;
-    height: 2rem;
-    border-radius: 50%;
-    cursor: pointer;
-    font-size: 14px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    pointer-events: auto;
-}
-
-.seta:hover {
-    background-color: rgb(255, 255, 255, 0.5);
-}
-
-.seta-esquerda {
-    left: 8px;
-}
-
-.seta-direita {
-    right: 8px;
-}
-
-.miniaturas {
-    display: flex;
-    gap: 2.5rem;
-    margin: 0;
-    padding-top: 0;
-}
-
-.thumb {
-    width: 5rem;
-    height: 5rem;
-    object-fit: cover;
-    border-radius: 1rem;
-    cursor: pointer;
-    opacity: 0.6;
-    transition: opacity 0.2s ease, border 0.2s ease;
-    border: 2px solid transparent;
-}
-
-.thumb:hover {
-    opacity: 1;
-}
-
-.thumb.active {
-    opacity: 1;
-    border: 2px solid #FF6F61;
 }
 
 .descricao {
@@ -979,3 +826,6 @@ TENHO INTERESSE
     padding-top: 0;
     margin-top: 0;
 }
+
+/*MEUS ANIMAIS*/
+/*NOVOCADASTRO*/
