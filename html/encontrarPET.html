@@ -52,32 +52,28 @@
 
         <div class="botoes">
             <button data-tipo="todos">Todos</button>
-            <button data-tipo="especie" data-valor="cachorro">Cachorro</button>
-            <button data-tipo="especie" data-valor="gato">Gato</button>
-            <button data-tipo="idade" data-valor="filhote">Filhote</button>
-            <button data-tipo="idade" data-valor="adulto">Adulto</button>
             <p>|</p>
             <button class="botaoFiltro"><i class="bi bi-funnel"></i>Filtros</button>
+            <div class="filtro-fechada botoes">
+                <button data-tipo="especie" data-valor="cachorro">Cachorro</button>
+                <button data-tipo="especie" data-valor="gato">Gato</button>
+                <button data-tipo="idade" data-valor="adulto">Adulto</button>
+                <button data-tipo="idade" data-valor="filhote">Filhote</button>
+                <button data-tipo="porte" data-valor="grande">Grande</button>
+                <button data-tipo="porte" data-valor="medio">Médio</button>
+                <button data-tipo="porte" data-valor="pequeno">Pequeno</button>
+                <button data-tipo="genero" data-valor="femea">Fêmea</button>
+                <button data-tipo="genero" data-valor="macho">Macho</button>
+                <button type="button" id="limparFiltros">Limpar filtros</button>
+            </div>
         </div>
-
-        <div id="painelFiltros" class="painel-filtros" hidden>
-            <fieldset>
-                <legend>Porte</legend>
-                <label><input type="radio" name="porte" value="pequeno"> Pequeno</label>
-                <label><input type="radio" name="porte" value="medio"> Médio</label>
-                <label><input type="radio" name="porte" value="grande"> Grande</label>
-            </fieldset>
-            <button type="button" id="limparFiltros">Limpar filtros</button>
-        </div>
-
-        <div id="filtrosAtivos" class="filtros-ativos"></div>
         <div class="alinhamentoEP">
             <div class="divCards">
-                <div class="card" style="width: 16rem;" data-especie="cachorro" data-idade="adulto" data-porte="medio">
+                <div class="card" style="width: 16rem;" data-especie="cachorro" data-idade="adulto" data-porte="medio" data-genero="macho">
                     <img src="img/C6/img1.jpg" class="card-img-top" alt="Fotografia do animal que está para adoção">
                     <div class="card-body">
-                        <h5 class="card-title">Mike</h5>
-                        <p class="card-text">2 anos - Pequeno </p>
+                        <h5 class="card-title">Juca</h5>
+                        <p class="card-text">Macho - Médio </p>
                         <div class="botao">
                             <a href="tenhoInteresse.html" class="btn btn-primary">Tenho Interesse</a>
                         </div>
@@ -85,11 +81,11 @@
                 </div>
 
                 <div class="card" style="width: 16rem;" data-especie="cachorro" data-idade="adulto"
-                    data-porte="pequeno">
+                    data-porte="grande" data-genero="macho">
                     <img src="img/C4/img1.jpg" class="card-img-top" alt="Fotografia do animal que está para adoção">
                     <div class="card-body">
-                        <h5 class="card-title">Mike</h5>
-                        <p class="card-text">2 anos - Pequeno </p>
+                        <h5 class="card-title">Bob</h5>
+                        <p class="card-text">Macho - Grande </p>
                         <div class="botao">
                             <a href="tenhoInteresse.html" class="btn btn-primary">Tenho Interesse</a>
                         </div>
@@ -97,64 +93,64 @@
                 </div>
 
                 <div class="card" style="width: 16rem;" data-especie="cachorro" data-idade="adulto"
-                    data-porte="pequeno">
+                    data-porte="grande" data-genero="femea">
                     <img src="img/c5/img4.jpg" class="card-img-top" alt="Fotografia do animal que está para adoção">
                     <div class="card-body">
-                        <h5 class="card-title">Mike</h5>
-                        <p class="card-text">2 anos - Pequeno </p>
+                        <h5 class="card-title">Belinha</h5>
+                        <p class="card-text">Fêmea - Grande </p>
                         <div class="botao">
                             <a href="tenhoInteresse.html" class="btn btn-primary">Tenho Interesse</a>
                         </div>
                     </div>
                 </div>
 
-                <div class="card" style="width: 16rem;" data-especie="cachorro" data-idade="adulto"
-                    data-porte="pequeno">
+                <div class="card" style="width: 16rem;" data-especie="cachorro" data-idade="filhote"
+                    data-porte="pequeno" data-genero="femea">
                     <img src="img/C3/img2.jpg" class="card-img-top" alt="Fotografia do animal que está para adoção">
                     <div class="card-body">
-                        <h5 class="card-title">Mike</h5>
-                        <p class="card-text">2 anos - Pequeno </p>
+                        <h5 class="card-title">Mel</h5>
+                        <p class="card-text">Fêmea - Pequeno </p>
                         <div class="botao">
                             <a href="tenhoInteresse.html" class="btn btn-primary">Tenho Interesse</a>
                         </div>
                     </div>
                 </div>
 
-                <div class="card" style="width: 16rem;" data-especie="gato" data-idade="adulto" data-porte="pequeno">
+                <div class="card" style="width: 16rem;" data-especie="gato" data-idade="adulto" data-porte="pequeno" data-genero="macho">
                     <img src="img/G2/img1.jpg" class="card-img-top" alt="Fotografia do animal que está para adoção">
                     <div class="card-body">
                         <h5 class="card-title">Mike</h5>
-                        <p class="card-text">2 anos - Pequeno </p>
+                        <p class="card-text">Macho - Pequeno </p>
                         <div class="botao">
                             <a href="tenhoInteresse.html" class="btn btn-primary">Tenho Interesse</a>
                         </div>
                     </div>
                 </div>
-                <div class="card" style="width: 16rem;" data-especie="gato" data-idade="adulto" data-porte="pequeno">
+                <div class="card" style="width: 16rem;" data-especie="gato" data-idade="filhote" data-porte="pequeno" data-genero="macho">
                     <img src="img/G1/img3.jpg" class="card-img-top" alt="Fotografia do animal que está para adoção">
                     <div class="card-body">
-                        <h5 class="card-title">Mike</h5>
-                        <p class="card-text">2 anos - Pequeno </p>
+                        <h5 class="card-title">Pudim</h5>
+                        <p class="card-text">Macho - Pequeno </p>
                         <div class="botao">
                             <a href="tenhoInteresse.html" class="btn btn-primary">Tenho Interesse</a>
                         </div>
                     </div>
                 </div>
-                <div class="card" style="width: 16rem;" data-especie="gato" data-idade="adulto" data-porte="pequeno">
+                <div class="card" style="width: 16rem;" data-especie="gato" data-idade="adulto" data-porte="medio" data-genero="femea">
                     <img src="img/G3/img3.jpg" class="card-img-top" alt="Fotografia do animal que está para adoção">
                     <div class="card-body">
-                        <h5 class="card-title">Mike</h5>
-                        <p class="card-text">2 anos - Pequeno </p>
+                        <h5 class="card-title">Floquinha</h5>
+                        <p class="card-text">Fêmea - Médio </p>
                         <div class="botao">
                             <a href="tenhoInteresse.html" class="btn btn-primary">Tenho Interesse</a>
                         </div>
                     </div>
                 </div>
-                <div class="card" style="width: 16rem;" data-especie="gato" data-idade="adulto" data-porte="pequeno">
+                <div class="card" style="width: 16rem;" data-especie="gato" data-idade="filhote" data-porte="pequeno" data-genero="femea">
                     <img src="img/G4/img4.jpg" class="card-img-top" alt="Fotografia do animal que está para adoção">
                     <div class="card-body">
-                        <h5 class="card-title">Mike</h5>
-                        <p class="card-text">2 anos - Pequeno </p>
+                        <h5 class="card-title">Pérola</h5>
+                        <p class="card-text">Fêmea - Pequeno </p>
                         <div class="botao">
                             <a href="tenhoInteresse.html" class="btn btn-primary">Tenho Interesse</a>
                         </div>
@@ -163,8 +159,7 @@
                 </div>
             </div>
         </div>
-        <p id="semResultado" class="text-center" hidden>Nenhum pet encontrado com esses filtros.</p>
-
+        <p id="semResultado" hidden>Nenhum pet encontrado com esses filtros.</p>
     </main>
     <footer class="rodape">
 

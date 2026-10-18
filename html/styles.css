@@ -292,6 +292,8 @@ main {
 .botaoFiltro i {
     padding: 0.2rem;
     color: rgb(0, 0, 0, 0.7) !important;
+    max-width: 8rem;
+    transition: 0.2s;
 }
 
 .botoes :focus {
@@ -310,60 +312,57 @@ main {
     color: #FFDAB9;
 }
 
-/* ===== Filtros ===== */
-.botoes button.ativo {
+/* Filtros  */
+
+.filtro-fechada {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    opacity: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    max-width: 0;
+    transition: all 0.2s;
+}
+
+.filtro-aberta {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    max-width: 50rem;
+    opacity: 1;
+    transition: all 0.2s;
+}
+
+.botaoFiltro-fechada {
+    opacity: 0;
+    max-width: 0;
+    overflow: hidden;
+    padding: 0;
+    transition: all 0.2s;
+}
+
+.card[hidden] {
+    display: none;
+}
+
+.botoes .botao-ativo {
     background-color: #008080;
     color: #fff;
 }
 
-.painel-filtros {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2rem;
-    margin: 1rem 0;
-    padding: 1rem 1.5rem;
-    border: 1px solid #FFDAB9;
-    border-radius: 1rem;
-    font-size: 14px;
+#semResultado {
+    text-align: center;
 }
 
-.painel-filtros fieldset {
+.botoes #limparFiltros {
     border: none;
-    padding: 0;
-    margin: 0;
+    background-color: transparent;
     width: auto;
-}
-
-.painel-filtros legend {
-    font-size: 16px;
-    font-weight: bold;
-    color: #008080;
-}
-
-.painel-filtros label {
-    display: block;
-}
-
-.painel-filtros input {
-    accent-color: #008080;
-    margin-right: 0.4rem;
-}
-
-#limparFiltros {
-    align-self: flex-end;
-    border: none;
-    background: none;
-    color: #FF6F61;
     font-weight: bold;
 }
 
-.filtros-ativos {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-    margin: 1rem 0;
-}
-
+/* Fim */
 .chip {
     display: inline-flex;
     align-items: center;
