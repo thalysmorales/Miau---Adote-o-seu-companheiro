@@ -1162,4 +1162,274 @@ a {
     * {
         transition: none !important;
     }
+} 
+
+:root {
+  --verde-escuro: #064e4b;
+  --verde: #1e9e5a;
+  --verde-claro: #3ccf7a;
+  --amarelo: #ffd23f;
+  --branco: #fff;
+  --texto: #222;
+  --fonte: "Poppins", Arial, sans-serif;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: var(--fonte);
+  background-color: #b4b1b1;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22380%22 height=%22380%22 viewBox=%220 0 380 380%22%3E%3Cg opacity=%220.5%22%3E%3Cg transform=%22translate%2840 45%29 rotate%28-25%29 scale%280.8%29%22%3E%3Cg fill=%22%231e9e5a%22%3E%3Cellipse cx=%220%22 cy=%229%22 rx=%2215%22 ry=%2212%22/%3E%3Cellipse cx=%22-17%22 cy=%22-8%22 rx=%226%22 ry=%228.5%22 transform=%22rotate%28-22 -17 -8%29%22/%3E%3Cellipse cx=%22-6%22 cy=%22-19%22 rx=%226%22 ry=%228.5%22 transform=%22rotate%28-7 -6 -19%29%22/%3E%3Cellipse cx=%226%22 cy=%22-19%22 rx=%226%22 ry=%228.5%22 transform=%22rotate%287 6 -19%29%22/%3E%3Cellipse cx=%2217%22 cy=%22-8%22 rx=%226%22 ry=%228.5%22 transform=%22rotate%2822 17 -8%29%22/%3E%3C/g%3E%3C/g%3E%3Cg transform=%22translate%28150 25%29 rotate%2815%29 scale%280.6%29%22%3E%3Cg fill=%22%231e9e5a%22%3E%3Cellipse cx=%220%22 cy=%229%22 rx=%2215%22 ry=%2212%22/%3E%3Cellipse cx=%22-17%22 cy=%22-8%22 rx=%226%22 ry=%228.5%22 transform=%22rotate%28-22 -17 -8%29%22/%3E%3Cellipse cx=%22-6%22 cy=%22-19%22 rx=%226%22 ry=%228.5%22 transform=%22rotate%28-7 -6 -19%29%22/%3E%3Cellipse cx=%226%22 cy=%22-19%22 rx=%226%22 ry=%228.5%22 transform=%22rotate%287 6 -19%29%22/%3E%3Cellipse cx=%2217%22 cy=%22-8%22 rx=%226%22 ry=%228.5%22 transform=%22rotate%2822 17 -8%29%22/%3E%3C/g%3E%3C/g%3E%3Cg transform=%22translate%28270 60%29 rotate%28-10%29 scale%280.75%29%22%3E%3Cg fill=%22%231e9e5a%22%3E%3Cellipse cx=%220%22 cy=%229%22 rx=%2215%22 ry=%2212%22/%3E%3Cellipse cx=%22-17%22 cy=%22-8%22 rx=%226%22 ry=%228.5%22 transform=%22rotate%28-22 -17 -8%29%22/%3E%3Cellipse cx=%22-6%22 cy=%22-19%22 rx=%226%22 ry=%228.5%22 transform=%22rotate%28-7 -6 -19%29%22/%3E%3Cellipse cx=%226%22 cy=%22-19%22 rx=%226%22 ry=%228.5%22 transform=%22rotate%287 6 -19%29%22/%3E%3Cellipse cx=%2217%22 cy=%22-8%22 rx=%226%22 ry=%228.5%22 transform=%22rotate%2822 17 -8%29%22/%3E%3C/g%3E%3C/g%3E%3Cg transform=%22translate%2895 125%29 rotate%2830%29 scale%280.65%29%22%3E%3Cg fill=%22%231e9e5a%22%3E%3Cellipse cx=%220%22 cy=%229%22 rx=%2215%22 ry=%2212%22/%3E%3Cellipse cx=%22-17%22 cy=%22-8%22 rx=%226%22 ry=%228.5%22 transform=%22rotate%28-22 -17 -8%29%22/%3E%3Cellipse cx=%22-6%22 cy=%22-19%22 rx=%226%22 ry=%228.5%22 transform=%22rotate%28-7 -6 -19%29%22/%3E%3Cellipse cx=%226%22 cy=%22-19%22 rx=%226%22 ry=%228.5%22 transform=%22rotate%287 6 -19%29%22/%3E%3Cellipse cx=%2217%22 cy=%22-8%22 rx=%226%22 ry=%228.5%22 transform=%22rotate%2822 17 -8%29%22/%3E%3C/g%3E%3C/g%3E%3Cg transform=%22translate%28215 140%29 rotate%28-35%29 scale%280.8%29%22%3E%3Cg fill=%22%231e9e5a%22%3E%3Cellipse cx=%220%22 cy=%229%22 rx=%2215%22 ry=%2212%22/%3E%3Cellipse cx=%22-17%22 cy=%22-8%22 rx=%226%22 ry=%228.5%22 transform=%22rotate%28-22 -17 -8%29%22/%3E%3Cellipse cx=%22-6%22 cy=%22-19%22 rx=%226%22 ry=%228.5%22 transform=%22rotate%28-7 -6 -19%29%22/%3E%3Cellipse cx=%226%22 cy=%22-19%22 rx=%226%22 ry=%228.5%22 transform=%22rotate%287 6 -19%29%22/%3E%3Cellipse cx=%2217%22 cy=%22-8%22 rx=%226%22 ry=%228.5%22 transform=%22rotate%2822 17 -8%29%22/%3E%3C/g%3E%3C/g%3E%3Cg transform=%22translate%28335 150%29 rotate%2820%29 scale%280.6%29%22%3E%3Cg fill=%22%231e9e5a%22%3E%3Cellipse cx=%220%22 cy=%229%22 rx=%2215%22 ry=%2212%22/%3E%3Cellipse cx=%22-17%22 cy=%22-8%22 rx=%226%22 ry=%228.5%22 transform=%22rotate%28-22 -17 -8%29%22/%3E%3Cellipse cx=%22-6%22 cy=%22-19%22 rx=%226%22 ry=%228.5%22 transform=%22rotate%28-7 -6 -19%29%22/%3E%3Cellipse cx=%226%22 cy=%22-19%22 rx=%226%22 ry=%228.5%22 transform=%22rotate%287 6 -19%29%22/%3E%3Cellipse cx=%2217%22 cy=%22-8%22 rx=%226%22 ry=%228.5%22 transform=%22rotate%2822 17 -8%29%22/%3E%3C/g%3E%3C/g%3E%3Cg transform=%22translate%2830 225%29 rotate%2810%29 scale%280.7%29%22%3E%3Cg fill=%22%231e9e5a%22%3E%3Cellipse cx=%220%22 cy=%229%22 rx=%2215%22 ry=%2212%22/%3E%3Cellipse cx=%22-17%22 cy=%22-8%22 rx=%226%22 ry=%228.5%22 transform=%22rotate%28-22 -17 -8%29%22/%3E%3Cellipse cx=%22-6%22 cy=%22-19%22 rx=%226%22 ry=%228.5%22 transform=%22rotate%28-7 -6 -19%29%22/%3E%3Cellipse cx=%226%22 cy=%22-19%22 rx=%226%22 ry=%228.5%22 transform=%22rotate%287 6 -19%29%22/%3E%3Cellipse cx=%2217%22 cy=%22-8%22 rx=%226%22 ry=%228.5%22 transform=%22rotate%2822 17 -8%29%22/%3E%3C/g%3E%3C/g%3E%3Cg transform=%22translate%28140 245%29 rotate%28-20%29 scale%280.8%29%22%3E%3Cg fill=%22%231e9e5a%22%3E%3Cellipse cx=%220%22 cy=%229%22 rx=%2215%22 ry=%2212%22/%3E%3Cellipse cx=%22-17%22 cy=%22-8%22 rx=%226%22 ry=%228.5%22 transform=%22rotate%28-22 -17 -8%29%22/%3E%3Cellipse cx=%22-6%22 cy=%22-19%22 rx=%226%22 ry=%228.5%22 transform=%22rotate%28-7 -6 -19%29%22/%3E%3Cellipse cx=%226%22 cy=%22-19%22 rx=%226%22 ry=%228.5%22 transform=%22rotate%287 6 -19%29%22/%3E%3Cellipse cx=%2217%22 cy=%22-8%22 rx=%226%22 ry=%228.5%22 transform=%22rotate%2822 17 -8%29%22/%3E%3C/g%3E%3C/g%3E%3Cg transform=%22translate%28255 255%29 rotate%2825%29 scale%280.65%29%22%3E%3Cg fill=%22%231e9e5a%22%3E%3Cellipse cx=%220%22 cy=%229%22 rx=%2215%22 ry=%2212%22/%3E%3Cellipse cx=%22-17%22 cy=%22-8%22 rx=%226%22 ry=%228.5%22 transform=%22rotate%28-22 -17 -8%29%22/%3E%3Cellipse cx=%22-6%22 cy=%22-19%22 rx=%226%22 ry=%228.5%22 transform=%22rotate%28-7 -6 -19%29%22/%3E%3Cellipse cx=%226%22 cy=%22-19%22 rx=%226%22 ry=%228.5%22 transform=%22rotate%287 6 -19%29%22/%3E%3Cellipse cx=%2217%22 cy=%22-8%22 rx=%226%22 ry=%228.5%22 transform=%22rotate%2822 17 -8%29%22/%3E%3C/g%3E%3C/g%3E%3Cg transform=%22translate%28335 330%29 rotate%28-15%29 scale%280.7%29%22%3E%3Cg fill=%22%231e9e5a%22%3E%3Cellipse cx=%220%22 cy=%229%22 rx=%2215%22 ry=%2212%22/%3E%3Cellipse cx=%22-17%22 cy=%22-8%22 rx=%226%22 ry=%228.5%22 transform=%22rotate%28-22 -17 -8%29%22/%3E%3Cellipse cx=%22-6%22 cy=%22-19%22 rx=%226%22 ry=%228.5%22 transform=%22rotate%28-7 -6 -19%29%22/%3E%3Cellipse cx=%226%22 cy=%22-19%22 rx=%226%22 ry=%228.5%22 transform=%22rotate%287 6 -19%29%22/%3E%3Cellipse cx=%2217%22 cy=%22-8%22 rx=%226%22 ry=%228.5%22 transform=%22rotate%2822 17 -8%29%22/%3E%3C/g%3E%3C/g%3E%3Cg transform=%22translate%2870 330%29 rotate%2835%29 scale%280.6%29%22%3E%3Cg fill=%22%231e9e5a%22%3E%3Cellipse cx=%220%22 cy=%229%22 rx=%2215%22 ry=%2212%22/%3E%3Cellipse cx=%22-17%22 cy=%22-8%22 rx=%226%22 ry=%228.5%22 transform=%22rotate%28-22 -17 -8%29%22/%3E%3Cellipse cx=%22-6%22 cy=%22-19%22 rx=%226%22 ry=%228.5%22 transform=%22rotate%28-7 -6 -19%29%22/%3E%3Cellipse cx=%226%22 cy=%22-19%22 rx=%226%22 ry=%228.5%22 transform=%22rotate%287 6 -19%29%22/%3E%3Cellipse cx=%2217%22 cy=%22-8%22 rx=%226%22 ry=%228.5%22 transform=%22rotate%2822 17 -8%29%22/%3E%3C/g%3E%3C/g%3E%3Cg transform=%22translate%28190 340%29 rotate%28-5%29 scale%280.7%29%22%3E%3Cg fill=%22%231e9e5a%22%3E%3Cellipse cx=%220%22 cy=%229%22 rx=%2215%22 ry=%2212%22/%3E%3Cellipse cx=%22-17%22 cy=%22-8%22 rx=%226%22 ry=%228.5%22 transform=%22rotate%28-22 -17 -8%29%22/%3E%3Cellipse cx=%22-6%22 cy=%22-19%22 rx=%226%22 ry=%228.5%22 transform=%22rotate%28-7 -6 -19%29%22/%3E%3Cellipse cx=%226%22 cy=%22-19%22 rx=%226%22 ry=%228.5%22 transform=%22rotate%287 6 -19%29%22/%3E%3Cellipse cx=%2217%22 cy=%22-8%22 rx=%226%22 ry=%228.5%22 transform=%22rotate%2822 17 -8%29%22/%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  background-size: 100px 100px;
+  color: var(--texto);
+  line-height: 1.7;
+}
+
+img { display: block; max-width: 100%; }
+
+/* ---------- Header ---------- */
+.header {
+  background: var(--verde-escuro);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 14px 6%;
+}
+.header__logo img { height: 52px; width: auto; }
+.header__nav { display: flex; gap: clamp(16px, 3vw, 44px); flex-wrap: wrap; justify-content: center; }
+.header__nav a {
+  color: var(--branco);
+  text-decoration: none;
+  font-family: "Quicksand", var(--fonte);
+  font-size: 0.95rem;
+  font-weight: 600;
+  transition: color .2s;
+}
+.header__nav a.ativo,
+.header__nav a:hover,
+.header__nav a:focus-visible { color: var(--amarelo); }
+
+/* ---------- Container ---------- */
+.container { width: 80%; max-width: 1150px; margin-left: auto; margin-right: auto; }
+
+.container p {
+  font-size: 1.1rem;
+  text-align: justify;
+  padding: 36px 0;
+}
+
+/* ---------- Sobre ---------- */
+.sobre { text-align: center; padding-top: 40px; }
+.sobre__logo { width: clamp(110px, 14vw, 170px); height: auto; margin: 0 auto 6px; }
+.sobre h1 { font-size: clamp(2rem, 4vw, 2.8rem); font-weight: 700; }
+.sobre p { padding: 20px 0 36px; }
+
+/* ---------- Banners (dentro da largura do texto) ---------- */
+.banner {
+  height: clamp(130px, 40vw, 290px);
+  object-fit: cover;
+  border-radius: 12px;
+  background: #808381;
+}
+
+/* ---------- Ajude ---------- */
+.ajude { padding: 40px 0 40px; }
+.ajude__titulo {
+  text-align: center;
+  font-size: clamp(1.4rem, 2.5vw, 1.9rem);
+  font-weight: 700;
+  margin-bottom: 36px;
+}
+.ajude h3 {
+  color: var(--verde);
+  font-size: clamp(1.3rem, 2.4vw, 1.8rem);
+  font-weight: 600;
+  text-decoration: underline;
+  margin: 28px 0 12px;
+}
+.ajude p { padding: 0 0 14px; }
+.ajude ul { padding-left: 32px; font-size: 1.1rem; margin-bottom: 12px; }
+.ajude li { margin-bottom: 4px; }
+
+/* ---------- Botão voluntário (acima do rodapé) ---------- */
+.voluntario {
+  display: flex;
+  justify-content: center;
+  padding: 0 16px 40px;
+  background: var(--branco);
+}
+
+/* ---------- Footer ---------- */
+.footer {
+  background: var(--verde-escuro);
+  color: var(--branco);
+  text-align: center;
+  padding: 40px 16px 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+.botao {
+  background: var(--verde);
+  color: var(--branco);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.2rem;
+  padding: 14px 48px;
+  border-radius: 12px;
+  transition: background .2s;
+}
+.botao:hover { background: var(--verde-claro); }
+.footer__logo { height: 52px; width: auto; }
+.footer p { font-size: 0.85rem; opacity: .85; }
+.footer__redes { display: flex; gap: 18px; margin-top: 4px; }
+.footer__redes a { color: var(--branco); }
+.footer__redes svg { width: 22px; height: 22px; }
+
+/* ---------- Mobile ---------- */
+@media (max-width: 700px) {
+  .header { flex-direction: column; padding: 12px 4%; }
+  .container { width: 90%; }
+  .container p { font-size: 1rem; text-align: left; padding: 24px 0; }
+  .ajude ul { font-size: 1rem; }
+} 
+
+
+
+
+/* Estilos exclusivos da página Mural de Notícias.
+   Carregue DEPOIS do styles.css (header, footer e body vêm de lá). */
+
+/* Fundo desta página: patas grandes e cinza-claras, como no layout */
+body {
+  background-color: #f8f8f8;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22700%22 height=%22700%22 viewBox=%220 0 700 700%22%3E%3Cg transform=%22translate%28110 120%29 rotate%28-20%29 scale%283.6%29%22%3E%3Cg fill=%22%23e3e3e3%22%3E%3Cellipse cx=%220%22 cy=%229%22 rx=%2215%22 ry=%2212%22/%3E%3Cellipse cx=%22-17%22 cy=%22-8%22 rx=%226%22 ry=%228.5%22 transform=%22rotate%28-22 -17 -8%29%22/%3E%3Cellipse cx=%22-6%22 cy=%22-19%22 rx=%226%22 ry=%228.5%22 transform=%22rotate%28-7 -6 -19%29%22/%3E%3Cellipse cx=%226%22 cy=%22-19%22 rx=%226%22 ry=%228.5%22 transform=%22rotate%287 6 -19%29%22/%3E%3Cellipse cx=%2217%22 cy=%22-8%22 rx=%226%22 ry=%228.5%22 transform=%22rotate%2822 17 -8%29%22/%3E%3C/g%3E%3C/g%3E%3Cg transform=%22translate%28440 70%29 rotate%2818%29 scale%283.0%29%22%3E%3Cg fill=%22%23e3e3e3%22%3E%3Cellipse cx=%220%22 cy=%229%22 rx=%2215%22 ry=%2212%22/%3E%3Cellipse cx=%22-17%22 cy=%22-8%22 rx=%226%22 ry=%228.5%22 transform=%22rotate%28-22 -17 -8%29%22/%3E%3Cellipse cx=%22-6%22 cy=%22-19%22 rx=%226%22 ry=%228.5%22 transform=%22rotate%28-7 -6 -19%29%22/%3E%3Cellipse cx=%226%22 cy=%22-19%22 rx=%226%22 ry=%228.5%22 transform=%22rotate%287 6 -19%29%22/%3E%3Cellipse cx=%2217%22 cy=%22-8%22 rx=%226%22 ry=%228.5%22 transform=%22rotate%2822 17 -8%29%22/%3E%3C/g%3E%3C/g%3E%3Cg transform=%22translate%28600 330%29 rotate%28-35%29 scale%284.0%29%22%3E%3Cg fill=%22%23e3e3e3%22%3E%3Cellipse cx=%220%22 cy=%229%22 rx=%2215%22 ry=%2212%22/%3E%3Cellipse cx=%22-17%22 cy=%22-8%22 rx=%226%22 ry=%228.5%22 transform=%22rotate%28-22 -17 -8%29%22/%3E%3Cellipse cx=%22-6%22 cy=%22-19%22 rx=%226%22 ry=%228.5%22 transform=%22rotate%28-7 -6 -19%29%22/%3E%3Cellipse cx=%226%22 cy=%22-19%22 rx=%226%22 ry=%228.5%22 transform=%22rotate%287 6 -19%29%22/%3E%3Cellipse cx=%2217%22 cy=%22-8%22 rx=%226%22 ry=%228.5%22 transform=%22rotate%2822 17 -8%29%22/%3E%3C/g%3E%3C/g%3E%3Cg transform=%22translate%28250 330%29 rotate%2828%29 scale%283.4%29%22%3E%3Cg fill=%22%23e3e3e3%22%3E%3Cellipse cx=%220%22 cy=%229%22 rx=%2215%22 ry=%2212%22/%3E%3Cellipse cx=%22-17%22 cy=%22-8%22 rx=%226%22 ry=%228.5%22 transform=%22rotate%28-22 -17 -8%29%22/%3E%3Cellipse cx=%22-6%22 cy=%22-19%22 rx=%226%22 ry=%228.5%22 transform=%22rotate%28-7 -6 -19%29%22/%3E%3Cellipse cx=%226%22 cy=%22-19%22 rx=%226%22 ry=%228.5%22 transform=%22rotate%287 6 -19%29%22/%3E%3Cellipse cx=%2217%22 cy=%22-8%22 rx=%226%22 ry=%228.5%22 transform=%22rotate%2822 17 -8%29%22/%3E%3C/g%3E%3C/g%3E%3Cg transform=%22translate%2890 540%29 rotate%2812%29 scale%283.2%29%22%3E%3Cg fill=%22%23e3e3e3%22%3E%3Cellipse cx=%220%22 cy=%229%22 rx=%2215%22 ry=%2212%22/%3E%3Cellipse cx=%22-17%22 cy=%22-8%22 rx=%226%22 ry=%228.5%22 transform=%22rotate%28-22 -17 -8%29%22/%3E%3Cellipse cx=%22-6%22 cy=%22-19%22 rx=%226%22 ry=%228.5%22 transform=%22rotate%28-7 -6 -19%29%22/%3E%3Cellipse cx=%226%22 cy=%22-19%22 rx=%226%22 ry=%228.5%22 transform=%22rotate%287 6 -19%29%22/%3E%3Cellipse cx=%2217%22 cy=%22-8%22 rx=%226%22 ry=%228.5%22 transform=%22rotate%2822 17 -8%29%22/%3E%3C/g%3E%3C/g%3E%3Cg transform=%22translate%28430 570%29 rotate%28-15%29 scale%283.8%29%22%3E%3Cg fill=%22%23e3e3e3%22%3E%3Cellipse cx=%220%22 cy=%229%22 rx=%2215%22 ry=%2212%22/%3E%3Cellipse cx=%22-17%22 cy=%22-8%22 rx=%226%22 ry=%228.5%22 transform=%22rotate%28-22 -17 -8%29%22/%3E%3Cellipse cx=%22-6%22 cy=%22-19%22 rx=%226%22 ry=%228.5%22 transform=%22rotate%28-7 -6 -19%29%22/%3E%3Cellipse cx=%226%22 cy=%22-19%22 rx=%226%22 ry=%228.5%22 transform=%22rotate%287 6 -19%29%22/%3E%3Cellipse cx=%2217%22 cy=%22-8%22 rx=%226%22 ry=%228.5%22 transform=%22rotate%2822 17 -8%29%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  background-size: 700px 700px;
+}
+
+.mural {
+  padding: 40px max(6%, calc((100% - 1150px) / 2)) 72px;
+}
+
+.mural__titulo {
+  font-family: "Quicksand", var(--fonte);
+  font-size: clamp(1.6rem, 3vw, 2.1rem);
+  font-weight: 600;
+  margin-bottom: 18px;
+}
+
+/* ---------- Filtros ---------- */
+.filtros { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 40px; }
+
+.filtro {
+  font-family: "Quicksand", var(--fonte);
+  font-size: .72rem;
+  font-weight: 600;
+  padding: 8px 18px;
+  border: 0;
+  border-radius: 8px;
+  background: #ffd9c2;
+  color: var(--texto);
+  cursor: pointer;
+  transition: background .2s, color .2s;
+}
+.filtro:hover { background: #ffc9a8; }
+.filtro--ativo,
+.filtro--ativo:hover { background: #0b8a8a; color: var(--branco); }
+.filtro:focus-visible { outline: 2px solid var(--verde-escuro); outline-offset: 2px; }
+
+/* ---------- Lista ---------- */
+.lista { display: flex; flex-direction: column; }
+
+.noticia {
+  display: flex;
+  gap: 22px;
+  align-items: flex-start;
+  padding: 28px 0;
+  border-bottom: 1px solid #cfcfcf;
+}
+.noticia:first-child { padding-top: 0; }
+.noticia:last-child { border-bottom: 0; }
+
+.noticia__img {
+  flex: 0 0 auto;
+  width: 190px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 8px;
+  background: #cfd8d2;
+}
+
+.noticia__corpo { min-width: 0; }
+
+.noticia__meta {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.tag {
+  font-family: "Quicksand", var(--fonte);
+  font-size: .62rem;
+  font-weight: 600;
+  line-height: 1;
+  padding: 5px 10px;
+  border-radius: 6px;
+}
+.tag--verde { background: #0b8a8a; color: var(--branco); }
+.tag--pessego { background: #ffd9c2; color: var(--texto); }
+
+.data {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-family: "Quicksand", var(--fonte);
+  font-size: .62rem;
+  text-transform: uppercase;
+  color: #444;
+}
+.data svg { width: 11px; height: 11px; fill: none; stroke: currentColor; stroke-width: 2; }
+
+.noticia__titulo {
+  font-family: "Quicksand", var(--fonte);
+  font-size: 1.15rem;
+  font-weight: 600;
+  line-height: 1.3;
+  margin-bottom: 8px;
+}
+
+.noticia__texto {
+  font-family: "Quicksand", var(--fonte);
+  font-size: .8rem;
+  line-height: 1.5;
+  max-width: 70ch;
+  margin-bottom: 10px;
+}
+
+.noticia__link {
+  font-family: "Quicksand", var(--fonte);
+  font-size: .75rem;
+  font-weight: 600;
+  color: #0b6f6f;
+  text-decoration: none;
+}
+.noticia__link:hover,
+.noticia__link:focus-visible { text-decoration: underline; }
+
+/* ---------- Footer (complementa o styles.css) ---------- */
+.footer__redes { gap: 26px; margin-top: 8px; }
+.footer__redes svg { width: 32px; height: 32px; }
+.footer__slogan { font-family: "Quicksand", var(--fonte); font-size: .95rem; opacity: 1; }
+.footer__copy { font-size: .7rem; margin-top: 6px; }
+
+/* ---------- Mobile ---------- */
+@media (max-width: 700px) {
+  .mural { padding: 28px 5% 48px; }
+  .noticia { flex-direction: column; gap: 14px; }
+  .noticia__img { width: 100%; height: auto; aspect-ratio: 4 / 3; }
+  .noticia__texto { font-size: .9rem; }
 }
