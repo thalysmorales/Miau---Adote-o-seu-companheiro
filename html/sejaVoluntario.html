@@ -11,71 +11,55 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    <title>Seja Voluntário - MiAu</title>
+    <title>Encontrar Pet</title>
 </head>
 
 <body>
-    <nav class="menu">
-        <a class="inicio" href="home.html">
-            <img class="logoOfc" src="img/logoofc.png" alt="MiAu - página inicial">
-        </a>
-        <ul class="nav fim">
-            <li class="nav-item">
-                <a class="nav-link" href="home.html">Início</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="encontrarPET.html">Encontrar Pet</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="sejaVoluntario.html">Seja Voluntário</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="muralNoticia.html">Mural de Notícias</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="sobre.html">Sobre a ONG</a>
-            </li>
+    <nav>
+
+        <ul class="nav">
+            <div class="inicio">
+                <li class="nav-item">
+                    <img class="logoOfc" src="img/logoofc.png" alt="Logo do web site- MiAu">
+                </li>
+            </div>
+            <div class="fim">
+                <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="home.html">Início</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="encontrarPET.html">Encontrar Pet</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="sejaVoluntario.html">Seja Voluntário</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="muralNoticia.html">Mural de Notícias</a>
+                </li>
+                 <li class="nav-item">
+                    <a class="nav-link" href="sobreOng.html">Sobre a ONG</a>
+                </li>
+            </div>
         </ul>
+
     </nav>
+    <main>
 
-    <main class="voluntario">
-        <!-- Patinhas decorativas do fundo -->
-        <span class="pata p1" aria-hidden="true"></span>
-        <span class="pata p2" aria-hidden="true"></span>
-        <span class="pata p3" aria-hidden="true"></span>
-        <span class="pata p4" aria-hidden="true"></span>
-        <span class="pata p5" aria-hidden="true"></span>
-        <span class="pata p6" aria-hidden="true"></span>
-        <span class="pata p7" aria-hidden="true"></span>
-
-        <section class="voluntario-conteudo">
-            <h1>Seja Voluntário</h1>
-            <p>
-                Ajude a ONG se voluntariando para auxiliar nas suas atividades!<br>
-                Clique no link abaixo e envie uma mensagem para a ONG e ajude a dar continuidade a esse projeto incrível!
-            </p>
-
-            <img id="fotoVoluntarios" class="foto-voluntarios" src="img/familha.png"
-                alt="Famílias e crianças brincando com cães e gatos em um parque">
-
-            <button type="button" id="btnVoluntario" class="btn-ajude">Ajude nossos amiguinhos peludos</button>
-        </section>
     </main>
 
     <footer class="rodape">
+
         <div class="item-rodape">
-            <img class="logoOfc" src="img/logoofc.png" alt="MiAu">
+            <img class="logoOfc" src="img/logoofc.png" alt="Logo do web site- MiAu">
             <p>Seu novo melhor amigo está a um clique!</p>
             <div>
-                <a href="#" aria-label="Instagram da ONG"><i class="bi bi-camera i-rodape"></i></a>
-                <a href="mailto:contato@miau.org" aria-label="E-mail da ONG"><i class="bi bi-envelope i-rodape"></i></a>
+                <i class="bi bi-camera i-rodape"></i>
+                <i class="bi bi-envelope i-rodape"></i>
             </div>
             <div class="pRo">
                 <p class="p-rodape"><i class="bi bi-c-circle"></i> 2026 MiAu - Centro Universitário UNIPAM</p>
             </div>
-        </div>
     </footer>
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
