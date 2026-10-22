@@ -296,14 +296,14 @@ main {
     transition: 0.2s;
 }
 
-.botoes :focus {
+/* .botoes :focus {
     background-color: #008080 !important;
     color: #fff;
 }
 
 .botoes :focus i {
     color: #fff !important;
-}
+} */
 
 .botoes p {
     padding-top: 0.8rem;
