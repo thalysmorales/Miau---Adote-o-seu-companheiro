@@ -1119,16 +1119,17 @@ main {
 }
 
 .mural-container {
-    max-width: 800px;
+    max-width: 1150px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 50px;
 }
 
 .mural-titulo {
     font-size: 1.5rem;
     font-weight: 600;
     color: #1f2d2d;
-    margin-bottom: 14px;
+    margin-bottom: 20px;
+    align-self: flex-start;
 }
 
 /* Filtros */
@@ -1160,6 +1161,7 @@ main {
 .mural-lista {
     display: flex;
     flex-direction: column;
+
 }
 
 .mural-noticia {
@@ -1210,7 +1212,7 @@ main {
 }
 
 .mural-noticia__titulo {
-    font-size: 1rem;
+    font-size: 1.2rem;
     font-weight: 600;
     color: #1f2d2d;
     margin: 0 0 6px;
@@ -1369,7 +1371,7 @@ main {
     font-size: 0.90rem;
     line-height: 1.6;
     color: #000000;
-    text-align: justify;
+    text-align: center;
     width: 100%;
     margin-bottom: 30px;
 }
