@@ -4,29 +4,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
     <title>LOGIN MIAU ADMINISTRADOR</title>
 </head>
 
 <body>
-    <main>
-        <div>
-            <img src="" alt="Logo MiAu">
-            <form>
-                <div>
-                    <label for="Texto">Login</label>
-                    <input type="text">
-                </div>
-                <div>
-                    <label for="Senha">Senha</label>
-                    <input type="password">
-                </div>
-                <div>
-                    <a href="">Trocar Senha</a>
-                    <button type="submit">Entrar</button>
-                </div>
-            </form>
+    <main style="display:flex;">
+        <div class="corpoLogin">
+                <img src="img/logoofcLogin.png" alt="Logo MiAu">
+                <form>
+                    <div class="itensformu">
+                        <label for="Texto">Login</label>
+                        <input type="text" id="login">
+                    </div>
+                    <div class="itensformu">
+                        <label for="Senha">Senha</label>
+                        <input type="password" id="senha">
+                    </div>
+                    <div class="itensformu">
+                        <a href="">Trocar Senha</a>
+                        <button type="submit">Entrar</button>
+                    </div>
+                </form>
         </div>
     </main>
+    <script src="login.js"></script>
 </body>
 
 </html>
