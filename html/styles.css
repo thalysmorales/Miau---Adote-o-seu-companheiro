@@ -878,26 +878,9 @@ main {
     margin: 20px 0;
 }
 
-/* Responsivo */
-@media (max-width: 576px) {
-    .mural-noticia {
-        flex-direction: column;
-    }
-
-    .mural-noticia__img {
-        width: 100%;
-        height: 180px;
-    }
-}
-
-
-
-
 
 /* ===== SEJA VOLUNTÁRIO ===== */
 .voluntario-principal {
-    font-family: 'Quicksand', sans-serif;
-    background-color: #f8f8f8;
     padding: 40px 0 50px;
 }
 
@@ -954,21 +937,6 @@ main {
     background-color: #e85a4c;
     color: #fff;
     transform: translateY(-2px);
-}
-
-/* Responsivo */
-@media (max-width: 576px) {
-    .voluntario-titulo {
-        font-size: 1.4rem;
-    }
-
-    .voluntario-img {
-        height: 180px;
-    }
-
-    .voluntario-botao {
-        width: 100%;
-    }
 }
 
 
@@ -1087,6 +1055,18 @@ main {
         width: 100%;
         text-align: center;
     }
+   .sobre-bloco__titulo {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #1f6b3a;
+    margin-bottom: 8px;
+}
+.sobre-botao {
+   
+    font-size: 1.25rem;
+    margin-top: 0;
+   
+}
 }
 
 
@@ -1102,6 +1082,7 @@ main {
 .corpoLogin img {
     width: 22.9375rem;
     height: 9.875rem;
+    object-fit: cover;
     padding-bottom: 2rem;
 }
 
@@ -1698,8 +1679,6 @@ main {
 
     }
 
-    /* FILTROS RESPONSIVOS — MOBILE */
-
     .botoes {
         display: flex;
         align-items: center;
@@ -1710,7 +1689,6 @@ main {
         margin: 0;
     }
 
-    /* Botões principais e opções de filtro */
     .botoes button {
         flex: 0 0 auto;
         width: auto;
@@ -1724,21 +1702,18 @@ main {
         white-space: nowrap;
     }
 
-    /* Botão Todos selecionado */
     .botoes button.botao-ativo {
         background-color: #008080;
         color: #fff;
         border-color: #008080;
     }
 
-    /* Separador vertical */
     .botoes>p {
         margin: 0;
         padding: 0;
         font-size: 1rem;
     }
 
-    /* Botão Filtros */
     .botoes .botaoFiltro {
         display: inline-flex;
         align-items: center;
@@ -1750,7 +1725,6 @@ main {
         background-color: transparent;
     }
 
-    /* Área que contém os filtros adicionais */
     .filtro-fechada,
     .filtro-aberta {
         display: flex;
@@ -1764,7 +1738,6 @@ main {
         transition: opacity 0.2s;
     }
 
-    /* Filtros fechados */
     .filtro-fechada {
         opacity: 0;
         overflow: hidden;
@@ -1772,14 +1745,12 @@ main {
         visibility: hidden;
     }
 
-    /* Filtros abertos */
     .filtro-aberta {
         opacity: 1;
         max-height: 30rem;
         visibility: visible;
     }
 
-    /* Botão para fechar/ocultar filtros */
     .botaoFiltro-fechada {
         opacity: 0;
         max-width: 0;
@@ -1788,7 +1759,6 @@ main {
         visibility: hidden;
     }
 
-    /* Botão Limpar filtros */
     .botoes #limparFiltros {
         width: auto;
         border: none;
@@ -1796,26 +1766,6 @@ main {
         color: #FF6F61;
         font-weight: bold;
         white-space: nowrap;
-    }
-
-    /* Fim */
-    .chip {
-        display: inline-flex;
-        align-items: center;
-        gap: 0.4rem;
-        padding: 0.2rem 0.8rem;
-        border: 1px solid #FFDAB9;
-        border-radius: 1rem;
-        font-size: 13px;
-        color: #008080;
-    }
-
-    .chip button {
-        border: none;
-        background: none;
-        padding: 0;
-        color: #FF6F61;
-        font-weight: bold;
     }
 
     .alinhamentoEP,
@@ -1881,7 +1831,7 @@ main {
         background-color: #FF6F61;
         text-align: center;
         border: none;
-        font-size: 16px;
+        font-size: 14px;
         font-weight: bold;
         width: 14rem;
     }
@@ -1896,4 +1846,775 @@ main {
         justify-content: center;
         text-align: center;
     }
+
+
+    /*TENHO INTERESSE*/
+
+    .box-informacao {
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-top: 1.5rem;
+        padding-bottom: 4.5rem;
+    }
+
+    .foto-principal {
+        width: 22.0625rem;
+        height: 22.0625rem;
+        object-fit: cover;
+        border-radius: 1rem;
+    }
+
+    .descricao {
+        padding-left: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .descricao h4 {
+        font-size: 2.25rem;
+        font-weight: bold;
+        margin: 0;
+        padding-top: 0.5rem;
+        padding-bottom: 0;
+
+    }
+
+    .descricao h3 {
+        margin: 0;
+        padding: 1rem;
+        font-size: 1.75rem;
+        color: rgba(0, 128, 128, 1);
+    }
+
+    .descricao p {
+        font-size: 1.125rem;
+        color: rgba(0, 0, 0, 0.7);
+        padding-bottom: 1.5rem;
+        padding-top: 0;
+        margin: 0;
+    }
+
+    .especifacoesPersona {
+        display: grid !important;
+        grid-template-columns: repeat(4, 1fr) !important;
+        gap: 0.25rem !important;
+        padding-bottom: 1rem;
+    }
+
+    .especifacoesPersona div {
+        border: 2px solid rgba(255, 218, 185, 1);
+        background-color: #FFFFFF;
+        border-radius: 0.5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 2.75rem;
+        width: 1rem;
+        height: 1rem;
+    }
+
+    .especifacoesPersona div p {
+        font-size: 1rem;
+        font-weight: 550;
+        color: #000;
+        margin: 0;
+        padding: 0;
+    }
+
+    .especifacoesPersona div h6 {
+        font-size: 0.8125rem;
+        color: rgba(0, 0, 0, 0.7);
+        margin: 0;
+        padding: 0;
+    }
+
+    .textoPersona {
+        font-size: 1rem !important;
+        width: 22.0625rem;
+        height: 16.5rem;
+        padding-bottom: 1rem !important;
+        text-align: justify;
+    }
+
+    .botoesPersona {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        gap: 1rem;
+        padding-top: 0;
+    }
+
+    .botoesPersona button {
+        border: none;
+        border-radius: 1rem;
+        width: 22.0625rem;
+        height: 4rem;
+    }
+
+    .box-informacao-ptd {
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 3rem;
+        padding-bottom: 3rem;
+    }
+
+    .box-informacao-ptd h4 {
+        font-size: 1.5rem;
+        font-weight: bold;
+        padding-left: 0.8rem;
+        padding-top: 1rem;
+    }
+
+    .icon-letra {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 2.75rem;
+        height: 2.75rem;
+        font-size: 1rem;
+        border-radius: 50%;
+        background-color: rgba(255, 255, 255, 0.3);
+        color: rgba(255, 219, 88, 1);
+        font-weight: bold;
+        margin-right: 8px;
+    }
+
+    .vacinas {
+        background-color: rgba(0, 128, 128, 1);
+        color: #fff;
+        border-radius: 1rem;
+        display: flex !important;
+        flex-direction: column !important;
+        padding: 0;
+        padding-right: 0;
+        padding-left: 0;
+
+    }
+
+    .fa-solid.fa-syringe.um {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: rgba(255, 219, 88, 1) !important;
+        font-size: 1.5rem !important;
+        padding-top: 1.5rem;
+        padding-left: 1.5rem;
+    }
+
+    .iconeAjuste {
+        display: flex;
+        gap: 1rem;
+        padding: 1.5rem;
+    }
+
+    .iconeAjustei {
+        font-size: 7rem !important;
+        color: rgba(255, 255, 255, 0.1);
+        padding-left:0.5rem;
+    }
+
+    .info {
+        display: flex;
+        flex-direction: column;
+        padding-top: 1rem;
+        margin: 0;
+    }
+
+    .informacoes-saude h6 {
+        font-size: 1.25rem;
+        font-weight: 600;
+        padding-bottom: 0;
+        margin-bottom: 0;
+        margin: 0;
+    }
+
+    .informacoes-saude p {
+        font-size: 1rem;
+        padding-top: 0;
+        margin-top: 0;
+        padding-left: 3.5rem;
+        margin: 0;
+    }
+
+    .contato {
+        background-color: rgba(255, 218, 185, 0.3);
+        border: 0.1rem solid rgba(255, 218, 185, 0.3);
+        border-radius: 1rem;
+        padding-top: 1rem;
+        padding-bottom: 2.2rem;
+        padding-left: 1.8rem;
+        padding-right: 5rem;
+    }
+
+    .contato a {
+        text-decoration: none;
+        color: rgba(0, 0, 0, 0.9);
+    }
+
+    .iconeContato {
+        background-color: rgba(255, 255, 255, 1);
+        color: rgba(255, 111, 97, 1);
+        font-weight: bold;
+        margin-right: 8px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 2.75rem;
+        height: 2.75rem;
+        font-size: 1rem;
+        border-radius: 50%;
+    }
+
+    .organizaicone {
+        display: flex;
+        margin: 0;
+        padding-top: 1.5rem;
+    }
+
+    .organizaicone h6 {
+        font-size: 1.25rem;
+        font-weight: 600;
+        padding-bottom: 0;
+        margin-bottom: 0;
+    }
+
+    .organizaicone p {
+        font-weight: 500;
+        font-size: 1rem;
+        padding-top: 0;
+        margin-top: 0;
+    }
+
+    /*SEJA VOLUNTÁRIO*/
+
+
+.voluntario-container {
+    max-width: 820px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.voluntario-titulo {
+    padding-left: 1rem;
+    align-self: flex-start;
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #1f2d2d;
+    margin-bottom: 12px;
+}
+
+.voluntario-texto {
+    font-size: 0.9rem;
+    line-height: 1.7;
+    color: #000000;
+    margin-bottom: 24px;
+    text-align: justify;
+    width: 20rem;
+}
+
+.voluntario-figura {
+    width: 100%;
+    margin: 0 0 36px;
+}
+
+.voluntario-img {
+    margin-left: 1rem;
+    width: 20rem;
+    height: 190px;
+    object-fit: cover;
+    border-radius: 1rem;
+    display: block;
+}
+
+.voluntario-botao {
+    display: inline-block;
+    background-color: #ff6f61;
+    color: #fff;
+    font-size: 0.85rem;
+    font-weight: 600;
+    padding: 14px 28px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+.voluntario-botao:hover {
+    background-color: #e85a4c;
+    color: #fff;
+    transform: translateY(-2px);
+}
+
+/*MURAL DE NOTÍCIA*/
+
+.mural-lista {
+    display: flex;
+    flex-direction: column;
+}
+
+.mural-noticia {
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+}
+
+.mural-noticia__img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 6px;
+    flex-shrink: 0;
+}
+
+.mural-noticia__conteudo {
+    flex: 1;
+}
+
+.mural-noticia__meta {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 6px;
+}
+
+.mural-tag {
+    font-size: 0.55rem;
+    font-weight: 600;
+    padding: 2px 8px;
+    border-radius: 4px;
+}
+
+.mural-tag--verde {
+    background-color: #0b7a75;
+    color: #fff;
+}
+
+.mural-tag--laranja {
+    background-color: #ffd9bd;
+    color: #080808;
+}
+
+.mural-data {
+    font-size: 0.55rem;
+    color: #333;
+}
+
+.mural-noticia__titulo {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #1f2d2d;
+    margin: 0 0 6px;
+}
+
+.mural-noticia__texto {
+    font-size: 0.7rem;
+    line-height: 1.4;
+    color: #000000;
+    margin-bottom: 6px;
+    text-align: justify;
+}
+
+.mural-noticia__link {
+    font-size: 0.6rem;
+    color: #0b7a75;
+    text-decoration: none;
+}
+
+.mural-noticia__link:hover {
+    text-decoration: underline;
+}
+
+.mural-divisor {
+    border: none;
+    border-top: 2px solid #ccc;
+    opacity: 1;
+    margin: 20px 0;
+}
+
+/*LOGIN MOBILE*/
+
+.corpoLogin{
+    display: flex;
+    justify-content: center;
+}
+.corpoLogin img {
+    width: 18.35rem;
+    height: auto;
+    padding-bottom: 2rem;
+}
+
+.itensformu input {
+    width: 21.5625rem;
+    height: 3.5rem;
+    border-radius: 1rem;
+    border: 1px solid #000;
+}
+
+.itensformu button {
+    width: 21.5625rem;
+}
+
+
+/*MEUS ANIMAIS*/
+
+.nav .fim.fimMA {
+        display: flex;
+        flex-direction: row;
+        width: auto;
+        padding: 0;
+    }
+
+    .nav .fim.fimMA .nav-item {
+        width: auto;
+    }
+
+    .fimMA button {
+        width: 5rem;
+        height: 2.5rem;
+        font-size: 0.875rem;
+    }
+
+.fimMA button {
+    border: none;
+    width: 6.0625rem;
+    height: 2.75rem;
+    color: #f3f3f3;
+    background-color: #FF6F61;
+    border: none;
+    font-weight: 700;
+    border-radius: 1rem;
+}
+
+.MA {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    gap: 2rem;
+}
+
+.esquerdaMA {
+    display: flex;
+    flex-direction: column;
+}
+
+.topoMAesq {
+    background-color: #FFF;
+    border-radius: 2rem;
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 10.5rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+.topoMAesq h5 {
+    padding-top: 1rem;
+    font-size: 1.125rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+.topoMAesq p {
+    color: #7A5B52;
+    font-size: 0.75rem;
+    padding-top: 0.5rem;
+}
+
+.fimMAesq {
+    display: flex;
+    flex-direction: column;
+}
+
+.fimMAesq a {
+    text-decoration: none;
+}
+
+.fimMAesq button {
+    display: flex;
+    width: 16rem;
+    border: none;
+    border-radius: 1rem;
+    padding: 1rem;
+    background-color: #FF6F61;
+    color: #FFF;
+    font-weight: bold;
+    align-self: flex-start;
+}
+
+.botaoMA2 {
+    color: #000 !important;
+    margin-top: 0.5rem !important;
+    background-color: #99a1af32 !important;
+}
+
+.ativo {
+    background-color: #FF6F61 !important;
+    color: #FFF !important;
+}
+
+.fimMAesq i {
+    padding-right: 1rem;
+    font-weight: bold;
+}
+
+.direitaMA {
+    background-color: #FFF;
+    border-radius: 2rem;
+    padding: 1.5rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    width: 90%;
+}
+
+.divCardsMA {
+    padding-top: 1rem;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+}
+
+.cardMA img {
+    width: 9.5rem !important;
+    height: 10rem;
+}
+
+
+.cardMA {
+    width: 9.5rem !important;
+}
+
+.cardMA img {
+    width: 100%;
+    height: 10rem;
+    object-fit: cover;
+}
+
+.card-bodyMA {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+    border: 1px solid #FFDAB9;
+    border-bottom-left-radius: 1.5rem;
+    border-bottom-right-radius: 1.5rem;
+}
+
+
+.card-bodyMA a {
+    background-color: transparent !important;
+}
+
+.botaoMA {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 100%;
+}
+
+.botaoMA a,
+.botaoMA>button {
+    flex: 1;
+    width: auto;
+    background-color: transparent !important;
+}
+
+.botaoMA button {
+    width: 100%;
+    background-color: #FFF1EB !important;
+    color: #1C3434;
+    font-weight: bold;
+    font-size: 0.875rem;
+    border: none;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+}
+
+.botaoMA3 {
+    color: #FF6F61 !important;
+}
+
+.botaoMA4 {
+    color: #008080 !important;
+}
+
+
+.direitaMA h1 {
+    display: flex;
+    align-self: start;
+    color: #1C3434;
+    font-weight: bold;
+    font-size: 1.875rem;
+
+}
+
+/*NOVOCADASTRO*/
+
+.formMA {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 1rem;
+}
+
+.formMA label {
+    color: #1C3434;
+    font-weight: bold;
+    font-size: 0.875rem;
+}
+
+.divElementosForm {
+    display: flex;
+    flex-direction: column;
+    padding-top: 1rem;
+    padding-bottom: 0.5rem;
+}
+
+.formMA input,
+.formMA select {
+    justify-content: center;
+    display: flex;
+    padding-left: 1rem;
+    border: 2px solid #F0DDD7;
+    border-radius: 1rem;
+    width: 20rem;
+    height: 3.7rem;
+}
+
+.formMA textarea {
+    justify-content: center;
+    display: flex;
+    padding-left: 1rem;
+    padding-top: 0.5rem;
+    border: 2px solid #F0DDD7;
+    border-radius: 1rem;
+    height: 9.375rem;
+}
+
+.formMA button[type="submit"] {
+    border: none;
+    border-radius: 2rem;
+    background-color: #FF6F61;
+    color: #FFF;
+    font-weight: bold;
+    width: 9rem;
+    padding: 1rem;
+    margin-top: 1rem;
+}
+
+.divFormMA {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.7rem;
+}
+
+.caixaUpload {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    width: 100%;
+    height: 10rem;
+    border: 2px dashed #F0DDD7;
+    border-radius: 1rem;
+    color: #7A5B52;
+    font-size: 0.875rem;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.caixaUpload:hover {
+    background-color: rgba(255, 111, 97, 0.05);
+    border-color: #FF6F61;
+}
+
+.caixaUpload i {
+    font-size: 1.1rem;
+}
+
+.previas {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.itemPrevia {
+    position: relative;
+    flex-shrink: 0;
+    width: 6rem;
+    height: 6rem;
+}
+
+.itemPrevia img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0.75rem;
+    border: 1px solid #094B4B;
+}
+
+.removerFoto {
+    position: absolute;
+    top: 0.3rem;
+    right: 0.3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.25rem;
+    height: 1.25rem;
+    min-width: 0;
+    padding: 0;
+    border: none;
+    border-radius: 50%;
+    background-color: rgba(107, 114, 128, 0.85);
+    color: #fff;
+    font-size: 0.8rem;
+    font-weight: bold;
+    line-height: 1;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.removerFoto:hover {
+    background-color: #094B4B;
+}
+
+.caixaUpload.cheia {
+    opacity: 0.5;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+.avisoFotos {
+    color: #FF6F61;
+    font-size: 0.875rem;
+    margin-top: 0.5rem;
+}
+
+
+
+
 }
