@@ -48,50 +48,67 @@
             </div>
             <div class="direitaMA">
                 <h1>Novo Cadastro</h1>
-                <form>
-                    <div>
+                <form class="formMA">
+                    <div class="divFormMA">
                         <div>
-                            <div>
+                            <div class="divElementosForm">
                                 <label>Nome do Pet</label>
-                                <input type="text">
+                                <input type="text" placeholder="Ex: Bob">
                             </div>
-                            <div>
+                            <div class="divElementosForm">
                                 <label>Cor </label>
-                                <input type="text">
+                                <input type="text" placeholder="Ex: Caramelo">
                             </div>
-                            <div>
+                            <div class="divElementosForm">
                                 <label>Espécie</label>
-                                <input type="text">
+                                <select name="" id="">
+                                    <option disabled selected hidden>Selecione a espécie</option>
+                                    <option value="">Cachorro</option>
+                                    <option value="">Gato</option>
+                                    <option value="">Outros</option>
+                                </select>
                             </div>
                         </div>
                         <div>
-                            <div>
+                            <div class="divElementosForm">
                                 <label> Raça</label>
-                                <input type="text">
+                                <input type="text" placeholder="Ex: SRD">
                             </div>
-                            <div>
+                            <div class="divElementosForm">
                                 <label>Idade Estimada</label>
-                                <input type="text">
+                                <select name="" id="">
+                                    <option disabled selected hidden>Selecione a idade estimada</option>
+                                    <option value="">Filhote</option>
+                                    <option value="">Adulto</option>
+                                    <option value="">Idoso</option>
+                                </select>
                             </div>
-                            <div>
+                            <div class="divElementosForm">
                                 <label>Porte</label>
-                                <input type="text">
+                                <select name="" id="">
+                                    <option disabled selected hidden>Selecione o porte</option>
+                                    <option value="">Pequeno</option>
+                                    <option value="">Médio</option>
+                                    <option value="">Grande</option>
+                                </select>
                             </div>
                         </div>
                     </div>
-                    <div>
+                    <div class="divElementosForm">
                         <label for="">Personalidade e História</label>
-                        <textarea name="" id=""></textarea>
+                        <textarea name="" id="" placeholder="Descreva o temperamento do animal e um pouco da sua história..."></textarea>
                     </div>
-                    <div>
-                        <label for="fotos" class="campoLabel">Fotos (Upload)</label>
+                    <div class="divElementosForm">
+                        <label for="fotos" class="campoLabel">Fotos (Upload - 4 fotos)</label>
 
-                        <label for="fotos" class="caixaUpload">
+                        <label for="fotos" class="caixaUpload" id="caixaUpload">
                             <i class="bi bi-plus-circle"></i>
-                            <span>Clique para adicionar fotos</span>
+                            <span id="textoUpload">Clique para adicionar fotos</span>
                         </label>
                         <input type="file" id="fotos" name="fotos" accept="image/*" multiple hidden>
+
                         <div id="previas" class="previas"></div>
+                        <p id="avisoFotos" class="avisoFotos" hidden></p>
                     </div>
 
                     <button type="submit"> Cadastrar Pet </button>
