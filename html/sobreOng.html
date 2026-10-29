@@ -23,7 +23,13 @@
                     <img class="logoOfc" src="img/logoofc.png" alt="Logo do web site- MiAu">
                 </li>
             </div>
-            <div class="fim">
+           <button class="btnMenu" id="btnMenu" type="button" aria-controls="menuLinks" aria-expanded="false"
+                aria-label="Abrir ou fechar o menu">
+                <i class="bi bi-list"></i>
+                <i class="bi bi-x-lg"></i>
+            </button>
+
+            <div class="fim" id="menuLinks">
                 <li class="nav-item">
                     <a class="nav-link" aria-current="page" href="home.html">Início</a>
                 </li>
@@ -34,10 +40,10 @@
                     <a class="nav-link" href="sejaVoluntario.html">Seja Voluntário</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" href="muralNoticia.html">Mural de Notícias</a>
+                    <a class="nav-link" href="muralNoticia.html">Mural de Notícias</a>
                 </li>
                  <li class="nav-item">
-                    <a class="nav-link" href="#">Sobre a ONG</a>
+                    <a class="nav-link active" href="#">Sobre a ONG</a>
                 </li>
             </div>
         </ul>
@@ -123,6 +129,7 @@
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
     <script src="sobreOng.js"></script>
+    <script src="menu.js"></script>
 </body>
 
 </html>

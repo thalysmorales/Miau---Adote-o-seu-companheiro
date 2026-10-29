@@ -1,8 +1,20 @@
 * {
     font-size: 16px;
     font-family: 'Quicksand', Arial, Helvetica, sans-serif;
+        box-sizing: border-box;
+
 }
 
+html,
+body {
+    margin: 0;
+    width: 100%;
+    min-height: 100%;
+}
+
+body {
+    overflow-x: clip;
+}
 
 .nav {
     display: flex;
@@ -35,9 +47,11 @@
 
 .fim {
     display: flex;
-    gap: 3.4rem;
-    padding-top: 1rem;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
     padding-right: 3rem;
+
 }
 
 .nav-link {
@@ -72,7 +86,6 @@ main {
     background-size: cover;
 
 }
-
 
 /*Home*/
 
@@ -177,7 +190,7 @@ main {
     font-weight: bold;
 }
 
-.esperandoVocep{
+.esperandoVocep {
     color: rgba(0, 0, 0, 0.7);
     text-align: center;
 }
@@ -192,7 +205,7 @@ main {
     padding-bottom: 2rem !important;
 }
 
-.esperandoVocea a{
+.esperandoVocea a {
     color: #FF6F61 !important;
     text-decoration: none;
     font-weight: bold;
@@ -242,6 +255,15 @@ main {
     padding: 0.5rem;
 }
 
+:root {
+    --fundo-link-inativo: rgba(255, 255, 255, 0.1);
+}
+
+.btnMenu {
+    display: none;
+}
+
+
 
 /*Encontrar pet*/
 
@@ -249,7 +271,7 @@ main {
     padding: 1rem;
 }
 
-.textoEncontrar{
+.textoEncontrar {
     padding: 1rem;
 }
 
@@ -380,7 +402,7 @@ main {
     font-weight: bold;
 }
 
-.alinhamentoEP{
+.alinhamentoEP {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -406,7 +428,7 @@ main {
     object-fit: cover;
 }
 
-.card-body{
+.card-body {
     border: 1px solid #FFDAB9;
     border-bottom-left-radius: 1.5rem !important;
     border-bottom-right-radius: 1.5rem !important;
@@ -594,7 +616,7 @@ main {
 }
 
 .descricao h3 {
-    margin:0;
+    margin: 0;
     font-size: 3.12rem;
     color: rgba(0, 128, 128, 1);
 }
@@ -625,7 +647,7 @@ main {
     padding-top: 1.5rem;
     width: 9.45rem;
     height: 4.4rem;
-   
+
 }
 
 .especifacoesPersona div p {
@@ -767,7 +789,7 @@ main {
     display: flex;
     flex-direction: column;
     padding-top: 1rem;
-    margin:0;
+    margin: 0;
 }
 
 .informacoes-saude h6 {
@@ -775,7 +797,7 @@ main {
     font-weight: 600;
     padding-bottom: 0;
     margin-bottom: 0;
-    margin:0;
+    margin: 0;
 }
 
 .informacoes-saude p {
@@ -783,7 +805,7 @@ main {
     padding-top: 0;
     margin-top: 0;
     padding-left: 3.5rem;
-    margin:0;
+    margin: 0;
 }
 
 .contato {
@@ -834,281 +856,6 @@ main {
     padding-top: 0;
     margin-top: 0;
 }
-
-/*MEUS ANIMAIS*/
-
-.fimMA button{
-    border: none;
-    width: 6.0625rem;
-    height: 2.75rem;
-    color: #f3f3f3;
-    background-color: #FF6F61;
-    border: none;
-    font-weight: 700;
-    border-radius: 1rem;
-}
-
-.MA{
-    display: flex;
-    justify-content: center;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
-    gap: 5rem;
-}
-
-.esquerdaMA{
-    display: flex;
-    flex-direction: column;
-}
-
-.topoMAesq{
-    background-color: #FFF;
-    border-radius: 1rem;
-    margin-bottom: 1rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 10.5rem;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
-}
-
-.topoMAesq h5{
-    padding-top: 1rem;
-    font-size: 1.125rem;
-    font-weight: bold;
-    margin: 0;
-}
-
-.topoMAesq p{
-    color: #7A5B52;
-    font-size: 0.75rem;
-    padding-top: 0.5rem;
-}
-
-.fimMAesq{
-    display: flex;
-    flex-direction: column;
-}
-
-.fimMAesq a {
-    text-decoration: none;
-}
-.fimMAesq button{
-    display: flex;
-    width: 16rem;
-    border: none;
-    border-radius: 1rem;
-    padding: 1rem;
-    background-color: #FF6F61;
-    color: #FFF;
-    font-weight: bold;
-    align-self: flex-start;
-}
-
-.botaoMA2{
-    color: #000 !important;
-    margin-top: 0.5rem !important;
-    background-color: #99a1af32 !important;
-}
-
-.ativo{
-     background-color: #FF6F61 !important;
-    color: #FFF !important;
-}
-
-.fimMAesq i{
-    padding-right: 1rem;
-    font-weight: bold;
-}
-
-.direitaMA{
-    background-color: #FFF;
-    border-radius: 1rem;
-    padding: 1.5rem;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
-}
-
-.divCardsMA {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.5rem;
-}
-
-.cardMA img{
-    width: 16rem;
-    height: 10rem;
-}
-
-
-.cardMA {
-    width: 16rem;
-}
-
-.cardMA img {
-    width: 100%;
-    height: 10rem;
-    object-fit: cover;
-}
-
-.card-bodyMA {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 1rem;
-    border: 1px solid #FFDAB9;
-    border-bottom-left-radius: 1.5rem;
-    border-bottom-right-radius: 1.5rem;
-}
-
-
-.card-bodyMA a {
-    background-color: transparent !important;
-}
-
-.botaoMA {
-    display: flex;
-    gap: 0.5rem;
-    width: 100%;
-}
-
-.botaoMA a,
-.botaoMA > button {
-    flex: 1;
-    width: auto;
-    background-color: transparent !important;
-}
-
-.botaoMA button {
-    width: 100%;
-    background-color: #FFF1EB !important;
-    color: #1C3434;
-    font-weight: bold;
-    font-size: 0.875rem;
-    border: none;
-    border-radius: 0.5rem;
-    padding: 0.5rem;
-}
-
-.botaoMA3 {
-    color: #FF6F61 !important;
-}
-
-.botaoMA4{
-    color:#008080 !important;
-}
-
-
-.direitaMA h1{
-    display: flex;
-    align-self: start;
-    color: #1C3434;
-    font-weight: bold;
-    font-size: 1.875rem;
-
-}
-
-/*NOVOCADASTRO*/
-
-.caixaUpload {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.5rem;
-    width: 100%;
-    height: 10rem;
-    border: 2px dashed #FFDAB9;
-    border-radius: 1rem;
-    color: #7A5B52;
-    font-size: 0.875rem;
-    cursor: pointer;
-    transition: 0.2s;
-}
-
-.caixaUpload:hover {
-    background-color: rgba(255, 111, 97, 0.05);
-    border-color: #FF6F61;
-}
-
-.caixaUpload i {
-    font-size: 1.1rem;
-}
-
-.previas {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.75rem;
-    margin-top: 1rem;
-}
-
-.previas img {
-    width: 6rem;
-    height: 6rem;
-    object-fit: cover;
-    border-radius: 0.75rem;
-}
-
-/*LOGIN*/
-.corpoLogin{
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.corpoLogin img{
-    width: 22.9375rem;
-    height: 9.875rem;
-    padding-bottom: 2rem;
-}
-
-.itensformu{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.itensformu label{
-    font-weight: bold;
-    color: rgba(0, 0, 0, 0.8);
-    padding-bottom: 0.5rem;
-    padding-top: 1rem;
-    padding-left: 0.5rem;
-    font-size: 1rem;
-    align-self: flex-start;
-}
-
-.itensformu input{
-    width: 28.0625rem;
-    height: 3.5rem;
-    border-radius: 1rem;
-    border: 1px solid #000;
-}
-
-.itensformu a{
-    text-decoration: none;
-    padding: 1rem;
-    color: rgba(0, 0, 0, 0.8);
-    font-weight: 600;
-}
-
-.itensformu button{
-    width: 6.0625rem;
-    height: 2.75rem;
-    color: #f3f3f3;
-    background-color: #FF6F61;
-    border: none;
-    font-weight: 700;
-    border-radius: 1rem;
-    box-shadow: 0 8px 8px rgba(0, 0, 0, 0.2);
-}
-
-/*NOVOCADASTRO*/
-
-
 
 
 /* ===== MURAL DE NOTÍCIAS ===== */
@@ -1251,7 +998,7 @@ main {
         width: 100%;
         height: 180px;
     }
-} 
+}
 
 
 
@@ -1332,7 +1079,7 @@ main {
     .voluntario-botao {
         width: 100%;
     }
-} 
+}
 
 
 
@@ -1449,5 +1196,588 @@ main {
     .sobre-botao {
         width: 100%;
         text-align: center;
+    }
+}
+
+
+/*LOGIN*/
+.corpoLogin {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.corpoLogin img {
+    width: 22.9375rem;
+    height: 9.875rem;
+    padding-bottom: 2rem;
+}
+
+.itensformu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.itensformu label {
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.8);
+    padding-bottom: 0.5rem;
+    padding-top: 1rem;
+    padding-left: 0.5rem;
+    font-size: 1rem;
+    align-self: flex-start;
+}
+
+.itensformu input {
+    width: 28.0625rem;
+    height: 3.5rem;
+    border-radius: 1rem;
+    border: 1px solid #000;
+}
+
+.itensformu a {
+    text-decoration: none;
+    padding: 1rem;
+    color: rgba(0, 0, 0, 0.8);
+    font-weight: 600;
+}
+
+.itensformu button {
+    width: 6.0625rem;
+    height: 2.75rem;
+    color: #f3f3f3;
+    background-color: #FF6F61;
+    border: none;
+    font-weight: 700;
+    border-radius: 1rem;
+    box-shadow: 0 8px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+/*MEUS ANIMAIS*/
+.fimMA button {
+    border: none;
+    width: 6.0625rem;
+    height: 2.75rem;
+    color: #f3f3f3;
+    background-color: #FF6F61;
+    border: none;
+    font-weight: 700;
+    border-radius: 1rem;
+}
+
+.MA {
+    display: flex;
+    justify-content: center;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    gap: 5rem;
+}
+
+.esquerdaMA {
+    display: flex;
+    flex-direction: column;
+}
+
+.topoMAesq {
+    background-color: #FFF;
+    border-radius: 2rem;
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 10.5rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+.topoMAesq h5 {
+    padding-top: 1rem;
+    font-size: 1.125rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+.topoMAesq p {
+    color: #7A5B52;
+    font-size: 0.75rem;
+    padding-top: 0.5rem;
+}
+
+.fimMAesq {
+    display: flex;
+    flex-direction: column;
+}
+
+.fimMAesq a {
+    text-decoration: none;
+}
+
+.fimMAesq button {
+    display: flex;
+    width: 16rem;
+    border: none;
+    border-radius: 1rem;
+    padding: 1rem;
+    background-color: #FF6F61;
+    color: #FFF;
+    font-weight: bold;
+    align-self: flex-start;
+}
+
+.botaoMA2 {
+    color: #000 !important;
+    margin-top: 0.5rem !important;
+    background-color: #99a1af32 !important;
+}
+
+.ativo {
+    background-color: #FF6F61 !important;
+    color: #FFF !important;
+}
+
+.fimMAesq i {
+    padding-right: 1rem;
+    font-weight: bold;
+}
+
+.direitaMA {
+    background-color: #FFF;
+    border-radius: 2rem;
+    padding: 1.5rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    width: 55rem;
+}
+
+.divCardsMA {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.cardMA img {
+    width: 16rem;
+    height: 10rem;
+}
+
+
+.cardMA {
+    width: 16rem;
+}
+
+.cardMA img {
+    width: 100%;
+    height: 10rem;
+    object-fit: cover;
+}
+
+.card-bodyMA {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+    border: 1px solid #FFDAB9;
+    border-bottom-left-radius: 1.5rem;
+    border-bottom-right-radius: 1.5rem;
+}
+
+
+.card-bodyMA a {
+    background-color: transparent !important;
+}
+
+.botaoMA {
+    display: flex;
+    gap: 0.5rem;
+    width: 100%;
+}
+
+.botaoMA a,
+.botaoMA>button {
+    flex: 1;
+    width: auto;
+    background-color: transparent !important;
+}
+
+.botaoMA button {
+    width: 100%;
+    background-color: #FFF1EB !important;
+    color: #1C3434;
+    font-weight: bold;
+    font-size: 0.875rem;
+    border: none;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+}
+
+.botaoMA3 {
+    color: #FF6F61 !important;
+}
+
+.botaoMA4 {
+    color: #008080 !important;
+}
+
+
+.direitaMA h1 {
+    display: flex;
+    align-self: start;
+    color: #1C3434;
+    font-weight: bold;
+    font-size: 1.875rem;
+
+}
+
+/*NOVOCADASTRO*/
+
+.formMA {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 1rem;
+}
+
+.formMA label {
+    color: #1C3434;
+    font-weight: bold;
+    font-size: 0.875rem;
+}
+
+.divElementosForm {
+    display: flex;
+    flex-direction: column;
+    padding-top: 1rem;
+    padding-bottom: 0.5rem;
+}
+
+.formMA input,
+.formMA select {
+    justify-content: center;
+    display: flex;
+    padding-left: 1rem;
+    border: 2px solid #F0DDD7;
+    border-radius: 1rem;
+    width: 25rem;
+    height: 3.7rem;
+}
+
+.formMA textarea {
+    justify-content: center;
+    display: flex;
+    padding-left: 1rem;
+    padding-top: 0.5rem;
+    border: 2px solid #F0DDD7;
+    border-radius: 1rem;
+    height: 9.375rem;
+}
+
+.formMA button[type="submit"] {
+    border: none;
+    border-radius: 2rem;
+    background-color: #FF6F61;
+    color: #FFF;
+    font-weight: bold;
+    width: 9rem;
+    padding: 1rem;
+    margin-top: 1rem;
+}
+
+.divFormMA {
+    display: flex;
+    gap: 2rem;
+}
+
+.caixaUpload {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    width: 100%;
+    height: 10rem;
+    border: 2px dashed #F0DDD7;
+    border-radius: 1rem;
+    color: #7A5B52;
+    font-size: 0.875rem;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.caixaUpload:hover {
+    background-color: rgba(255, 111, 97, 0.05);
+    border-color: #FF6F61;
+}
+
+.caixaUpload i {
+    font-size: 1.1rem;
+}
+
+.previas {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.itemPrevia {
+    position: relative;
+    flex-shrink: 0;
+    width: 6rem;
+    height: 6rem;
+}
+
+.itemPrevia img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0.75rem;
+    border: 1px solid #094B4B;
+}
+
+.removerFoto {
+    position: absolute;
+    top: 0.3rem;
+    right: 0.3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.25rem;
+    height: 1.25rem;
+    min-width: 0;
+    padding: 0;
+    border: none;
+    border-radius: 50%;
+    background-color: rgba(107, 114, 128, 0.85);
+    color: #fff;
+    font-size: 0.8rem;
+    font-weight: bold;
+    line-height: 1;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.removerFoto:hover {
+    background-color: #094B4B;
+}
+
+.caixaUpload.cheia {
+    opacity: 0.5;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+.avisoFotos {
+    color: #FF6F61;
+    font-size: 0.875rem;
+    margin-top: 0.5rem;
+}
+
+
+/*HOME MOBILE*/
+@media (max-width: 768px) {
+
+   
+    .nav {
+        align-items: center;
+    }
+
+    .btnMenu {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 2.5rem;
+        height: 2.5rem;
+        padding: 0;
+        border: none;
+        border-radius: 0.6rem;
+        background-color: var(--fundo-link-inativo);
+        color: #fff;
+    }
+
+    .btnMenu i {
+        font-size: 1.4rem;
+    }
+
+    .btnMenu .bi-x-lg {
+        display: none;
+    }
+
+    .btnMenu[aria-expanded="true"] .bi-list {
+        display: none;
+    }
+
+    .btnMenu[aria-expanded="true"] .bi-x-lg {
+        display: inline;
+    }
+
+    .nav .fim.collapse:not(.show) {
+        display: none;
+    }
+
+    .fim.aberto {
+        display: flex;
+    }
+
+    .fim {
+        flex-direction: column;
+        align-items: stretch;
+        width: 100%;
+        gap: 0.5rem;
+        padding: 1rem 1rem 0.5rem;
+        display: none;
+    }
+
+    .fim .nav-item {
+        width: 100%;
+    }
+
+    .nav .nav-link {
+        padding: 0.7rem 1rem;
+        border-radius: 0.6rem;
+        background-color: var(--fundo-link-inativo);
+        text-align: left;
+        font-size: 0.85rem;
+    }
+
+    .nav .nav-link.active {
+        background-color: #FFDB58;
+        color: #094B4B !important;
+    }
+
+
+    .mainHome {
+        padding-top: 1rem;
+    }
+
+    .boxHome {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-top: 1rem;
+        padding-bottom: 3rem;
+        gap: 3rem;
+    }
+
+    .texto {
+        margin-top: 0;
+        width: 22rem;
+        height: auto;
+    }
+
+    .texto h1 {
+        margin: -3px;
+        width: 22rem;
+        font-size: 2.5rem;
+    }
+
+    .h1Mobile h1{
+       display: inline;
+    }
+
+    .texto p {
+        width: 22rem;
+        height: 7rem;
+        font-size: 1rem;
+        padding-top: 1rem;
+    }
+
+    .textoHome {
+        color: rgba(0,0,0) !important;
+        padding: 0.5rem;
+    }
+
+    .botoesHome {
+        width: auto;
+        height: 3.5rem;
+        padding-top: 1.5rem;
+        display: flex;
+        justify-content: center;
+    }
+
+    .botoesHome a,
+    .botoesHome i {
+        font-size: 0.875rem;
+        padding: 0.2rem;
+    }
+
+    .botoesHome button {
+        border: none;
+        border-radius: 1.5rem;
+        width: auto;
+        height: 3.5rem;
+    }
+
+    .foto-principalHome {
+        width: 22.0625rem;
+        height: 22.0625rem;
+    }
+
+    .esperandoVoce h1 {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    .esperandoVocep {
+       width: 20.9rem;
+    }
+
+    .cartoesEsperando {
+        flex-direction: column !important;
+        gap: 1.5rem !important;
+        padding-top: 1rem;
+        padding-bottom: 1rem !important;
+    }
+
+
+
+    .rodape {
+        background-color: #094B4B;
+        padding-top: 2rem;
+    }
+
+    .item-rodape {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .item-rodape h3 {
+        color: #FFDAB9;
+        font-size: 36px;
+        font-weight: bold;
+    }
+
+    .item-rodape p {
+        color: #fff;
+        padding-top: 0.5rem;
+        width: 20rem;
+        text-align: center;
+        font-size: 20px;
+        font-weight: 500;
+    }
+
+
+    .p-rodape,
+    .p-rodape i {
+        color: #99A1AF !important;
+        font-size: 14px !important;
+    }
+
+    .pRo {
+        padding-bottom: 1rem;
+        padding-top: 1rem;
+    }
+
+    .i-rodape {
+        color: #F9F7F7 !important;
+        font-size: 30px;
+        padding: 0.5rem;
     }
 }
