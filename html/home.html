@@ -11,6 +11,28 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+
+    <meta name="google-site-verification" content="KeHFK8Lvx_Ev7rhqkzTo8PoxUvqeA6CV8c0Ue5-3Ldw" />
+    <meta name="description" content="MiAu — Adote Seu Companheiro é uma plataforma de adoção responsável de animais que conecta pessoas à ONG Só Patas. Conheça cães e gatos disponíveis para adoção e encontre seu novo melhor amigo!">
+     <meta name="robots" content="index, follow">
+
+    <meta name="author" content="MiAu - Adote Seu Companheiro">
+
+    <meta name="theme-color" content="#094B4B">
+
+    <link rel="canonical" href="https://miau-adote-seu-companheiro.netlify.app/">
+
+    <meta property="og:type" content="website">
+
+    <meta property="og:title" content="MiAu | Adote Seu Companheiro">
+
+    <meta property="og:description" content="Conectamos pessoas e animais que precisam de um lar. Conheça os cães e gatos disponíveis para adoção responsável.">
+
+    <meta property="og:url" content="https://miau-adote-seu-companheiro.netlify.app/">
+
+    <meta property="og:image" content="https://miau-adote-seu-companheiro.netlify.app/img/miau.png">
+
+    <meta property="og:locale" content="pt_BR">
     <title>Início MiAu - Adote Seu Companheiro</title>
 </head>
 
@@ -23,7 +45,14 @@
                     <img class="logoOfc" src="img/logoofc.png" alt="Logo do web site- MiAu">
                 </li>
             </div>
-            <div class="fim">
+
+            <button class="btnMenu" id="btnMenu" type="button" aria-controls="menuLinks" aria-expanded="false"
+                aria-label="Abrir ou fechar o menu">
+                <i class="bi bi-list"></i>
+                <i class="bi bi-x-lg"></i>
+            </button>
+
+            <div class="fim" id="menuLinks">
                 <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="#">Início</a>
                 </li>
@@ -49,9 +78,11 @@
 
         <div class="boxHome">
             <div class="texto">
+                <div class="h1Mobile">
                 <h1>Seu novo <h1 class="textoHome"> melhor amigo</h1>
                     <h1>está a um </h1>
                     <h1>clique!</h1>
+                    </div>
                     <p>Conectamos você a ONG para encontrar o companheiro ideal e ficar por dentro de todas as notícias
                         da Só Patas. Ajude esse projeto e dê um lar cheio de amor para quem mais precisa</p>
 
@@ -75,35 +106,35 @@
                 mesmo!</p>
             <div>
                 <div class="divCards cartoesEsperando">
-                    <div class="card" style="width: 16rem;">
+                    <div class="card cardIAjuste" style="width: 16rem;">
                         <img src="img/C6/img1.jpg" class="card-img-top" alt="Fotografia do animal que está para adoção">
-                        <div class="card-body">
-                            <h5 class="card-title">Mike</h5>
-                            <p class="card-text">2 anos - Pequeno </p>
-                            <div class="botao">
+                        <div class="card-body botaoIAjuste">
+                            <h5 class="card-title">Juca</h5>
+                            <p class="card-text">Filhote - Pequeno </p>
+                            <div class="botao botaoIAjuste">
                                 <a href="tenhoInteresse.html" class="btn btn-primary">Tenho Interesse</a>
                             </div>
                         </div>
                     </div>
 
-                    <div class="card" style="width: 16rem;">
+                    <div class="card cardIAjuste" style="width: 16rem;">
                         <img src="img/C4/img1.jpg" class="card-img-top" alt="Fotografia do animal que está para adoção">
-                        <div class="card-body">
-                            <h5 class="card-title">Mike</h5>
-                            <p class="card-text">2 anos - Pequeno </p>
-                            <div class="botao">
+                        <div class="card-body botaoIAjuste">
+                            <h5 class="card-title">Bob</h5>
+                            <p class="card-text">Adulto - Pequeno </p>
+                            <div class="botao botaoIAjuste">
                                 <a href="tenhoInteresse.html" class="btn btn-primary">Tenho Interesse</a>
                             </div>
                         </div>
                     </div>
 
 
-                    <div class="card" style="width: 16rem;">
+                    <div class="card cardIAjuste" style="width: 16rem;">
                         <img src="img/c5/img4.jpg" class="card-img-top" alt="Fotografia do animal que está para adoção">
-                        <div class="card-body">
-                            <h5 class="card-title">Mike</h5>
-                            <p class="card-text">2 anos - Pequeno </p>
-                            <div class="botao">
+                        <div class="card-body botaoIAjuste">
+                            <h5 class="card-title">Belinha</h5>
+                            <p class="card-text">Adulto - Pequeno </p>
+                            <div class="botao botaoIAjuste">
                                 <a href="tenhoInteresse.html" class="btn btn-primary">Tenho Interesse</a>
                             </div>
                         </div>
@@ -111,7 +142,7 @@
                 </div>
             </div>
             <div class="esperandoVocea">
-                <a href="tenhoInteresse.html">Ver todos os animais</a>
+                <a href="encontrarPET.html">Ver todos os animais</a>
             </div>
         </div>
 
@@ -134,6 +165,7 @@
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
     <script src="home.js"></script>
+    <script src="menu.js"></script>
 </body>
 
 </html>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="  https://miau-adote-seu-companheiro.netlify.app/styles.css">
+    <title>Novo Cadastro</title>
+</head>
+
+<body>
+    <nav>
+        <ul class="nav">
+            <div class="inicio">
+                <li class="nav-item">
+                    <img class="logoOfc" src="  https://miau-adote-seu-companheiro.netlify.app/img/logoofc.png" alt="Logo do web site- MiAu">
+                </li>
+            </div>
+            <div class="fim fimMA">
+                <li class="nav-item">
+                    <a href="login.html"><button>Sair</button></a>
+                </li>
+            </div>
+        </ul>
+
+    </nav>
+
+    <main>
+        <div class="MA">
+            <div class="esquerdaMA">
+                <div class="topoMAesq">
+                    <img src="  https://miau-adote-seu-companheiro.netlify.app/img/LogoSoPatas.png" alt="Logo da ONG Só Patas">
+                    <h5>Só Patas</h5>
+                    <p>Admin</p>
+                </div>
+                <div class="fimMAesq">
+                    <a href="meusAnimais.html"><button class="botaoMA2"><i class="bi bi-columns-gap"></i>Meus
+                            Animais</button></a>
+                    <a href="#"><button class="botaoMA2 ativo"><i class="bi bi-plus-circle"></i>Novo
+                            Cadastro</button></a>
+                </div>
+            </div>
+            <div class="direitaMA">
+                <h1>Novo Cadastro</h1>
+                <form class="formMA">
+                    <div class="divFormMA">
+                        <div>
+                            <div class="divElementosForm">
+                                <label>Nome do Pet</label>
+                                <input type="text" placeholder="Ex: Bob">
+                            </div>
+                            <div class="divElementosForm">
+                                <label>Cor </label>
+                                <input type="text" placeholder="Ex: Caramelo">
+                            </div>
+                            <div class="divElementosForm">
+                                <label>Espécie</label>
+                                <select name="" id="">
+                                    <option disabled selected hidden>Selecione a espécie</option>
+                                    <option value="">Cachorro</option>
+                                    <option value="">Gato</option>
+                                    <option value="">Outros</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="divElementosForm">
+                                <label> Raça</label>
+                                <input type="text" placeholder="Ex: SRD">
+                            </div>
+                            <div class="divElementosForm">
+                                <label>Idade Estimada</label>
+                                <select name="" id="">
+                                    <option disabled selected hidden>Selecione a idade estimada</option>
+                                    <option value="">Filhote</option>
+                                    <option value="">Adulto</option>
+                                    <option value="">Idoso</option>
+                                </select>
+                            </div>
+                            <div class="divElementosForm">
+                                <label>Porte</label>
+                                <select name="" id="">
+                                    <option disabled selected hidden>Selecione o porte</option>
+                                    <option value="">Pequeno</option>
+                                    <option value="">Médio</option>
+                                    <option value="">Grande</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="divElementosForm">
+                        <label for="">Personalidade e História</label>
+                        <textarea name="" id="" placeholder="Descreva o temperamento do animal e um pouco da sua história..."></textarea>
+                    </div>
+                    <div class="divElementosForm">
+                        <label for="fotos" class="campoLabel">Fotos (Upload - 4 fotos)</label>
+
+                        <label for="fotos" class="caixaUpload" id="caixaUpload">
+                            <i class="bi bi-plus-circle"></i>
+                            <span id="textoUpload">Clique para adicionar fotos</span>
+                        </label>
+                        <input type="file" id="fotos" name="fotos" accept="image/*" multiple hidden>
+
+                        <div id="previas" class="previas"></div>
+                        <p id="avisoFotos" class="avisoFotos" hidden></p>
+                    </div>
+
+                    <button type="submit"> Cadastrar Pet </button>
+                </form>
+            </div>
+        </div>
+    </main>
+     <footer class="rodape">
+
+        <div class="item-rodape">
+            <img class="logoOfc" src="  https://miau-adote-seu-companheiro.netlify.app/img/logoofc.png" alt="Logo do web site- MiAu">
+            <p>Seu novo melhor amigo está a um clique!</p>
+            <div>
+                <i class="bi bi-camera i-rodape"></i>
+                <i class="bi bi-envelope i-rodape"></i>
+            </div>
+            <div class="pRo">
+                <p class="p-rodape"><i class="bi bi-c-circle"></i> 2026 MiAu - Centro Universitário UNIPAM</p>
+            </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+    <script src="novoCadastro.js"></script>
+</body>
+
+</html>
