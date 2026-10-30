@@ -46,46 +46,45 @@
     </nav>
     <main>
 
+        <!-- Mensagem mostrada quando o pet não é encontrado ou a API falha -->
+        <p id="erroPet" hidden></p>
+
         <div class="box-informacao">
 
             <div>
-                <img class="foto-principal" src="img/G2/img1.jpg" alt="Foto do pet">
+                <img class="foto-principal" id="fotoPet" alt="Foto do pet">
             </div>
             <div class="descricao">
 
-                <h4>Mike</h4>
-                <p>Vira-lata(SRD)</p>
+                <h4 id="nomePet">Carregando...</h4>
+                <p id="racaPet"></p>
 
                 <div class="especifacoesPersona">
                     <div>
                         <h6>ESPÉCIE:</h6>
-                        <p>Gato</p>
+                        <p id="especiePet"></p>
                     </div>
 
                     <div>
                         <h6>IDADE:</h6>
-                        <p>9 anos</p>
+                        <p id="idadePet"></p>
                     </div>
 
                     <div>
                         <h6>PORTE:</h6>
-                        <p>Pequeno</p>
+                        <p id="portePet"></p>
                     </div>
 
                     <div>
                         <h6>GÊNERO</h6>
-                        <p>Macho</p>
+                        <p id="generoPet"></p>
                     </div>
                 </div>
                 <h3>Personalidade</h3>
-                <p class="textoPersona">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dignissim ac
-                    turpis eu lacinia. Aliquam in imperdiet ex. Praesent posuere ac mauris vel mattis. Sed viverra
-                    finibus massa vitae consequat.  Curabitur augue leo, iaculis ac lacus id, ultricies luctus turpis.
-                    Sed efficitur arcu rutrum, sollicitudin urna a, molestie justo. Pellentesque efficitur fermentum
-                    dapibus.</p>
+                <p class="textoPersona" id="descricaoPet"></p>
 
                 <div class="botoesPersona">
-                    <button class="corBum"><a href=""><i class="fa-solid fa-paw"></i> Adotar Mike</a></button>
+                    <button class="corBum"><a href=""><i class="fa-solid fa-paw"></i> Adotar <span style="font-size: 1.5rem;" id="nomeAdotar"></span></a></button>
                     <button class="corBois"><a href=""><i class="bi bi-chat-right"></i> Tirar Dúvidas</a></button>
                 </div>
             </div>
@@ -103,16 +102,16 @@
                     <div class="informacoes-saude">
                         <div class="info">
                             <h6 class="titulo-com-icone">Vacinas</h6>
-                            <p>V10 e Raiva</p>
+                            <p id="vacinadoPet"></p>
 
                         </div>
                         <div class="info">
-                            <h6 class="titulo-com-icone">Não castrado</h6>
-                            <p></p>
+                            <h6 class="titulo-com-icone">Castração</h6>
+                            <p id="castradoPet"></p>
                         </div>
                         <div class="info">
-                            <h6 class="titulo-com-icone">Vermifugado</h6>
-                            <p>Janeiro 2024</p>
+                            <h6 class="titulo-com-icone">Vermifugação</h6>
+                            <p id="vermifugadoPet"></p>
                         </div>
                     </div>
                     <i class="fa-solid fa-syringe iconeAjustei"></i>
