@@ -1166,6 +1166,10 @@ main {
     display: flex;
     gap: 16px;
     align-items: flex-start;
+    margin: 20px 0 0 0;
+    padding-top: 20px;
+    border-top: 2px solid #ccc;
+
 }
 
 .mural-noticia__img {
@@ -1234,12 +1238,12 @@ main {
     text-decoration: underline;
 }
 
-.mural-divisor {
+/* .mural-divisor {
     border: none;
     border-top: 2px solid #ccc;
     opacity: 1;
     margin: 20px 0;
-}
+} */
 
 /* Responsivo */
 @media (max-width: 576px) {
