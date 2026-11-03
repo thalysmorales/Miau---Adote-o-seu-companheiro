@@ -73,3 +73,94 @@ function mostrarAviso(msg) {
 }
 
 atualizar();
+
+
+
+
+const API_URL = "http://localhost:3000";
+const CLOUDINARY_CLOUD = "dypnvgrc";
+const CLOUDINARY_PRESET = "miau_img";
+
+const form = document.getElementById('formCadastro');
+const botaoCadastrar = document.getElementById('botaoCadastrar');
+const mensagemForm = document.getElementById('mensagemForm');
+
+function mostrarMensagem(texto) {
+    mensagemForm.textContent = texto;
+    mensagemForm.hidden = false;
+}
+
+// envia uma foto para o Cloudinary e devolve o link dela
+async function enviarFoto(arquivo) {
+    const dados = new FormData();
+    dados.append('file', arquivo);
+    dados.append('upload_preset', CLOUDINARY_PRESET);
+
+    const resposta = await fetch(
+        `https://api.cloudinary.com/v1_1/${CLOUDINARY_CLOUD}/image/upload`,
+        { method: 'POST', body: dados }
+    );
+    if (!resposta.ok) {
+        throw new Error(`Não foi possível enviar a foto "${arquivo.name}".`);
+    }
+    const resultado = await resposta.json();
+    return resultado.secure_url;
+}
+
+form.addEventListener('submit', async (evento) => {
+    evento.preventDefault();
+    mensagemForm.hidden = true;
+
+    if (fotos.length === 0) {
+        mostrarMensagem('Adicione pelo menos uma foto do pet.');
+        return;
+    }
+
+    botaoCadastrar.disabled = true;
+    botaoCadastrar.textContent = 'Enviando...';
+
+    try {
+        // envia as fotos (a ordem é mantida)
+        const urls = await Promise.all(fotos.map((foto) => enviarFoto(foto)));
+
+        const campos = form.elements;
+        const animal = {
+            nome: campos.nome.value.trim(),
+            especie: campos.especie.value,
+            genero: campos.genero.value,
+            raca: campos.raca.value.trim(),
+            idade: campos.idade.value,
+            porte: campos.porte.value,
+            descricao: campos.descricao.value.trim(),
+            vacinado: campos.vacinado.checked,
+            castrado: campos.castrado.checked,
+            vermifugado: campos.vermifugado.checked,
+            foto_url: urls[0] || null,
+            foto_url_2: urls[1] || null,
+            foto_url_3: urls[2] || null,
+            foto_url_4: urls[3] || null,
+        };
+
+        const resposta = await fetch(`${API_URL}/animais`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(animal),
+        });
+
+        if (!resposta.ok) {
+            const erro = await resposta.json().catch(() => ({}));
+            throw new Error(erro.erro || 'Erro ao cadastrar o animal.');
+        }
+
+        mostrarMensagem('Pet cadastrado com sucesso!');
+        form.reset();
+        fotos = [];
+        atualizar();
+    } catch (erro) {
+        console.error(erro);
+        mostrarMensagem(erro.message || 'Algo deu errado. Tente novamente.');
+    } finally {
+        botaoCadastrar.disabled = false;
+        botaoCadastrar.textContent = 'Cadastrar Pet';
+    }
+});
