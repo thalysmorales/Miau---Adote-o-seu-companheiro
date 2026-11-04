@@ -35,18 +35,16 @@ load_dotenv()
 app = Flask(__name__)
 CORS(app, origins=[
     "https://miauadote.tmctech.workers.dev",
+    "https://miauadote-login.tmctech.workers.dev",  
     "http://localhost:5500",
     "http://127.0.0.1:5500",
 ])
-
 SITES_PERMITIDOS = [
-    "https://miau-adote.tmctech.workers.dev",
+    "https://miauadote.tmctech.workers.dev",        
+    "https://miauadote-login.tmctech.workers.dev",  
     "http://127.0.0.1:5500",
     "http://localhost:5500",
-    "http://127.0.0.1:5502",
-    "http://localhost:5502"
 ]
-
 CORS(
     app,
     resources={r"/*": {"origins": SITES_PERMITIDOS}},
