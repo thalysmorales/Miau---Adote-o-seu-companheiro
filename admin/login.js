@@ -30,3 +30,19 @@ mostrarSenha.addEventListener("change", () => {
     const senha = document.querySelector("#senha")
     senha.type = mostrarSenha.checked ? "text" : "password"
 })
+
+/*Configuração API */
+
+const resposta = await fetch(MIAU.API_URL + '/login', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ usuario, senha })   // os valores digitados
+});
+
+if (resposta.ok) {
+    const { token } = await resposta.json();
+    localStorage.setItem('miau_token', token);
+    window.location.href = 'meusAnimais.html';
+} else {
+    // mostre "Usuário ou senha inválidos"
+}
