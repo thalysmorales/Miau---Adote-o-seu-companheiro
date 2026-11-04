@@ -75,12 +75,16 @@ function mostrarAviso(msg) {
 atualizar();
 
 
-
-
+// ------------------------------------------------------------
+// Envio do cadastro
+// ------------------------------------------------------------
 const API_URL = "https://miau-adote-o-seu-companheiro.onrender.com";
 const CLOUDINARY_CLOUD = "dypnvgrc";
 const CLOUDINARY_PRESET = "miau_img";
 
+// nome com que a página de login guarda o token do administrador
+// (confira em F12 > Application > Local Storage e troque aqui se for outro)
+const CHAVE_TOKEN = 'miau_token';
 const form = document.getElementById('formCadastro');
 const botaoCadastrar = document.getElementById('botaoCadastrar');
 const mensagemForm = document.getElementById('mensagemForm');
@@ -88,6 +92,10 @@ const mensagemForm = document.getElementById('mensagemForm');
 function mostrarMensagem(texto) {
     mensagemForm.textContent = texto;
     mensagemForm.hidden = false;
+}
+
+function obterToken() {
+    return localStorage.getItem(CHAVE_TOKEN) || sessionStorage.getItem(CHAVE_TOKEN);
 }
 
 // envia uma foto para o Cloudinary e devolve o link dela
@@ -101,7 +109,10 @@ async function enviarFoto(arquivo) {
         { method: 'POST', body: dados }
     );
     if (!resposta.ok) {
-        throw new Error(`Não foi possível enviar a foto "${arquivo.name}".`);
+        const erroCloud = await resposta.json().catch(() => ({}));
+        throw new Error(
+            erroCloud.error?.message || `Não foi possível enviar a foto "${arquivo.name}".`
+        );
     }
     const resultado = await resposta.json();
     return resultado.secure_url;
@@ -113,6 +124,13 @@ form.addEventListener('submit', async (evento) => {
 
     if (fotos.length === 0) {
         mostrarMensagem('Adicione pelo menos uma foto do pet.');
+        return;
+    }
+
+    // confere o login antes de enviar qualquer foto
+    const token = obterToken();
+    if (!token) {
+        mostrarMensagem('Você precisa fazer login como administrador para cadastrar.');
         return;
     }
 
@@ -136,17 +154,23 @@ form.addEventListener('submit', async (evento) => {
             castrado: campos.castrado.checked,
             vermifugado: campos.vermifugado.checked,
             foto_url: urls[0] || null,
-            foto_url_2: urls[1] || null,
-            foto_url_3: urls[2] || null,
-            foto_url_4: urls[3] || null,
+            foto_url2: urls[1] || null,
+            foto_url3: urls[2] || null,
+            foto_url4: urls[3] || null,
         };
 
         const resposta = await fetch(`${API_URL}/animais`, {
             method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${token}`,
+            },
             body: JSON.stringify(animal),
         });
 
+        if (resposta.status === 401) {
+            throw new Error('Sessão expirada ou inválida. Faça login novamente.');
+        }
         if (!resposta.ok) {
             const erro = await resposta.json().catch(() => ({}));
             throw new Error(erro.erro || 'Erro ao cadastrar o animal.');
