@@ -58,7 +58,20 @@
         <div class="box-informacao">
 
             <div>
-                <img class="foto-principal" id="fotoPet" alt="Foto do pet">
+                <div id="carrosselPet" class="carousel slide">
+                    <div class="carousel-indicators" id="carrosselIndicadores"></div>
+                    <div class="carousel-inner" id="carrosselFotos"></div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carrosselPet"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Anterior</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carrosselPet"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Próxima</span>
+                    </button>
+                </div>
             </div>
             <div class="descricao">
 
@@ -90,7 +103,8 @@
                 <p class="textoPersona" id="descricaoPet"></p>
 
                 <div class="botoesPersona">
-                    <button class="corBum"><a href=""><i class="fa-solid fa-paw"></i> Adotar <span style="font-size: 1.5rem;" id="nomeAdotar"></span></a></button>
+                    <button class="corBum"><a href=""><i class="fa-solid fa-paw"></i> Adotar <span
+                                style="font-size: 1.5rem;" id="nomeAdotar"></span></a></button>
                     <button class="corBois"><a href=""><i class="bi bi-chat-right"></i> Tirar Dúvidas</a></button>
                 </div>
             </div>

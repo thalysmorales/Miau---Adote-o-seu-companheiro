@@ -23,14 +23,55 @@ function mostrarErro(mensagem) {
   erroPet.hidden = false
 }
 
+function montarCarrossel(a) {
+  const carrossel = document.getElementById("carrosselPet")
+  const slides = document.getElementById("carrosselFotos")
+  const indicadores = document.getElementById("carrosselIndicadores")
+
+  // só usa as fotos que estão preenchidas no banco
+  const fotos = [a.foto_url, a.foto_url2, a.foto_url3, a.foto_url4].filter(Boolean)
+
+  slides.innerHTML = ""
+  indicadores.innerHTML = ""
+
+  fotos.forEach((url, i) => {
+    const item = document.createElement("div")
+    item.className = "carousel-item" + (i === 0 ? " active" : "")
+
+    const img = document.createElement("img")
+    img.className = "foto-principal d-block w-100"
+    img.src = url
+    img.alt = `Foto ${i + 1} de ${a.nome}`
+
+    item.appendChild(img)
+    slides.appendChild(item)
+
+    const bolinha = document.createElement("button")
+    bolinha.type = "button"
+    bolinha.setAttribute("data-bs-target", "#carrosselPet")
+    bolinha.setAttribute("data-bs-slide-to", i)
+    bolinha.setAttribute("aria-label", `Foto ${i + 1}`)
+    if (i === 0) {
+      bolinha.className = "active"
+      bolinha.setAttribute("aria-current", "true")
+    }
+    indicadores.appendChild(bolinha)
+  })
+
+  // com apenas uma foto, esconde as setas e as bolinhas
+  if (fotos.length <= 1) {
+    carrossel
+      .querySelectorAll(".carousel-control-prev, .carousel-control-next, .carousel-indicators")
+      .forEach((el) => {
+        el.hidden = true
+      })
+  }
+}
+
 function preencherPagina(a) {
   document.title = `${a.nome} | MiAu`
 
-  const foto = document.getElementById("fotoPet")
-  if (a.foto_url) {
-    foto.src = a.foto_url
-  }
-  foto.alt = `Foto de ${a.nome}`
+  montarCarrossel(a)
 
   escrever("nomePet", a.nome)
   escrever("racaPet", a.raca)

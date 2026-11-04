@@ -68,14 +68,17 @@ def cadastrar():
     porte = dados.get("porte")
     genero = dados.get("genero")
     raca = dados.get("raca") or "Vira-lata (SRD)"
-    foto_url = dados.get("foto_url")
     descricao = dados.get("descricao")
+    foto_url = dados.get("foto_url")
+    foto_url2 = dados.get("foto_url_2")
+    foto_url3 = dados.get("foto_url_3")
+    foto_url4 = dados.get("foto_url_4")
     vacinado = bool(dados.get("vacinado"))
     castrado = bool(dados.get("castrado"))
     vermifugado = bool(dados.get("vermifugado"))
 
-    if not nome or not especie or not idade or not porte:
-        return jsonify({"erro": "Nome, espécie, idade e porte são obrigatórios"}), 400
+    if not nome or not especie or not idade or not porte or not genero:
+        return jsonify({"erro": "Nome, espécie, idade, porte e gênero são obrigatórios"}), 400
 
     conexao = None
     try:
@@ -83,11 +86,14 @@ def cadastrar():
         with conexao.cursor() as cursor:
             cursor.execute(
                 """INSERT INTO animais
-                   (nome, especie, idade, porte, genero, raca, foto_url,
-                    descricao, vacinado, castrado, vermifugado)
-                   VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)""",
-                (nome, especie, idade, porte, genero, raca, foto_url,
-                 descricao, vacinado, castrado, vermifugado),
+                   (nome, especie, idade, porte, genero, raca, descricao,
+                    foto_url, foto_url2, foto_url3, foto_url4,
+                    vacinado, castrado, vermifugado)
+                   VALUES (%s, %s, %s, %s, %s, %s, %s, %s,
+                           %s, %s, %s, %s, %s, %s)""",
+                (nome, especie, idade, porte, genero, raca, descricao,
+                 foto_url, foto_url2, foto_url3, foto_url4,
+                 vacinado, castrado, vermifugado),
             )
             conexao.commit()
             return jsonify({"id": cursor.lastrowid}), 201

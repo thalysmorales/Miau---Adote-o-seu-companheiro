@@ -486,7 +486,7 @@ main {
 }
 
 .foto-principal {
-    width: 30.3125rem;
+    width: 30.3125rem !important;
     height: 30rem;
     object-fit: cover;
     border-radius: 1rem;
