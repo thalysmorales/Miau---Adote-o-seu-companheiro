@@ -26,7 +26,7 @@
             </div>
             <div class="fim fimMA">
                 <li class="nav-item">
-                    <a href="index.html"><button>Sair</button></a>
+                    <a href="login.html"><button>Sair</button></a>
                 </li>
             </div>
         </ul>
@@ -52,105 +52,84 @@
             <div class="direitaMA">
                 <h1>Novo Cadastro</h1>
                 <form class="formMA" id="formCadastro">
+                    <div class="divFormMA">
+                        <div>
+                            <div class="divElementosForm">
+                                <label for="nome">Nome do Pet</label>
+                                <input type="text" id="nome" name="nome" placeholder="Ex: Bob" required>
+                            </div>
+                            <div class="divElementosForm">
+                                <label for="especie">Espécie</label>
+                                <select id="especie" name="especie" required>
+                                    <option value="" disabled selected hidden>Selecione a espécie</option>
+                                    <option value="Cachorro">Cachorro</option>
+                                    <option value="Gato">Gato</option>
+                                    <option value="Outros">Outros</option>
+                                </select>
+                            </div>
+                            <div class="divElementosForm">
+                                <label for="genero">Gênero</label>
+                                <select id="genero" name="genero" required>
+                                    <option value="" disabled selected hidden>Selecione o gênero</option>
+                                    <option value="Macho">Macho</option>
+                                    <option value="Fêmea">Fêmea</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="divElementosForm">
+                                <label for="raca">Raça</label>
+                                <input type="text" id="raca" name="raca" placeholder="Ex: SRD">
+                            </div>
+                            <div class="divElementosForm">
+                                <label for="idade">Idade Estimada</label>
+                                <select id="idade" name="idade" required>
+                                    <option value="" disabled selected hidden>Selecione a idade estimada</option>
+                                    <option value="Filhote">Filhote</option>
+                                    <option value="Adulto">Adulto</option>
+                                    <option value="Idoso">Idoso</option>
+                                </select>
+                            </div>
+                            <div class="divElementosForm">
+                                <label for="porte">Porte</label>
+                                <select id="porte" name="porte" required>
+                                    <option value="" disabled selected hidden>Selecione o porte</option>
+                                    <option value="Pequeno">Pequeno</option>
+                                    <option value="Médio">Médio</option>
+                                    <option value="Grande">Grande</option>
+                                </select>
+                            </div>
+                            <div class="divElementosForm">
+                                <label>Saúde</label>
+                                <div>
+                                    <label><input type="checkbox" id="vacinado"> Vacinado</label>
+                                    <label><input type="checkbox" id="castrado"> Castrado</label>
+                                    <label><input type="checkbox" id="vermifugado"> Vermifugado</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="divElementosForm">
+                        <label for="descricao">Personalidade e História</label>
+                        <textarea id="descricao" name="descricao"
+                            placeholder="Descreva o temperamento do animal e um pouco da sua história..."></textarea>
+                    </div>
+                    <div class="divElementosForm">
+                        <label for="fotos" class="campoLabel">Fotos (Upload - 4 fotos)</label>
 
-    <div class="divFormMA">
-        <div>
-            <div class="divElementosForm">
-                <label for="nome">Nome do Pet</label>
-                <input type="text" id="nome" name="nome" placeholder="Ex: Bob" required>
-            </div>
-            <div class="divElementosForm">
-                <label for="especie">Espécie</label>
-                <select id="especie" name="especie" required>
-                    <option value="" disabled selected hidden>Selecione a espécie</option>
-                    <option value="cachorro">Cachorro</option>
-                    <option value="gato">Gato</option>
-                    <option value="outros">Outros</option>
-                </select>
-            </div>
-            <div class="divElementosForm">
-                <label for="porte">Porte</label>
-                <select id="porte" name="porte" required>
-                    <option value="" disabled selected hidden>Selecione o porte</option>
-                    <option value="pequeno">Pequeno</option>
-                    <option value="medio">Médio</option>
-                    <option value="grande">Grande</option>
-                </select>
-            </div>
-            <div class="divElementosForm">
-                <label for="vacinado">Vacinado?</label>
-                <select id="vacinado" name="vacinado" required>
-                    <option value="" disabled selected hidden>Selecione</option>
-                    <option value="sim">Sim</option>
-                    <option value="nao">Não</option>
-                </select>
-            </div>
-            <div class="divElementosForm">
-                <label for="vermifugado">Vermifugado?</label>
-                <select id="vermifugado" name="vermifugado" required>
-                    <option value="" disabled selected hidden>Selecione</option>
-                    <option value="sim">Sim</option>
-                    <option value="nao">Não</option>
-                </select>
-            </div>
-        </div>
+                        <label for="fotos" class="caixaUpload" id="caixaUpload">
+                            <i class="bi bi-plus-circle"></i>
+                            <span id="textoUpload">Clique para adicionar fotos</span>
+                        </label>
+                        <input type="file" id="fotos" name="fotos" accept="image/*" multiple hidden>
 
-        <div>
-            <div class="divElementosForm">
-                <label for="raca">Raça</label>
-                <input type="text" id="raca" name="raca" placeholder="Ex: Vira-lata (SRD)">
-            </div>
-            <div class="divElementosForm">
-                <label for="genero">Gênero</label>
-                <select id="genero" name="genero" required>
-                    <option value="" disabled selected hidden>Selecione o gênero</option>
-                    <option value="macho">Macho</option>
-                    <option value="femea">Fêmea</option>
-                </select>
-            </div>
-            <div class="divElementosForm">
-                <label for="idade">Idade Estimada</label>
-                <select id="idade" name="idade" required>
-                    <option value="" disabled selected hidden>Selecione a idade estimada</option>
-                    <option value="filhote">Filhote</option>
-                    <option value="adulto">Adulto</option>
-                    <option value="idoso">Idoso</option>
-                </select>
-            </div>
-            <div class="divElementosForm">
-                <label for="castrado">Castrado?</label>
-                <select id="castrado" name="castrado" required>
-                    <option value="" disabled selected hidden>Selecione</option>
-                    <option value="sim">Sim</option>
-                    <option value="nao">Não</option>
-                </select>
-            </div>
-        </div>
-    </div>
+                        <div id="previas" class="previas"></div>
+                        <p id="avisoFotos" class="avisoFotos" hidden></p>
+                    </div>
 
-    <div class="divElementosForm">
-        <label for="personalidade">Personalidade e História</label>
-        <textarea id="personalidade" name="personalidade" required
-            placeholder="Descreva o temperamento do animal e um pouco da sua história..."></textarea>
-    </div>
-
-    <div class="divElementosForm" id="blocoFotos">
-        <label for="fotos" class="campoLabel">Fotos (até 4)</label>
-
-        <label for="fotos" class="caixaUpload" id="caixaUpload">
-            <i class="bi bi-plus-circle"></i>
-            <span id="textoUpload">Clique para adicionar fotos</span>
-        </label>
-        <input type="file" id="fotos" name="fotos" accept="image/*" multiple hidden>
-
-        <div id="previas" class="previas"></div>
-        <p id="avisoFotos" class="avisoFotos" hidden></p>
-    </div>
-
-    <button type="submit">Cadastrar Pet</button>
-    <p id="mensagemForm" class="mensagemForm" hidden></p>
-</form>
-
+                    <p id="mensagemForm" hidden></p>
+                    <button type="submit" id="botaoCadastrar"> Cadastrar Pet </button>
+                </form>
             </div>
         </div>
     </main>

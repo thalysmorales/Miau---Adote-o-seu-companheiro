@@ -33,6 +33,11 @@ from itsdangerous import BadSignature, URLSafeTimedSerializer
 load_dotenv()
 
 app = Flask(__name__)
+CORS(app, origins=[
+    "https://miauadote.tmctech.workers.dev",
+    "http://localhost:5500",
+    "http://127.0.0.1:5500",
+])
 
 SITES_PERMITIDOS = [
     "https://miau-adote.tmctech.workers.dev",
@@ -110,11 +115,26 @@ def login():
 # ------------------------------------------------------------
 @app.get("/animais")
 def listar():
+    # ?todos=1 (painel do admin) inclui os animais já adotados
+    todos = request.args.get("todos") == "1"
+    # ?limite=3 devolve só os 3 mais recentes
+    limite = request.args.get("limite", type=int)
+
+    sql = "SELECT * FROM animais"
+    if not todos:
+        sql += " WHERE adotado = 0"
+    sql += " ORDER BY id DESC"
+
+    parametros = ()
+    if limite and limite > 0:
+        sql += " LIMIT %s"
+        parametros = (min(limite, 50),)
+
     conexao = None
     try:
         conexao = conectar()
         with conexao.cursor() as cursor:
-            cursor.execute("SELECT * FROM animais ORDER BY id DESC")
+            cursor.execute(sql, parametros)
             return jsonify(cursor.fetchall())
     except Exception as erro:
         print(erro)
@@ -122,7 +142,6 @@ def listar():
     finally:
         if conexao:
             conexao.close()
-
 
 @app.get("/animais/<int:id>")
 def buscar(id):
@@ -155,9 +174,9 @@ def cadastrar():
     raca = dados.get("raca") or "Vira-lata (SRD)"
     descricao = dados.get("descricao")
     foto_url = dados.get("foto_url")
-    foto_url2 = dados.get("foto_url_2")
-    foto_url3 = dados.get("foto_url_3")
-    foto_url4 = dados.get("foto_url_4")
+    foto_url2 = dados.get("foto_url2")
+    foto_url3 = dados.get("foto_url3")
+    foto_url4 = dados.get("foto_url4")
     vacinado = bool(dados.get("vacinado"))
     castrado = bool(dados.get("castrado"))
     vermifugado = bool(dados.get("vermifugado"))
@@ -188,44 +207,27 @@ def cadastrar():
     finally:
         if conexao:
             conexao.close()
-
-
-# Colunas que o PATCH pode alterar (lista fixa: protege contra campos inesperados)
-COLUNAS_EDITAVEIS = {
-    "nome", "especie", "idade", "porte", "genero", "raca", "descricao",
-    "foto_url", "foto_url2", "foto_url3", "foto_url4",
-    "vacinado", "castrado", "vermifugado", "adotado",
-}
-
-
-@app.patch("/animais/<int:id>")
-@exige_admin
-def atualizar(id):
+            
+@app.patch("/animais/<int:id>/adotado")
+def marcar_adotado(id):
     dados = request.get_json() or {}
-    campos = {coluna: valor for coluna, valor in dados.items() if coluna in COLUNAS_EDITAVEIS}
-
-    if not campos:
-        return jsonify({"erro": "Nenhum campo válido para atualizar"}), 400
+    adotado = bool(dados.get("adotado"))
 
     conexao = None
     try:
         conexao = conectar()
         with conexao.cursor() as cursor:
-            # os nomes das colunas vêm da lista fixa acima; os valores vão como parâmetros
-            partes = ", ".join(f"{coluna} = %s" for coluna in campos)
             cursor.execute(
-                f"UPDATE animais SET {partes} WHERE id = %s",
-                (*campos.values(), id),
+                "UPDATE animais SET adotado = %s WHERE id = %s", (adotado, id)
             )
             conexao.commit()
-            return jsonify({"ok": True})
+            return jsonify({"ok": True, "adotado": adotado})
     except Exception as erro:
         print(erro)
         return jsonify({"erro": "Erro ao atualizar animal"}), 500
     finally:
         if conexao:
             conexao.close()
-
 
 @app.delete("/animais/<int:id>")
 @exige_admin

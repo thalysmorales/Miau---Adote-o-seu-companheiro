@@ -20,12 +20,13 @@
         <ul class="nav">
             <div class="inicio">
                 <li class="nav-item">
-                    <img class="logoOfc" src="  https://miau-adote-seu-companheiro.netlify.app/img/logoofc.png" alt="Logo do web site- MiAu">
+                    <img class="logoOfc" src="  https://miau-adote-seu-companheiro.netlify.app/img/logoofc.png"
+                        alt="Logo do web site- MiAu">
                 </li>
             </div>
             <div class="fim fimMA">
                 <li class="nav-item">
-                    <a href="index.html"><button>Sair</button></a>
+                    <a href="login.html"><button>Sair</button></a>
                 </li>
             </div>
         </ul>
@@ -36,7 +37,8 @@
         <div class="MA">
             <div class="esquerdaMA">
                 <div class="topoMAesq">
-                    <img src="  https://miau-adote-seu-companheiro.netlify.app/img/LogoSoPatas.png" alt="Logo da ONG Só Patas">
+                    <img src="  https://miau-adote-seu-companheiro.netlify.app/img/LogoSoPatas.png"
+                        alt="Logo da ONG Só Patas">
                     <h5>Só Patas</h5>
                     <p>Admin</p>
                 </div>
@@ -48,52 +50,8 @@
             </div>
             <div class="direitaMA">
                 <h1>Meus Animais</h1>
-                <div class="divCardsMA">
-                    <div class="card cardMA" style="width: 16rem;">
-                        <img src="  https://miau-adote-seu-companheiro.netlify.app/img/C1/img1.jpg" class="card-img-top" alt="">
-                        <div class="card-body card-bodyMA">
-                            <h5 class="card-title">Luna</h5>
-                            <p class="card-text">Cadastrado há 2 dias</p>
-                            <div class="botaoMA">
-                                <a href=""><button>Editar</button></a>
-                                <button class="botaoMA3">Adotado</button>
-                            </div>
-                        </div>
-                    </div>
-                   <div class="card cardMA" style="width: 16rem;">
-                        <img src="  https://miau-adote-seu-companheiro.netlify.app/img/C2/img1.jpg" class="card-img-top" alt="">
-                        <div class="card-body card-bodyMA">
-                            <h5 class="card-title">Luna</h5>
-                            <p class="card-text">Cadastrado há 2 dias</p>
-                            <div class="botaoMA">
-                                <a href=""><button>Editar</button></a>
-                                <button class="botaoMA4">Adotado</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card cardMA" style="width: 16rem;">
-                        <img src="  https://miau-adote-seu-companheiro.netlify.app/img/G1/img1.jpg" class="card-img-top" alt="">
-                        <div class="card-body card-bodyMA">
-                            <h5 class="card-title">Luna</h5>
-                            <p class="card-text">Cadastrado há 2 dias</p>
-                            <div class="botaoMA">
-                                <a href=""><button>Editar</button></a>
-                                <button class="botaoMA3">Adotado</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card cardMA" style="width: 16rem;">
-                        <img src="  https://miau-adote-seu-companheiro.netlify.app/img/G2/img1.jpg" class="card-img-top" alt="">
-                        <div class="card-body card-bodyMA">
-                            <h5 class="card-title">Luna</h5>
-                            <p class="card-text">Cadastrado há 2 dias</p>
-                            <div class="botaoMA">
-                                <a href=""><button>Editar</button></a>
-                                <button class="botaoMA4">Adotado</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <p id="mensagemLista" hidden></p>
+                <div class="divCardsMA" id="listaMeusAnimais"></div>
             </div>
         </div>
     </main>
@@ -101,7 +59,8 @@
     <footer class="rodape">
 
         <div class="item-rodape">
-            <img class="logoOfc" src="  https://miau-adote-seu-companheiro.netlify.app/img/logoofc.png" alt="Logo do web site- MiAu">
+            <img class="logoOfc" src="  https://miau-adote-seu-companheiro.netlify.app/img/logoofc.png"
+                alt="Logo do web site- MiAu">
             <p>Seu novo melhor amigo está a um clique!</p>
             <div>
                 <i class="bi bi-camera i-rodape"></i>

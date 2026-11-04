@@ -1,4 +1,4 @@
-const API_URL = "https://miau-adote-o-seu-companheiro.onrender.com"
+const API_URL = "https://miau-adote-o-seu-companheiro.onrender.com";
 
 const botaoMenu = document.querySelector(".botaoFiltro")
 const caixa = document.querySelector(".filtro-fechada")
