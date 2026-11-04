@@ -50,7 +50,7 @@ body {
     justify-content: center;
     align-items: center;
     gap: 1rem;
-    padding-right: 3rem;
+    padding-right: 0.5rem;
 
 }
 
@@ -1612,6 +1612,10 @@ main {
         gap: 1.5rem !important;
         padding-top: 1rem;
         padding-bottom: 1rem !important;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.5rem;
+        padding-bottom: 2rem;
     }
 
 
