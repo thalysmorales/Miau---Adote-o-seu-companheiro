@@ -76,9 +76,9 @@ atualizar();
 
 
 
-const API_URL = ["localhost", "127.0.0.1"].includes(window.location.hostname)
-  ? "http://localhost:3000"
-  : "https://miau-adote-o-seu-companheiro.onrender.com";
+
+const API_URL = "https://miau-adote-o-seu-companheiro.onrender.com";
+const CLOUDINARY_CLOUD = "dypnvgrc";
 const CLOUDINARY_PRESET = "miau_img";
 
 const form = document.getElementById('formCadastro');
