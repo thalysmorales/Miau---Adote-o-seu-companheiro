@@ -9,6 +9,28 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://miau-adote-seu-companheiro.netlify.app/styles.css">
+    <style>
+        .textos-controles {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: 0.5rem 1rem;
+            margin: 0.5rem 0 0.5rem 0;
+        }
+        .textos-controles label {
+            white-space: nowrap;
+        }
+        #mensagem-erro {
+            margin: 0;
+            color: #FF6F61;
+            opacity: 0;
+            transition: opacity 0.4s;
+        }
+        #mensagem-erro.visivel {
+            opacity: 1;
+        }
+    </style>
     <title>LOGIN MIAU ADMINISTRADOR</title>
 </head>
 
@@ -25,8 +47,16 @@
                         <label for="Senha">Senha</label>
                         <input type="password" id="senha">
                     </div>
+                    <div class="textos-controles">
+                        <p id="mensagem-erro">Email ou senha incorretos</p>
+                        <label for="mostrar-senha">
+                            Mostrar Senha
+                            <input type="checkbox" id="mostrar-senha">
+                        </label>
+                    </div>
+                    
                     <div class="itensformu">
-                        <a href="">Trocar Senha</a>
+                        <!-- <a href="">Trocar Senha</a> -->
                         <button id="btnEntrar" type="submit">Entrar</button>
                     </div>
                 </form>
