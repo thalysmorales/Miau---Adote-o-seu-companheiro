@@ -1,48 +1,73 @@
-const emailLogin = "admin@sopatas.com"
-const senhaLogin = "2026"
 
-const btnEntrar = document.querySelector("#btnEntrar")
-const mensagemErro = document.querySelector("#mensagem-erro")
-const mostrarSenha = document.querySelector("#mostrar-senha")
+const formulario = document.querySelector("form");
+const mensagemErro = document.querySelector("#mensagem-erro");
+const mostrarSenha = document.querySelector("#mostrar-senha");
+const campoLogin = document.querySelector("#login");
+const campoSenha = document.querySelector("#senha");
+const btnEntrar = document.querySelector("#btnEntrar");
 
-let temporizador
+let temporizador;
 
-btnEntrar.addEventListener("click", (event) => {
-    event.preventDefault()
+formulario.addEventListener("submit", async (event) => {
+    event.preventDefault();
 
-    const emailUsuario = document.getElementById("login").value
-    const senhaUsuario = document.getElementById("senha").value
+    const usuario = campoLogin.value.trim();
+    const senha = campoSenha.value;
 
-    if (emailLogin === emailUsuario && senhaLogin === senhaUsuario) {
-        window.location.href = "meusAnimais.html"
+    if (!usuario || !senha) {
+        mostrarErro("Preencha o usuário e a senha.");
+        return;
     }
-    else {
-        mensagemErro.classList.add("visivel")
-        clearTimeout(temporizador)
-        temporizador = setTimeout(() => {
-        mensagemErro.classList.remove("visivel")
-        }, 3000)
-        
+
+    btnEntrar.disabled = true;
+    btnEntrar.textContent = "Entrando...";
+
+    try {
+        const resposta = await fetch(`${MIAU.API_URL}/login`, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                usuario: usuario,
+                senha: senha
+            })
+        });
+
+        const resultado = await resposta.json();
+
+        if (!resposta.ok) {
+            throw new Error(resultado.erro || "Usuário ou senha inválidos.");
+        }
+
+        localStorage.setItem("miau_token", resultado.token);
+
+        window.location.href = "meusAnimais.html";
+
+    } catch (erro) {
+        console.error("Erro no login:", erro);
+        mostrarErro(
+            erro.message === "Failed to fetch"
+                ? "Não foi possível conectar à API."
+                : erro.message
+        );
+    } finally {
+        btnEntrar.disabled = false;
+        btnEntrar.textContent = "Entrar";
     }
-})
-
-mostrarSenha.addEventListener("change", () => {
-    const senha = document.querySelector("#senha")
-    senha.type = mostrarSenha.checked ? "text" : "password"
-})
-
-/*Configuração API */
-
-const resposta = await fetch(MIAU.API_URL + '/login', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ usuario, senha })   // os valores digitados
 });
 
-if (resposta.ok) {
-    const { token } = await resposta.json();
-    localStorage.setItem('miau_token', token);
-    window.location.href = 'meusAnimais.html';
-} else {
-    // mostre "Usuário ou senha inválidos"
+function mostrarErro(texto) {
+    mensagemErro.textContent = texto;
+    mensagemErro.classList.add("visivel");
+
+    clearTimeout(temporizador);
+
+    temporizador = setTimeout(() => {
+        mensagemErro.classList.remove("visivel");
+    }, 4000);
 }
+
+mostrarSenha.addEventListener("change", () => {
+    campoSenha.type = mostrarSenha.checked ? "text" : "password";
+});
