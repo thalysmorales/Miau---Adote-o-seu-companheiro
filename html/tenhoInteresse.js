@@ -1,4 +1,4 @@
-const API_URL = "http://localhost:3000"
+const API_URL = "https://miau-adote-o-seu-companheiro.onrender.com"
 
 // Ícones com a primeira letra do título (código original do grupo)
 document.querySelectorAll(".titulo-com-icone").forEach((el) => {
