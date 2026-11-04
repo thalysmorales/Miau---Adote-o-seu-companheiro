@@ -36,7 +36,7 @@ app = Flask(__name__)
 # Sites que podem conversar com a API. Ajuste para os endereços reais.
 SITES_PERMITIDOS = [
     "https://miauadote.tmctech.workers.dev",          # site público (Cloudflare)
-    # "https://ENDERECO-DO-ADMIN",                    # site do administrador, quando existir
+    "https://miauadote-login.tmctech.workers.dev/?",                    # site do administrador, quando existir
     "http://127.0.0.1:5500",                          # Live Server (testes no computador)
     "http://localhost:5500",
     "https://miau-adote-o-seu-companheiro.onrender.com"
