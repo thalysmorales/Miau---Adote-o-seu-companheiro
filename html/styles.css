@@ -1608,14 +1608,10 @@ main {
     }
 
     .cartoesEsperando {
-        flex-direction: column !important;
-        gap: 1.5rem !important;
-        padding-top: 1rem;
-        padding-bottom: 1rem !important;
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 0.5rem;
-        padding-bottom: 2rem;
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 0.5rem !important;
+        padding-bottom: 2rem !important;
     }
 
 
