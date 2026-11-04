@@ -19,6 +19,7 @@
 #   ADMIN_SENHA=uma-senha-forte
 # ============================================================
 
+
 import hmac
 import os
 from functools import wraps
@@ -33,16 +34,21 @@ load_dotenv()
 
 app = Flask(__name__)
 
-# Sites que podem conversar com a API. Ajuste para os endereços reais.
 SITES_PERMITIDOS = [
-    "https://miauadote.tmctech.workers.dev",          # site público (Cloudflare)
-    "https://miauadote-login.tmctech.workers.dev/?",                    # site do administrador, quando existir
-    "http://127.0.0.1:5500",                          # Live Server (testes no computador)
+    "https://miau-adote.tmctech.workers.dev",
+    "http://127.0.0.1:5500",
     "http://localhost:5500",
-    "https://miau-adote-o-seu-companheiro.onrender.com"
+    "http://127.0.0.1:5502",
+    "http://localhost:5502"
 ]
-CORS(app, origins=SITES_PERMITIDOS)
 
+CORS(
+    app,
+    resources={r"/*": {"origins": SITES_PERMITIDOS}},
+    methods=["GET", "POST", "PATCH", "DELETE", "OPTIONS"],
+    allow_headers=["Content-Type", "Authorization"],
+    supports_credentials=False
+)
 PASTA = os.path.dirname(os.path.abspath(__file__))
 
 SECRET_KEY = os.getenv("SECRET_KEY")
