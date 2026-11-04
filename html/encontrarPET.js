@@ -1,5 +1,6 @@
-const API_URL = "http://localhost:3000"
-
+const API_URL = ["localhost", "127.0.0.1"].includes(window.location.hostname)
+  ? "http://localhost:3000"
+  : "https://miau-adote-o-seu-companheiro.onrender.com/animais";
 const botaoMenu = document.querySelector(".botaoFiltro")
 const caixa = document.querySelector(".filtro-fechada")
 const limparFiltros = document.querySelector("#limparFiltros")

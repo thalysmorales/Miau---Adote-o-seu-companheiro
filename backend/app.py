@@ -7,7 +7,11 @@ from dotenv import load_dotenv
 load_dotenv()
 
 app = Flask(__name__)
-CORS(app)  # na Fase 7 você restringe ao endereço do site
+CORS(app, origins=[
+    "https://miauadote.tmctech.workers.dev",
+    "http://localhost:5500",
+    "http://127.0.0.1:5500",
+])
 
 PASTA = os.path.dirname(os.path.abspath(__file__))
 
@@ -26,11 +30,26 @@ def conectar():
 
 @app.get("/animais")
 def listar():
+    # ?todos=1 (painel do admin) inclui os animais já adotados
+    todos = request.args.get("todos") == "1"
+    # ?limite=3 devolve só os 3 mais recentes
+    limite = request.args.get("limite", type=int)
+
+    sql = "SELECT * FROM animais"
+    if not todos:
+        sql += " WHERE adotado = 0"
+    sql += " ORDER BY id DESC"
+
+    parametros = ()
+    if limite and limite > 0:
+        sql += " LIMIT %s"
+        parametros = (min(limite, 50),)
+
     conexao = None
     try:
         conexao = conectar()
         with conexao.cursor() as cursor:
-            cursor.execute("SELECT * FROM animais")
+            cursor.execute(sql, parametros)
             return jsonify(cursor.fetchall())
     except Exception as erro:
         print(erro)
@@ -70,9 +89,9 @@ def cadastrar():
     raca = dados.get("raca") or "Vira-lata (SRD)"
     descricao = dados.get("descricao")
     foto_url = dados.get("foto_url")
-    foto_url2 = dados.get("foto_url_2")
-    foto_url3 = dados.get("foto_url_3")
-    foto_url4 = dados.get("foto_url_4")
+    foto_url2 = dados.get("foto_url2")
+    foto_url3 = dados.get("foto_url3")
+    foto_url4 = dados.get("foto_url4")
     vacinado = bool(dados.get("vacinado"))
     castrado = bool(dados.get("castrado"))
     vermifugado = bool(dados.get("vermifugado"))
@@ -104,6 +123,26 @@ def cadastrar():
         if conexao:
             conexao.close()
             
+@app.patch("/animais/<int:id>/adotado")
+def marcar_adotado(id):
+    dados = request.get_json() or {}
+    adotado = bool(dados.get("adotado"))
+
+    conexao = None
+    try:
+        conexao = conectar()
+        with conexao.cursor() as cursor:
+            cursor.execute(
+                "UPDATE animais SET adotado = %s WHERE id = %s", (adotado, id)
+            )
+            conexao.commit()
+            return jsonify({"ok": True, "adotado": adotado})
+    except Exception as erro:
+        print(erro)
+        return jsonify({"erro": "Erro ao atualizar animal"}), 500
+    finally:
+        if conexao:
+            conexao.close()
 
 @app.delete("/animais/<int:id>")
 def excluir(id):
