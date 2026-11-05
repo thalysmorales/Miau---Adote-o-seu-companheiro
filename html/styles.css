@@ -485,6 +485,24 @@ main {
     padding-bottom: 4.5rem;
 }
 
+
+#carrosselPet {
+    width: 30rem;
+    overflow: hidden;
+    object-fit: cover;
+}
+
+.foto-principal {
+    display: block;
+    width: 100% !important;
+    max-width: 100%;
+    aspect-ratio: 1 / 1;
+    height: auto;
+    object-fit: cover;
+    border-radius: 1rem;
+}
+
+
 .foto-principal {
     width: 30.3125rem !important;
     height: 30rem;
