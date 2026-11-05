@@ -205,6 +205,53 @@ def cadastrar():
     finally:
         if conexao:
             conexao.close()
+
+CAMPOS_EDITAVEIS = [
+    "nome", "especie", "idade", "porte", "genero", "raca", "descricao",
+    "foto_url", "foto_url2", "foto_url3", "foto_url4",
+]
+CAMPOS_BOOLEANOS = ["vacinado", "castrado", "vermifugado"]
+CAMPOS_OBRIGATORIOS = ["nome", "especie", "idade", "porte", "genero"]
+
+
+@app.patch("/animais/<int:id>")
+@exige_admin
+def editar(id):
+    dados = request.get_json() or {}
+
+    for campo in CAMPOS_OBRIGATORIOS:
+        if campo in dados and not dados[campo]:
+            return jsonify({"erro": "Nome, espécie, idade, porte e gênero são obrigatórios"}), 400
+
+    colunas, valores = [], []
+    for campo in CAMPOS_EDITAVEIS:
+        if campo in dados:
+            colunas.append(f"{campo} = %s")
+            valores.append(dados[campo])
+    for campo in CAMPOS_BOOLEANOS:
+        if campo in dados:
+            colunas.append(f"{campo} = %s")
+            valores.append(bool(dados[campo]))
+
+    if not colunas:
+        return jsonify({"erro": "Nada para atualizar"}), 400
+    valores.append(id)
+
+    conexao = None
+    try:
+        conexao = conectar()
+        with conexao.cursor() as cursor:
+            cursor.execute(
+                f"UPDATE animais SET {', '.join(colunas)} WHERE id = %s", valores
+            )
+            conexao.commit()
+            return jsonify({"ok": True})
+    except Exception as erro:
+        print(erro)
+        return jsonify({"erro": "Erro ao editar animal"}), 500
+    finally:
+        if conexao:
+            conexao.close()
             
 @app.patch("/animais/<int:id>/adotado")
 def marcar_adotado(id):
