@@ -50,8 +50,7 @@ function criarCard(a) {
         <h5 class="card-title">${escapar(a.nome)}</h5>
         <p class="card-text">${escapar(tempoDesde(a.criado_em))}</p>
         <div class="botaoMA">
-          <a href="novoCadastro.html?editar=${encodeURIComponent(a.id)}"><button type="button">Editar</button></a>
-          <button type="button"
+          <a href="editarPet.html?id=${encodeURIComponent(a.id)}"><button type="button">Editar</button></a>          <button type="button"
                   class="botao-adotado ${adotado ? CLASSE_ADOTADO : CLASSE_DISPONIVEL}"
                   data-adotado="${adotado ? 1 : 0}"
                   title="${textoDoBotao(adotado)}">Adotado</button>
