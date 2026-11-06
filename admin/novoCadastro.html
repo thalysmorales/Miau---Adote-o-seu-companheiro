@@ -11,106 +11,106 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
-      <link rel="icon" href="miau_logo_circle_ma_v2 copy.png" type="image/x-icon">
+    <link rel="icon" href="miau_logo_circle_ma_v2 copy.png" type="image/x-icon">
     <link rel="stylesheet" href="  https://miau-adote-seu-companheiro.netlify.app/styles.css">
     <style>
-    .formMA .tituloCampo {
-        color: #1C3434;
-        font-weight: bold;
-        font-size: 0.875rem;
-    }
- 
+        .formMA .tituloCampo {
+            color: #1C3434;
+            font-weight: bold;
+            font-size: 0.875rem;
+        }
 
-    .formMA .grupoSaude {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 1rem;
-    }
- 
-    .formMA .grupoSaude label {
-        display: flex;
-        align-items: center;
-        gap: 0.75rem;
-        height: 3.7rem;
-        padding: 0 1rem;
-        border: 2px solid #F0DDD7;
-        border-radius: 1rem;
-        background-color: #fff;
-        cursor: pointer;
-        transition: border-color 0.2s, background-color 0.2s;
-    }
- 
-    .formMA .grupoSaude label:hover {
-        border-color: #FF6F61;
-    }
- 
-   
-    .formMA .grupoSaude label:has(input:checked) {
-        border-color: #FF6F61;
-        background-color: rgba(255, 111, 97, 0.08);
-    }
- 
-    
-    .formMA .grupoSaude label:has(input:focus-visible) {
-        outline: 2px solid #008080;
-        outline-offset: 2px;
-    }
- 
-   
-    .formMA .grupoSaude input[type="checkbox"] {
-        -webkit-appearance: none;
-        appearance: none;
-        display: grid;
-        place-content: center;
-        flex-shrink: 0;
-        width: 1.5rem;
-        height: 1.5rem;
-        margin: 0;
-        padding: 0;
-        border: 2px solid #F0DDD7;
-        border-radius: 0.5rem;
-        background-color: #fff;
-        cursor: pointer;
-        transition: background-color 0.2s, border-color 0.2s;
-    }
- 
-    /* O "check" desenhado dentro da caixinha */
-    .formMA .grupoSaude input[type="checkbox"]::before {
-        content: "";
-        width: 0.8rem;
-        height: 0.8rem;
-        background-color: #fff;
-        clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
-        transform: scale(0);
-        transition: transform 0.15s ease-in-out;
-    }
- 
-    .formMA .grupoSaude input[type="checkbox"]:checked {
-        background-color: #FF6F61;
-        border-color: #FF6F61;
-    }
- 
-    .formMA .grupoSaude input[type="checkbox"]:checked::before {
-        transform: scale(1);
-    }
- 
 
-    @media (max-width: 768px) {
         .formMA .grupoSaude {
-            grid-template-columns: 1fr;
-            gap: 0.7rem;
-            width: 19.5rem;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+        }
+
+        .formMA .grupoSaude label {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            height: 3.7rem;
+            padding: 0 1rem;
+            border: 2px solid #F0DDD7;
+            border-radius: 1rem;
+            background-color: #fff;
+            cursor: pointer;
+            transition: border-color 0.2s, background-color 0.2s;
+        }
+
+        .formMA .grupoSaude label:hover {
+            border-color: #FF6F61;
+        }
+
+
+        .formMA .grupoSaude label:has(input:checked) {
+            border-color: #FF6F61;
+            background-color: rgba(255, 111, 97, 0.08);
+        }
+
+
+        .formMA .grupoSaude label:has(input:focus-visible) {
+            outline: 2px solid #008080;
+            outline-offset: 2px;
+        }
+
+
+        .formMA .grupoSaude input[type="checkbox"] {
+            -webkit-appearance: none;
+            appearance: none;
+            display: grid;
+            place-content: center;
+            flex-shrink: 0;
+            width: 1.5rem;
+            height: 1.5rem;
             margin: 0;
             padding: 0;
+            border: 2px solid #F0DDD7;
+            border-radius: 0.5rem;
+            background-color: #fff;
+            cursor: pointer;
+            transition: background-color 0.2s, border-color 0.2s;
         }
- 
-        .formMA .grupoSaude label {
-            height: 3.2rem;
+
+        /* O "check" desenhado dentro da caixinha */
+        .formMA .grupoSaude input[type="checkbox"]::before {
+            content: "";
+            width: 0.8rem;
+            height: 0.8rem;
+            background-color: #fff;
+            clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+            transform: scale(0);
+            transition: transform 0.15s ease-in-out;
         }
-    }
-</style>
- 
- 
+
+        .formMA .grupoSaude input[type="checkbox"]:checked {
+            background-color: #FF6F61;
+            border-color: #FF6F61;
+        }
+
+        .formMA .grupoSaude input[type="checkbox"]:checked::before {
+            transform: scale(1);
+        }
+
+
+        @media (max-width: 768px) {
+            .formMA .grupoSaude {
+                grid-template-columns: 1fr;
+                gap: 0.7rem;
+                width: 19.5rem;
+                margin: 0;
+                padding: 0;
+            }
+
+            .formMA .grupoSaude label {
+                height: 3.2rem;
+            }
+        }
+    </style>
+
+
     <title>Novo Cadastro</title>
 </head>
 
@@ -125,7 +125,7 @@
             </div>
             <div class="fim fimMA">
                 <li class="nav-item">
-                    <a href="login.html"><button>Sair</button></a>
+                    <a href="meusAnimais.html"><button>Sair</button></a>
                 </li>
             </div>
         </ul>
@@ -199,17 +199,17 @@
                                 </select>
                             </div>
 
-                   
+
                         </div>
                     </div>
-                               <div class="divElementosForm">
-        <span class="tituloCampo" id="tituloSaude">Saúde</span>
-        <div class="grupoSaude" role="group" aria-labelledby="tituloSaude">
-            <label><input type="checkbox" id="vacinado" name="vacinado"> Vacinado</label>
-            <label><input type="checkbox" id="castrado" name="castrado"> Castrado</label>
-            <label><input type="checkbox" id="vermifugado" name="vermifugado"> Vermifugado</label>
-        </div>
-    </div>
+                    <div class="divElementosForm">
+                        <span class="tituloCampo" id="tituloSaude">Saúde</span>
+                        <div class="grupoSaude" role="group" aria-labelledby="tituloSaude">
+                            <label><input type="checkbox" id="vacinado" name="vacinado"> Vacinado</label>
+                            <label><input type="checkbox" id="castrado" name="castrado"> Castrado</label>
+                            <label><input type="checkbox" id="vermifugado" name="vermifugado"> Vermifugado</label>
+                        </div>
+                    </div>
                     <div class="divElementosForm">
                         <label for="descricao">Personalidade e História</label>
                         <textarea id="descricao" name="descricao"
