@@ -28,7 +28,7 @@ function criarCard(a) {
 
 async function carregarUltimosPets() {
   try {
-    const resposta = await fetch(`${API_URL}/animais?limite=3`);
+    const resposta = await fetch(`${API_URL}/animais?limite=4`);
     if (!resposta.ok) {
       throw new Error("A API respondeu com erro " + resposta.status);
     }
