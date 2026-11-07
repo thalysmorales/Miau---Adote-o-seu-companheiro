@@ -11,8 +11,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="miau_logo_circle_ma_v2 copy.png" type="image/x-icon">
     <link rel="stylesheet" href="https://miau-adote-seu-companheiro.netlify.app/styles.css">
-    <title>Editar Pet</title>
     <style>
         .formMA .tituloCampo {
             color: #1C3434;
@@ -109,6 +109,9 @@
             }
         }
     </style>
+
+
+    <title>Editar Pet</title>
 </head>
 
 <body>
@@ -122,7 +125,7 @@
             </div>
             <div class="fim fimMA">
                 <li class="nav-item">
-                    <a href="meusAnimais.html"><button>Sair</button></a>
+                    <a href="login.html"><button>Sair</button></a>
                 </li>
             </div>
         </ul>
@@ -194,17 +197,18 @@
                                     <option value="Grande">Grande</option>
                                 </select>
                             </div>
-                            
+
+
                         </div>
                     </div>
                     <div class="divElementosForm">
-                                <label>Saúde</label>
-                                <div class="grupoSaude">
-                                    <label><input type="checkbox" id="vacinado" name="vacinado"> Vacinado</label>
-                                    <label><input type="checkbox" id="castrado" name="castrado"> Castrado</label>
-                                    <label><input type="checkbox" id="vermifugado" name="vermifugado"> Vermifugado</label>
-                                </div>
-                            </div>
+                        <span class="tituloCampo" id="tituloSaude">Saúde</span>
+                        <div class="grupoSaude" role="group" aria-labelledby="tituloSaude">
+                            <label><input type="checkbox" id="vacinado" name="vacinado"> Vacinado</label>
+                            <label><input type="checkbox" id="castrado" name="castrado"> Castrado</label>
+                            <label><input type="checkbox" id="vermifugado" name="vermifugado"> Vermifugado</label>
+                        </div>
+                    </div>
                     <div class="divElementosForm">
                         <label for="descricao">Personalidade e História</label>
                         <textarea id="descricao" name="descricao"
@@ -244,6 +248,7 @@
                 <p class="p-rodape"><i class="bi bi-c-circle"></i> 2026 MiAu - Centro Universitário UNIPAM</p>
             </div>
     </footer>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
