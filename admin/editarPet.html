@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="miau_logo_circle_ma_v2 copy.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://miau-adote-seu-companheiro.netlify.app/styles.css">
+    <style>
+        .formMA .tituloCampo {
+            color: #1C3434;
+            font-weight: bold;
+            font-size: 0.875rem;
+        }
+
+
+        .formMA .grupoSaude {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+        }
+
+        .formMA .grupoSaude label {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            height: 3.7rem;
+            padding: 0 1rem;
+            border: 2px solid #F0DDD7;
+            border-radius: 1rem;
+            background-color: #fff;
+            cursor: pointer;
+            transition: border-color 0.2s, background-color 0.2s;
+        }
+
+        .formMA .grupoSaude label:hover {
+            border-color: #FF6F61;
+        }
+
+
+        .formMA .grupoSaude label:has(input:checked) {
+            border-color: #FF6F61;
+            background-color: rgba(255, 111, 97, 0.08);
+        }
+
+
+        .formMA .grupoSaude label:has(input:focus-visible) {
+            outline: 2px solid #008080;
+            outline-offset: 2px;
+        }
+
+
+        .formMA .grupoSaude input[type="checkbox"] {
+            -webkit-appearance: none;
+            appearance: none;
+            display: grid;
+            place-content: center;
+            flex-shrink: 0;
+            width: 1.5rem;
+            height: 1.5rem;
+            margin: 0;
+            padding: 0;
+            border: 2px solid #F0DDD7;
+            border-radius: 0.5rem;
+            background-color: #fff;
+            cursor: pointer;
+            transition: background-color 0.2s, border-color 0.2s;
+        }
+
+        /* O "check" desenhado dentro da caixinha */
+        .formMA .grupoSaude input[type="checkbox"]::before {
+            content: "";
+            width: 0.8rem;
+            height: 0.8rem;
+            background-color: #fff;
+            clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+            transform: scale(0);
+            transition: transform 0.15s ease-in-out;
+        }
+
+        .formMA .grupoSaude input[type="checkbox"]:checked {
+            background-color: #FF6F61;
+            border-color: #FF6F61;
+        }
+
+        .formMA .grupoSaude input[type="checkbox"]:checked::before {
+            transform: scale(1);
+        }
+
+
+        @media (max-width: 768px) {
+            .formMA .grupoSaude {
+                grid-template-columns: 1fr;
+                gap: 0.7rem;
+                width: 19.5rem;
+                margin: 0;
+                padding: 0;
+            }
+
+            .formMA .grupoSaude label {
+                height: 3.2rem;
+            }
+        }
+    </style>
+
+
+    <title>Editar Pet</title>
+</head>
+
+<body>
+    <nav>
+        <ul class="nav">
+            <div class="inicio">
+                <li class="nav-item">
+                    <img class="logoOfc" src="https://miau-adote-seu-companheiro.netlify.app/img/logoofc.png"
+                        alt="Logo do web site- MiAu">
+                </li>
+            </div>
+            <div class="fim fimMA">
+                <li class="nav-item">
+                    <a href="login.html"><button>Sair</button></a>
+                </li>
+            </div>
+        </ul>
+
+    </nav>
+
+    <main>
+        <div class="MA">
+            <div class="esquerdaMA">
+                <div class="topoMAesq">
+                    <img src="https://miau-adote-seu-companheiro.netlify.app/img/LogoSoPatas.png"
+                        alt="Logo da ONG Só Patas">
+                    <h5>Só Patas</h5>
+                    <p>Admin</p>
+                </div>
+                <div class="fimMAesq">
+                    <a href="meusAnimais.html"><button><i class="bi bi-columns-gap"></i>Meus Animais</button></a>
+                    <a href="novoCadastro.html"><button class="botaoMA2"><i class="bi bi-plus-circle"></i>Novo
+                            Cadastro</button></a>
+                </div>
+            </div>
+            <div class="direitaMA">
+                <h1 id="tituloEdicao">Editar Pet</h1>
+                <form class="formMA" id="formEditar">
+                    <div class="divFormMA">
+                        <div>
+                            <div class="divElementosForm">
+                                <label for="nome">Nome do Pet</label>
+                                <input type="text" id="nome" name="nome" placeholder="Ex: Bob" required>
+                            </div>
+                            <div class="divElementosForm">
+                                <label for="especie">Espécie</label>
+                                <select id="especie" name="especie" required>
+                                    <option value="" disabled selected hidden>Selecione a espécie</option>
+                                    <option value="Cachorro">Cachorro</option>
+                                    <option value="Gato">Gato</option>
+                                    <option value="Outros">Outros</option>
+                                </select>
+                            </div>
+                            <div class="divElementosForm">
+                                <label for="genero">Gênero</label>
+                                <select id="genero" name="genero" required>
+                                    <option value="" disabled selected hidden>Selecione o gênero</option>
+                                    <option value="Macho">Macho</option>
+                                    <option value="Fêmea">Fêmea</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="divElementosForm">
+                                <label for="raca">Raça</label>
+                                <input type="text" id="raca" name="raca" placeholder="Ex: SRD">
+                            </div>
+                            <div class="divElementosForm">
+                                <label for="idade">Idade Estimada</label>
+                                <select id="idade" name="idade" required>
+                                    <option value="" disabled selected hidden>Selecione a idade estimada</option>
+                                    <option value="Filhote">Filhote</option>
+                                    <option value="Adulto">Adulto</option>
+                                    <option value="Idoso">Idoso</option>
+                                </select>
+                            </div>
+                            <div class="divElementosForm">
+                                <label for="porte">Porte</label>
+                                <select id="porte" name="porte" required>
+                                    <option value="" disabled selected hidden>Selecione o porte</option>
+                                    <option value="Pequeno">Pequeno</option>
+                                    <option value="Médio">Médio</option>
+                                    <option value="Grande">Grande</option>
+                                </select>
+                            </div>
+
+
+                        </div>
+                    </div>
+                    <div class="divElementosForm">
+                        <span class="tituloCampo" id="tituloSaude">Saúde</span>
+                        <div class="grupoSaude" role="group" aria-labelledby="tituloSaude">
+                            <label><input type="checkbox" id="vacinado" name="vacinado"> Vacinado</label>
+                            <label><input type="checkbox" id="castrado" name="castrado"> Castrado</label>
+                            <label><input type="checkbox" id="vermifugado" name="vermifugado"> Vermifugado</label>
+                        </div>
+                    </div>
+                    <div class="divElementosForm">
+                        <label for="descricao">Personalidade e História</label>
+                        <textarea id="descricao" name="descricao"
+                            placeholder="Descreva o temperamento do animal e um pouco da sua história..."></textarea>
+                    </div>
+                    <div class="divElementosForm">
+                        <label for="fotos" class="campoLabel">Fotos (até 4)</label>
+
+                        <label for="fotos" class="caixaUpload" id="caixaUpload">
+                            <i class="bi bi-plus-circle"></i>
+                            <span id="textoUpload">Clique para adicionar fotos</span>
+                        </label>
+                        <input type="file" id="fotos" name="fotos" accept="image/*" multiple hidden>
+
+                        <div id="previas" class="previas"></div>
+                        <p id="avisoFotos" class="avisoFotos" hidden></p>
+                    </div>
+
+                    <p id="mensagemForm" class="mensagemForm" hidden></p>
+                    <button type="submit" id="botaoSalvar"> Salvar alterações </button>
+                    <p><a href="meusAnimais.html">Cancelar e voltar para Meus Animais</a></p>
+                </form>
+            </div>
+        </div>
+    </main>
+    <footer class="rodape">
+
+        <div class="item-rodape">
+            <img class="logoOfc" src="https://miau-adote-seu-companheiro.netlify.app/img/logoofc.png"
+                alt="Logo do web site- MiAu">
+            <p>Seu novo melhor amigo está a um clique!</p>
+            <div>
+                <i class="bi bi-camera i-rodape"></i>
+                <i class="bi bi-envelope i-rodape"></i>
+            </div>
+            <div class="pRo">
+                <p class="p-rodape"><i class="bi bi-c-circle"></i> 2026 MiAu - Centro Universitário UNIPAM</p>
+            </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+    <script src="editarPet.js"></script>
+</body>
+
+</html>
