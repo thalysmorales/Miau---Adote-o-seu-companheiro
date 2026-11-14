@@ -1,4 +1,6 @@
 const API_URL = "https://miau-adote-o-seu-companheiro.onrender.com";
+let animalAtual = null
+const numeroONG = "5534997413510"
 // Ícones com a primeira letra do título (código original do grupo)
 document.querySelectorAll(".titulo-com-icone").forEach((el) => {
   const texto = el.textContent.trim()
@@ -108,11 +110,36 @@ async function carregarPet() {
     }
 
     const animal = await resposta.json()
+    animalAtual = animal
     preencherPagina(animal)
   } catch (erro) {
     console.error("Erro ao carregar o pet:", erro)
     mostrarErro("Não foi possível carregar as informações do pet. Tente novamente mais tarde.")
   }
 }
+
+function montarMensagemAdotar(a) {
+  return `Olá tenho interesse em adotar o ${a.nome}. Gostaria de saber como funciona a adoção.`
+}
+
+function montarMensagemDuvidas(a) {
+  return `Olá gostaria de tirar algumas dúvidas sobre o ${a.nome}`
+}
+
+const btnAdotar = document.getElementById("btnAdotar")
+
+btnAdotar.addEventListener("click", () => {
+  if (!animalAtual) return
+  const texto =  encodeURIComponent(montarMensagemAdotar(animalAtual))
+  window.open(`https://wa.me/${numeroONG}?text=${texto}`, "_blank")
+})
+
+const btnTirarDuvidas = document.getElementById("btnDuvidas")
+
+btnTirarDuvidas.addEventListener("click", () => {
+  if (!animalAtual) return
+  const texto =  encodeURIComponent(montarMensagemDuvidas(animalAtual))
+  window.open(`https://wa.me/${numeroONG}?text=${texto}`, "_blank")
+})
 
 carregarPet()
