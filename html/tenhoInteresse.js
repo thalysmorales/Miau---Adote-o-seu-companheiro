@@ -130,7 +130,7 @@ function montarMensagemAdotar(a) {
 
 function montarMensagemDuvidas(a) {
   let genero
-  if (a.genero === "femea") {
+  if (a.genero === "Fêmea") {
     genero = 'a'
   } else {
     genero = 'o'
