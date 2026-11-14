@@ -119,11 +119,23 @@ async function carregarPet() {
 }
 
 function montarMensagemAdotar(a) {
-  return `Olá tenho interesse em adotar o ${a.nome}. Gostaria de saber como funciona a adoção.`
+  let genero
+  if (a.genero === "Fêmea") {
+    genero = 'a'
+  } else {
+    genero = 'o'
+  }
+  return `Olá tenho interesse em adotar ${genero} ${a.nome}. Gostaria de saber como funciona a adoção.`
 }
 
 function montarMensagemDuvidas(a) {
-  return `Olá gostaria de tirar algumas dúvidas sobre o ${a.nome}`
+  let genero
+  if (a.genero === "femea") {
+    genero = 'a'
+  } else {
+    genero = 'o'
+  }
+  return `Olá gostaria de tirar algumas dúvidas sobre ${genero} ${a.nome}`
 }
 
 const btnAdotar = document.getElementById("btnAdotar")
