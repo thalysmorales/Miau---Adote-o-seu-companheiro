@@ -11,6 +11,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+     <link rel="icon" href="img/miau_logo_circle_ma_v2.png" type="image/x-icon">
     <link rel="stylesheet" href="styles.css">
     <title>Encontrar Pet</title>
 </head>
@@ -32,10 +33,10 @@
 
             <div class="fim" id="menuLinks">
                 <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="home.html">Início</a>
+                    <a class="nav-link" aria-current="page" href="index.html">Início</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Encontrar Pet</a>
+                    <a class="nav-link active" aria-current="page" href="encontrarPET.html">Encontrar Pet</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="sejaVoluntario.html">Seja Voluntário</a>
@@ -52,47 +53,60 @@
     </nav>
     <main>
 
+        <!-- Mensagem mostrada quando o pet não é encontrado ou a API falha -->
+        <p id="erroPet" hidden></p>
+
         <div class="box-informacao">
 
             <div>
-                <img class="foto-principal" src="img/G2/img1.jpg" alt="Foto do pet">
+                <div id="carrosselPet" class="carousel slide">
+                    <div class="carousel-indicators" id="carrosselIndicadores"></div>
+                    <div class="carousel-inner" id="carrosselFotos"></div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carrosselPet"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Anterior</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carrosselPet"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Próxima</span>
+                    </button>
+                </div>
             </div>
             <div class="descricao">
 
-                <h4>Mike</h4>
-                <p>Vira-lata(SRD)</p>
+                <h4 id="nomePet">Carregando...</h4>
+                <p id="racaPet"></p>
 
                 <div class="especifacoesPersona">
                     <div>
                         <h6>ESPÉCIE:</h6>
-                        <p>Cachorro</p>
+                        <p id="especiePet"></p>
                     </div>
 
                     <div>
                         <h6>IDADE:</h6>
-                        <p>Filhote</p>
+                        <p id="idadePet"></p>
                     </div>
 
                     <div>
                         <h6>PORTE:</h6>
-                        <p>Pequeno</p>
+                        <p id="portePet"></p>
                     </div>
 
                     <div>
                         <h6>GÊNERO</h6>
-                        <p>Macho</p>
+                        <p id="generoPet"></p>
                     </div>
                 </div>
                 <h3>Personalidade</h3>
-                <p class="textoPersona">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dignissim ac
-                    turpis eu lacinia. Aliquam in imperdiet ex. Praesent posuere ac mauris vel mattis. Sed viverra
-                    finibus massa vitae consequat.  Curabitur augue leo, iaculis ac lacus id, ultricies luctus turpis.
-                    Sed efficitur arcu rutrum, sollicitudin urna a, molestie justo. Pellentesque efficitur fermentum
-                    dapibus.</p>
+                <p class="textoPersona" id="descricaoPet"></p>
 
                 <div class="botoesPersona">
-                    <button class="corBum"><a href=""><i class="fa-solid fa-paw"></i> Adotar Mike</a></button>
-                    <button class="corBois"><a href=""><i class="bi bi-chat-right"></i> Tirar Dúvidas</a></button>
+                    <button id="btnAdotar" class="corBum"><a href="#"><i class="fa-solid fa-paw"></i> Adotar <span
+                                style="font-size: 1.5rem;" id="nomeAdotar"></span></a></button>
+                    <button id="btnDuvidas" class="corBois"><a href="https://wa.me/message/P6KAJCPJFNUMG1"><i class="bi bi-chat-right"></i> Tirar Dúvidas</a></button>
                 </div>
             </div>
         </div>
@@ -109,16 +123,16 @@
                     <div class="informacoes-saude">
                         <div class="info">
                             <h6 class="titulo-com-icone">Vacinas</h6>
-                            <p>V10 e Raiva</p>
+                            <p id="vacinadoPet"></p>
 
                         </div>
                         <div class="info">
-                            <h6 class="titulo-com-icone">Não castrado</h6>
-                            <p></p>
+                            <h6 class="titulo-com-icone">Castração</h6>
+                            <p id="castradoPet"></p>
                         </div>
                         <div class="info">
-                            <h6 class="titulo-com-icone">Vermifugado</h6>
-                            <p>Janeiro 2024</p>
+                            <h6 class="titulo-com-icone">Vermifugação</h6>
+                            <p id="vermifugadoPet"></p>
                         </div>
                     </div>
                     <i class="fa-solid fa-syringe iconeAjustei"></i>
@@ -164,13 +178,18 @@
             <img class="logoOfc" src="img/logoofc.png" alt="Logo do web site- MiAu">
             <p>Seu novo melhor amigo está a um clique!</p>
             <div>
-                <i class="bi bi-camera i-rodape"></i>
-                <i class="bi bi-envelope i-rodape"></i>
+                <a style="text-decoration: none;" href="https://www.instagram.com/ong_sopatas?utm_source=ig_web_button_share_sheet&vrfl=ZDNlZDc0MzIxNw==">
+                    <i class="bi bi-camera i-rodape"></i>
+                </a>
+                <a style="text-decoration: none;" href="mailto:ancorasimob@gmail.com">
+                    <i class="bi bi-envelope i-rodape"></i>
+                </a>
             </div>
             <div class="pRo">
                 <p class="p-rodape"><i class="bi bi-c-circle"></i> 2026 MiAu - Centro Universitário UNIPAM</p>
             </div>
     </footer>
+      <script src="dados copy.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
