@@ -634,7 +634,9 @@ main {
     color: #fff !important;
 }
 
-.corBois:hover i {
+.corBois:hover i ,
+.corBois:hover a,
+.corBois:hover button{
     color: #fff !important;
 }
 
