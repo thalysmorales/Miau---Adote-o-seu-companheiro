@@ -35,39 +35,76 @@ O trabalho foi realizado em colaboração com a **ONG Só Patas**, buscando cont
 
 O MiAu foi pensado para oferecer uma navegação simples e intuitiva, permitindo que os visitantes conheçam os animais e tenham acesso às informações da ONG.
 
-Entre os recursos apresentados pela plataforma, estão:
+### Para o público
 
-- **Apresentação dos animais:** exibição de cães e gatos disponíveis para adoção.
+- **Apresentação dos animais:** exibição de cães e gatos disponíveis para adoção, com filtros para facilitar a busca.
 - **Informações individuais:** acesso aos detalhes e às características de cada animal.
 - **Interesse na adoção:** possibilidade de demonstrar interesse em um animal.
 - **Mural de notícias:** divulgação de conteúdos e novidades relacionados à ONG.
 - **Apresentação da ONG:** informações sobre a instituição e seu trabalho.
 - **Interface responsiva:** adaptação da experiência de navegação a diferentes tamanhos de tela.
 
+### Para a ONG (área administrativa)
+
+- **Acesso com login:** área restrita à administração da ONG.
+- **Cadastro de animais:** inclusão de novos animais com suas informações e fotos.
+- **Acompanhamento dos cadastros:** consulta dos animais já cadastrados.
+
+---
+
+## Como o projeto funciona
+
+O sistema é dividido em partes que se comunicam entre si:
+
+```
+Site público ──┐
+               ├──►  API (Python/Flask)  ──►  Banco de dados (MySQL)
+Área admin  ───┘
+      │
+      └──► Fotos enviadas para o Cloudinary
+```
+
+- Os dois sites (público e administrativo) consomem a mesma **API**, responsável por ler e gravar os dados dos animais.
+- As **fotos** dos animais ficam armazenadas no Cloudinary, e o banco de dados guarda apenas o endereço de cada imagem.
+- As ações de cadastro, edição e exclusão só são aceitas pela API mediante **login do administrador**.
+
+---
+
+## Estrutura do Repositório
+
+| Pasta | Conteúdo |
+|---|---|
+| `html/` | Site público (páginas, estilos, scripts e imagens) |
+| `admin/` | Área administrativa (login, meus animais e novo cadastro) |
+| `backend/` | API em Python/Flask |
+
 ---
 
 ## Tecnologias Utilizadas
-
-Durante o desenvolvimento, foram utilizadas tecnologias voltadas à construção de interfaces web e à organização dos elementos da aplicação.
 
 | Tecnologia | Aplicação |
 |---|---|
 | HTML5 | Estruturação das páginas |
 | CSS3 | Estilização e organização visual |
-| JavaScript | Implementação de interações e funcionalidades |
+| JavaScript | Interações, funcionalidades e comunicação com a API |
 | Bootstrap 5.3.8 | Apoio na construção de interfaces responsivas |
 | Bootstrap Icons | Ícones utilizados na interface |
 | Font Awesome | Biblioteca complementar de ícones |
+| Python + Flask | API (back-end) |
+| MySQL | Banco de dados |
+| Cloudinary | Armazenamento das fotos dos animais |
+| Cloudflare Workers | Publicação do site público e da área administrativa |
+| Render | Hospedagem da API |
 | Git | Controle de versão |
 | GitHub | Hospedagem do código-fonte e colaboração |
-| Netlify | Publicação da aplicação web |
 
 ---
 
 ## Acesse o Projeto
 
-- **Aplicação publicada:** [MiAu — Adote o Seu Companheiro](https://miau-adote-seu-companheiro.netlify.app/)
-- **Repositório no GitHub:** [github.com/thalysmorales/Miau---adote-o-seu-companheiro](https://github.com/thalysmorales/Miau---adote-o-seu-companheiro)
+- **Site público:** [MiAu — Adote o Seu Companheiro](https://miauadote.tmctech.workers.dev/)
+- **Área administrativa (login):** [Login do administrador](https://miauadote-login.tmctech.workers.dev/) — acesso restrito à administração da ONG.
+- **Repositório no GitHub:** [github.com/thalysmorales/Miau---Adote-o-seu-companheiro](https://github.com/thalysmorales/Miau---Adote-o-seu-companheiro)
 
 ---
 
