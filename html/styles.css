@@ -153,6 +153,7 @@ main {
     text-align: center;
     gap: 1.5rem;
     padding-top: 2rem;
+    
 }
 
 .botoesHome a,
@@ -167,6 +168,9 @@ main {
     border-radius: 1.5rem;
     width: 19.37rem;
     height: 4.43rem;
+    color: #fff;
+    font-weight: bold;
+    
 }
 
 .foto-principalHome {
@@ -604,30 +608,34 @@ main {
 }
 
 .corBum a,
-.corBum i {
-    color: #F9F7F7;
+.corBum i,
+.corBum button {
+    color: #fff;
+    font-weight: bold;
 }
 
 .corBois {
+    background-color: #fff !important;
     border: 2px solid #008080 !important;
-    background-color: #fff;
+    color: #008080 !important;
+}
+.corBois a{
+    text-decoration: none;
+    color: #008080 !important;
+    font-weight: bold;
+
+}
+.corBois i {
+    color: #008080 !important;
 }
 
 .corBois:hover {
-    background-color: #008080;
-}
-
-.corBois a,
-.corBois i {
-    color: #008080;
-}
-
-.corBois:hover a {
-    color: #fff;
+    background-color: #008080 !important;
+    color: #fff !important;
 }
 
 .corBois:hover i {
-    color: #FFF;
+    color: #fff !important;
 }
 
 .box-informacao-ptd {
