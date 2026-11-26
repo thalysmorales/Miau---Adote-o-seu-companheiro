@@ -1,6 +1,6 @@
 const API_URL = "https://miau-adote-o-seu-companheiro.onrender.com";
 let animalAtual = null
-const numeroONG = "5534996691614"
+const numeroONG = "5534999669664"
 // Ícones com a primeira letra do título (código original do grupo)
 document.querySelectorAll(".titulo-com-icone").forEach((el) => {
   const texto = el.textContent.trim()
